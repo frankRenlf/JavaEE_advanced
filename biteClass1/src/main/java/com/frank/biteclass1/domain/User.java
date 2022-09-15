@@ -1,5 +1,9 @@
 package com.frank.biteclass1.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -12,17 +16,14 @@ package com.frank.biteclass1.domain;
  * @github : https://github.com/frankRenlf
  * @Description :
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
 
     Integer id;
     String name;
     String password;
-
-    public User(Integer id, String name, String password) {
-        this.id = id;
-        this.name = name;
-        this.password = password;
-    }
 
     public Integer getId() {
         return id;

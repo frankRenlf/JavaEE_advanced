@@ -1,6 +1,7 @@
 package com.frank.biteclass1.Controller;
 
 import com.frank.biteclass1.domain.User;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +25,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    @PostMapping("/add")
+    @GetMapping("/add")
     public User add(Integer id, String name, String password) {
         return new User(id, name, password);
     }
