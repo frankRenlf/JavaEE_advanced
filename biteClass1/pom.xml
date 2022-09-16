@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com</groupId>
-    <artifactId>demo_08_SSMP</artifactId>
+    <artifactId>biteClass1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
