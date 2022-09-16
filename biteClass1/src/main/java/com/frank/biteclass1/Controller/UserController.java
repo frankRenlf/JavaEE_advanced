@@ -1,10 +1,10 @@
 package com.frank.biteclass1.Controller;
 
+import com.frank.biteclass1.Controller.utils.Result;
 import com.frank.biteclass1.domain.User;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.frank.biteclass1.service.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,22 +25,18 @@ import java.util.Map;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    @GetMapping("/add")
-    public User add(Integer id, String name, String password) {
-        return new User(id, name, password);
+
+    @Autowired
+    private IUserService iUserService;
+
+    @GetMapping
+    public Result getById(@RequestBody User user) {
+        return new Result(true, iUserService.check(user));
     }
 
-    @RequestMapping("/delete")
-    public Integer del(Integer id) {
-        return id;
+    @PostMapping
+    public Result save(@RequestBody User user) {
+        return new Result(iUserService.save(user));
     }
 
-    @RequestMapping("/getone")
-    public HashMap<String, Object> getOne(Integer id) {
-        HashMap<String, Object> map = new HashMap<>();
-        map.put("id", 1);
-        map.put("name", "frank");
-        map.put("password", "1234");
-        return map;
-    }
 }

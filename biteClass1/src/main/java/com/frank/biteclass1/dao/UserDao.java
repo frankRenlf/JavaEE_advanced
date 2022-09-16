@@ -1,5 +1,9 @@
 package com.frank.biteclass1.dao;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.frank.biteclass1.domain.User;
+import org.apache.ibatis.annotations.Mapper;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -12,5 +16,6 @@ package com.frank.biteclass1.dao;
  * @github : https://github.com/frankRenlf
  * @Description :
  */
-public class UserDao {
+@Mapper
+public interface UserDao extends BaseMapper<User> {
 }
