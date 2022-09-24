@@ -48,9 +48,15 @@ public class UserController {
         return new Result(flag, user, flag ? "增加成功" : "增加失败");
     }
 
-//    @PostMapping("/del")
-//    public Result addUser(@RequestBody User user) {
-//        return new Result(iUserService.removeById(user.getId()));
-//    }
+    @PostMapping("/del")
+    public Result addUser(@RequestBody User user) {
+        User[] list = iUserService.list().toArray(new User[0]);
+        for (User elem : list) {
+            if (elem.getUsername().equals(user.getUsername())) {
+                user.setId(elem.getId());
+            }
+        }
+        return new Result(iUserService.removeById(user.getId()), user, "删除成功");
+    }
 
 }
