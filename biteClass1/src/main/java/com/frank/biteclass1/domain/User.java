@@ -25,6 +25,7 @@ public class User {
     private String password;
 
     public User(String username, String password) {
+        this.id = null;
         this.username = username;
         this.password = password;
     }

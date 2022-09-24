@@ -6,6 +6,7 @@ import com.frank.biteclass1.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,13 +36,21 @@ public class UserController {
     }
 
     @PostMapping
-    public Result save(@RequestBody User user) {
-        return new Result(iUserService.save(user));
+    public Result save(@RequestBody User user) throws IOException {
+//        return new Result(iUserService.save(user));
+        User[] list = iUserService.list().toArray(new User[0]);
+        for (User elem : list) {
+            if (elem.getUsername().equals(user.getUsername())) {
+                return new Result(false, user, "已经存在该用户名");
+            }
+        }
+        Boolean flag = iUserService.save(user);
+        return new Result(flag, user, flag ? "增加成功" : "增加失败");
     }
 
-    @PostMapping("/del")
-    public Result addUser(@RequestBody User user) {
-        return new Result(iUserService.removeById(user.getId()));
-    }
+//    @PostMapping("/del")
+//    public Result addUser(@RequestBody User user) {
+//        return new Result(iUserService.removeById(user.getId()));
+//    }
 
 }
