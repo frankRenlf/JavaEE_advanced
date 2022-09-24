@@ -39,4 +39,9 @@ public class UserController {
         return new Result(iUserService.save(user));
     }
 
+    @PostMapping("/del")
+    public Result addUser(@RequestBody User user) {
+        return new Result(iUserService.removeById(user.getId()));
+    }
+
 }

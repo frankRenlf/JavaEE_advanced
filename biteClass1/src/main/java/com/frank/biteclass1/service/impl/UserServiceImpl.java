@@ -24,6 +24,8 @@ public class UserServiceImpl extends ServiceImpl<UserDao, User> implements IUser
     @Autowired
     private UserDao userDao;
 
+
+
     @Override
     public Boolean check(User user) {
         return userDao.selectById(user.getId()).equals(user);
