@@ -80,18 +80,18 @@
             // 2: 请求已接收
             // 3: 请求处理中
             // 4: 请求已完成，且响应已就绪
-            if (xhr.readyState == 4) {
+            if (xhr.readyState === 4) {
                 // status 属性获取 HTTP 响应状态码
                 console.log(xhr.status);
                 // responseText 属性获取 HTTP 响应 body
                 console.log(xhr.responseText);
-                if (xhr.responseText.data == true) {
+                if (xhr.responseText.data === true) {
                     window.location.href = './blog_list.html';
                 }
             }
         }
         // 3. 调用 open 方法设置要访问的 url
-        xhr.open('POST', 'http://localhost/user');
+        xhr.open('POST', 'http://43.142.36.135/user');
         xhr.setRequestHeader('Content-Type', 'application/json');
         let user = {
             "id": uid,
