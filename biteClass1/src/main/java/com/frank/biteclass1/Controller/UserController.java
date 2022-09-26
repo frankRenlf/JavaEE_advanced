@@ -40,16 +40,16 @@ public class UserController {
         return new Result(true, iUserService.getById(id));
     }
 
-    @GetMapping
+    @PostMapping
     public Result getById(@RequestBody User user) {
         return new Result(true, iUserService.check(user));
     }
 
-    @PostMapping
-    public Result save(@RequestBody User user) throws IOException {
-//        return new Result(iUserService.save(user));
-        Boolean flag = iUserService.save(user);
-        return new Result(flag, user, flag ? "增加成功" : "增加失败");
-    }
+//    @PostMapping
+//    public Result save(@RequestBody User user) throws IOException {
+////        return new Result(iUserService.save(user));
+//        Boolean flag = iUserService.save(user);
+//        return new Result(flag, user, flag ? "增加成功" : "增加失败");
+//    }
 
 }
