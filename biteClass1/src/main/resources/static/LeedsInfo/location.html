@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Location</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css" target="_blank">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" rel="external nofollow"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js" rel="external nofollow"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js" rel="external nofollow"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="#" id="logo"><img src="images/logo.jpg" width="300" height="100" alt="logo" /></a>
+                    </div>
+                    <div class="col-sm-8">
+                        <nav>
+                            <ul>
+                                <li><a href="main.html">Home</a></li>
+                                <li><a href="environment.html">Environment</a></li>
+                                <li><a href="economy.html">Economy</a></li>
+                                <li><a href="location.html" class="current">Location</a></li>
+                                <li><a href="University of Leeds.html">University</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="group_bannner_left1">
+                            <iframe width='560' height='260' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://surl.amap.com/1Q2yqR1o5Ah'></iframe>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <header class="group_bannner_right1">
+                            <h1 class="ml14">
+                                <span class="text-wrapper">
+                                    <span class="letters">Location of Leeds</span>
+                                    <span class="line"></span>
+                                </span>
+                            </h1>
+                            <h2>“Located at the eastern foot of the penning mountains, on the Bank of the Al River, it was originally an Anglo Saxon town on the North Bank of the Ayr River, and later developed into a local market trade center.”</h2>
+                        </header>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="holder_content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <section class="group1">
+                            <h3>Transportation</h3>
+                            <p>
+                                West Yorkshire has a complete transport network and other infrastructure, of which the first and most important highway in the UK, highway 1, has been built to connect Leeds with London and form a "t" network
+                                with highway 62, which connects the East and West ports of Hal and Liverpool. Road 62 runs through the central part of the UK, while Leeds is located at the junction of this "t" road network. It is the trade
+                                center of UK GDP second only to the southeast. One of the economic pillars of the Yorkshire hengbused area is the busiest port in the UK at present. The port serves the emerging European integration market and makes the region an important trade center in Europe.
+                            </p>
+                        </section>
+                    </div>
+                    <div class="col-sm-4">
+                        <section class="group3-a">
+                            <h3>Road pictures</h3>
+                            <p></p>
+                            <img src="images/road.jpg" width="500" height="270" alt="Traffic routes">
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm">
+                        <h3>
+                            <p id="demo">Click this button to get your coordinates:</p>
+                            <button onclick="getLocation()">Try</button>
+
+                            <script>
+                                var x=document.getElementById("demo");
+                                function getLocation()
+                                {
+                                if (navigator.geolocation)
+                                {
+                                navigator.geolocation.getCurrentPosition(showPosition);
+                                }
+                                else{x.innerHTML="Geolocation is not supported by this browser.";}
+                                }
+                                function showPosition(position)
+                                {
+                                x.innerHTML="Latitude: " + position.coords.latitude +
+                                "<br />Longitude: " + position.coords.longitude;
+                                }
+                            </script>
+                        </h3>
+
+
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+            </div>
+
+            <section class="group2">
+            </section>
+
+        </div>
+
+        <div class="holder_content1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <section class="group4">
+                            <h3>Developed transportation facilities</h3>
+                            <p>
+                                The transportation network plays an important role in the development of Leeds. The advanced traffic management system ensures the smooth traffic in the downtown area and makes the urban environment cleaner and safer.
+                            </p>
+                            <div class="pikachoose">
+                                <ul id="pikame">
+                                    <li><a href="#"><img src="images/air.jpg" width="500" height="250" alt="Leeds Bradford International Airport" /></a><span>“Leeds Bradford International Airport”</span></li>
+                                    <li><a href="#"><img src="images/rail.jpg" width="500" height="250" alt="Birmingham-Leeds High-speed Railway" /></a><span>“Birmingham-Leeds High-speed Railway” </span></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-sm-5">
+                        <section class="group5">
+                            <h3>Specific information</h3>
+                            <br /><br /><br /><br /><br /><br />
+                            <p>
+                                <span class="grey">(1)</span>Leeds Bradford International Airport, referred to as Leeds airport, is located in Yeadon, Leeds Metropolitan Area, West Yorkshire,
+                                England, 11 kilometers northwest of Leeds city center. It serves Leeds and Bradford, as well as the entire Yorkshire area, including the cities of York and Wakefield, and is the largest airport in Yorkshire.
+                            </p>
+                            <br /><br /><br /><br /><br /><br />
+                            <p>
+                                <span class="grey">(2)</span>The British high-speed rail project, called "British high-speed rail 2", is planned to be built in two phases. The first phase connects London with Birmingham, the second largest city in the UK. Construction started in 2016 and completed in 2026.
+                                The second phase consists of two lines, connecting Manchester and Leeds from Bermingham to the north.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <section class="group5-b">
+                    <a href="#"><img src="images/back.png" alt="Back to the top" /></a>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <img src="images/line2.png" alt="end">
+            </div>
+        </div>
+    </div>
+    <script src="js/l1.js"></script>
+</body>
+</html>
