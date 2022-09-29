@@ -1,3 +1,7 @@
+import com.beans.User;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -10,8 +14,12 @@
  * @github : https://github.com/frankRenlf
  * @Description :
  */
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("hello");
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("spring-config.xml");
+        User user = (User) context.getBean("user");
+        user.greet("frank");
     }
 }
