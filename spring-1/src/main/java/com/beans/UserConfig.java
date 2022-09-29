@@ -1,5 +1,7 @@
 package com.beans;
 
+import org.springframework.context.annotation.Configuration;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -7,13 +9,16 @@ package com.beans;
  * @version : 1.0
  * @Project : spring-1
  * @Package : com.beans
- * @createTime : 2022/9/29 16:16
+ * @createTime : 2022/9/29 23:34
  * @Email : sc19lr@leeds.ac.uk
  * @github : https://github.com/frankRenlf
  * @Description :
  */
-public class User {
-    public void greet(String name) {
-        System.out.println("Hi " + name);
+@Configuration
+public class UserConfig {
+
+    public void test(){
+        System.out.println("test config");
     }
+
 }
