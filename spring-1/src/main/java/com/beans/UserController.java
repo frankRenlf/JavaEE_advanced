@@ -23,8 +23,8 @@ public class UserController {
     private UserService user;
 
     @Autowired
-    public UserController(UserService user) {
-        this.user = user;
+    public UserController(@Qualifier(value="userService2") UserService userService) {
+        this.user = userService;
     }
 //    @Autowired
 //    @Qualifier("userInfo1")

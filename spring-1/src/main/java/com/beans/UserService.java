@@ -17,8 +17,28 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
+    private int id;
+    private String name;
+
+    public UserService() {
+    }
+
+    public UserService(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+
+    @Override
+    public String toString() {
+        return "UserService{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
     public void test() {
-        System.out.println("test");
+        System.out.println("test: " + this);
     }
 
 }

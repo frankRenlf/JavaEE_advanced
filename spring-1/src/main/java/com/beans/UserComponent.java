@@ -18,10 +18,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserComponent {
 
-    @Bean(name = {"userInfo","userInfo1"})
+    @Bean(name = {"userService1"})
+    public UserService getUserService() {
+        return new UserService(1, "frank");
+    }
+    @Bean(name = {"userService2"})
+    public UserService getUserService1() {
+        return new UserService(2, "fr11ank");
+    }
+
+    @Bean(name = {"userInfo", "userInfo1"})
     public User getUser1() {
         return new User(1, "frank");
     }
+
     @Bean(name = {"userInfo2"})
     public User getUser2() {
         return new User(2, "lily");
