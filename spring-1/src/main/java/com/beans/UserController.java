@@ -19,21 +19,20 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class UserController {
 
-
-    private User user;
+//    @Autowired
+    private UserService user;
 
     @Autowired
-    public UserController(@Qualifier("userInfo1") User user) {
+    public UserController(UserService user) {
         this.user = user;
     }
 //    @Autowired
 //    @Qualifier("userInfo1")
-//    public void setUser(User user) {
+//    public void setUser(UserService user) {
 //        this.user = user;
 //    }
 
     public void greet() {
-
-        System.out.println("Hi " + user);
+        user.test();
     }
 }
