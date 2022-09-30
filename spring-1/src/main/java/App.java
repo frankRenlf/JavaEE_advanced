@@ -21,5 +21,6 @@ public class App {
                 new ClassPathXmlApplicationContext("spring-config.xml");
         UserComponent user = context.getBean("userComponent", UserComponent.class);
         user.test();
+
     }
 }
