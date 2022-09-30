@@ -19,9 +19,18 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class UserController {
 
-    @Qualifier("userInfo2")
-    @Autowired
+
     private User user;
+
+    @Autowired
+    public UserController(@Qualifier("userInfo1") User user) {
+        this.user = user;
+    }
+//    @Autowired
+//    @Qualifier("userInfo1")
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 
     public void greet() {
 
