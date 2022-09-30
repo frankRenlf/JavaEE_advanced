@@ -18,6 +18,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserComponent {
 
+    private int id;
+
+    public UserComponent() {
+    }
+
+    public UserComponent(int id) {
+        this.id = id;
+    }
+
     @Bean(name = {"userService1"})
     public UserService getUserService() {
         return new UserService(1, "frank");
