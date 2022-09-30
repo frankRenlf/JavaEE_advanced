@@ -3,6 +3,7 @@ package com;
 import com.beans.User;
 import com.beans.UserController;
 import com.beans.UserController2;
+import com.beans.UserRepository;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -30,6 +31,8 @@ public class App2 {
 
         System.out.println(user.getUser1());
         System.out.println(user.getUser2());
+//        User userRepository = context.getBean("user2",User.class);
+//        System.out.println(userRepository);
 
     }
 

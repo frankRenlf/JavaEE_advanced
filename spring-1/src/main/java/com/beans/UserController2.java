@@ -20,7 +20,7 @@ import org.springframework.stereotype.Controller;
 public class UserController2 {
 
     @Autowired
-    @Qualifier(value = "user1")
+    @Qualifier(value = "user2")
     private User user1;
 
     public User getUser1() {
@@ -28,7 +28,7 @@ public class UserController2 {
     }
 
     @Autowired
-    @Qualifier(value = "user1")
+    @Qualifier(value = "user2")
     private User user2;
 
     public User getUser2() {

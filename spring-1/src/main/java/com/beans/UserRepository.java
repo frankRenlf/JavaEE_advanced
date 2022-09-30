@@ -29,7 +29,7 @@ public class UserRepository {
 //        System.out.println(user1);
         return user1;
     }
-
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     @Bean(value = {"user2"})
     public User getUser2() {
         return new User(2, "a");
