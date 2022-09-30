@@ -27,14 +27,7 @@ public class UserComponent {
         this.id = id;
     }
 
-    @Bean(name = {"userService1"})
-    public UserService getUserService() {
-        return new UserService(1, "frank");
-    }
-    @Bean(name = {"userService2"})
-    public UserService getUserService1() {
-        return new UserService(2, "fr11ank");
-    }
+
 
     @Bean(name = {"userInfo", "userInfo1"})
     public User getUser1() {

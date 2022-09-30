@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.beans.Introspector;
+import java.sql.SQLException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,10 +22,10 @@ import java.beans.Introspector;
  */
 public class App2 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
-        UserController user = context.getBean( UserController.class);
-        user.greet();
+        UserController user = context.getBean(UserController.class);
+        System.out.println(user.getUser1().select());
     }
 
 }

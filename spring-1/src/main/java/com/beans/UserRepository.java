@@ -1,6 +1,10 @@
 package com.beans;
 
+import com.mysql.cj.jdbc.MysqlDataSource;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Repository;
+
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,8 +21,14 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UserRepository {
 
-    public void test(){
-        System.out.println("test repository");
+    @Bean(value = {"user1"})
+    public User getUser1() {
+        return new User(1, "f");
+    }
+
+    @Bean(value = {"user2"})
+    public User getUser2() {
+        return new User(2, "a");
     }
 
 }

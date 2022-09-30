@@ -2,7 +2,11 @@ package com.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
+
+import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,20 +23,12 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class UserController {
 
-//    @Autowired
-    private UserService user;
-
     @Autowired
-    public UserController(@Qualifier(value="userService2") UserService userService) {
-        this.user = userService;
-    }
-//    @Autowired
-//    @Qualifier("userInfo1")
-//    public void setUser(UserService user) {
-//        this.user = user;
-//    }
+    @Qualifier(value = "userService1")
+    private User user1;
 
-    public void greet() {
-        user.test();
+    public User getUser1(){
+        return user1;
     }
+
 }

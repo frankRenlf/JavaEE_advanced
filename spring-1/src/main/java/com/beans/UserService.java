@@ -1,6 +1,12 @@
 package com.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
+
+import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,28 +23,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
-    private int id;
-    private String name;
+    @Qualifier("user2")
+    @Autowired
+    private User user;
 
-    public UserService() {
+    @Bean(value = {"userService1"})
+    public User userService1(){
+        return user;
     }
-
-    public UserService(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-
-    @Override
-    public String toString() {
-        return "UserService{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
-    }
-
-    public void test() {
-        System.out.println("test: " + this);
+    @Bean(value = {"userService2"})
+    public User userService2(){
+        return user;
     }
 
 }
