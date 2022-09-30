@@ -1,5 +1,10 @@
 package com;
 
+import com.beans.User;
+import com.beans.UserController;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import java.beans.Introspector;
 
 /**
@@ -17,9 +22,9 @@ import java.beans.Introspector;
 public class App2 {
 
     public static void main(String[] args) {
-        String name = "USERFrank";
-        String name2 = "UserFrank";
-        System.out.println(Introspector.decapitalize(name2));
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
+        UserController user = context.getBean( UserController.class);
+        user.greet();
     }
 
 }

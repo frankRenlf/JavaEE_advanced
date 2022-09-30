@@ -20,7 +20,7 @@ public class App {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("spring-config.xml");
         UserComponent user = context.getBean("userComponent", UserComponent.class);
-        user.test();
+//        user.test();
 
     }
 }

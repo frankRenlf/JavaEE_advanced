@@ -1,6 +1,7 @@
 package com.beans;
 
-import org.springframework.context.annotation.Bean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -17,12 +18,13 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 public class UserController {
-    public UserController() {
-        System.out.println(Bean.class);
-    }
 
-    public void greet(String name) {
+    @Qualifier("userInfo2")
+    @Autowired
+    private User user;
 
-        System.out.println("Hi " + name);
+    public void greet() {
+
+        System.out.println("Hi " + user);
     }
 }

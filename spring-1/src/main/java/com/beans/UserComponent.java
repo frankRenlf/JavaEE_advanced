@@ -1,5 +1,6 @@
 package com.beans;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
@@ -17,8 +18,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserComponent {
 
-    public void test() {
-        System.out.println("test component");
+    @Bean(name = {"userInfo","userInfo1"})
+    public User getUser1() {
+        return new User(1, "frank");
+    }
+    @Bean(name = {"userInfo2"})
+    public User getUser2() {
+        return new User(2, "lily");
     }
 
 }
