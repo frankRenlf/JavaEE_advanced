@@ -23,7 +23,7 @@ import java.util.List;
 @Service
 public class UserService {
 
-    @Qualifier("user2")
+    @Qualifier("user1")
     @Autowired
     private User user;
 

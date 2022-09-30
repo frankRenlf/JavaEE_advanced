@@ -1,9 +1,10 @@
 package com.beans;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
-
 
 
 /**
@@ -21,9 +22,12 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UserRepository {
 
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     @Bean(value = {"user1"})
     public User getUser1() {
-        return new User(1, "f");
+        User user1 = new User(1, "f");
+//        System.out.println(user1);
+        return user1;
     }
 
     @Bean(value = {"user2"})

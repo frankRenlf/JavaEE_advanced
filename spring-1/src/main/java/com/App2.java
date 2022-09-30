@@ -2,6 +2,7 @@ package com;
 
 import com.beans.User;
 import com.beans.UserController;
+import com.beans.UserController2;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -24,8 +25,12 @@ public class App2 {
 
     public static void main(String[] args) throws SQLException {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
-        UserController user = context.getBean(UserController.class);
-        System.out.println(user.getUser1().select());
+        UserController2 user = context.getBean(UserController2.class);
+        user.getUser1().setName("frank");
+
+        System.out.println(user.getUser1());
+        System.out.println(user.getUser2());
+
     }
 
 }
