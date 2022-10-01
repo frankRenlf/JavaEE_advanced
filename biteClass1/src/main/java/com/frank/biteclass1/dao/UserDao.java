@@ -3,6 +3,7 @@ package com.frank.biteclass1.dao;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.frank.biteclass1.domain.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,4 +19,7 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface UserDao extends BaseMapper<User> {
+
+    @Select("select * from tbl_user where username = #{username}")
+    public User selectByName(String username);
 }

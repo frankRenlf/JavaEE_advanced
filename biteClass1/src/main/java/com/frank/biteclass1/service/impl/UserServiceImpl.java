@@ -25,9 +25,18 @@ public class UserServiceImpl extends ServiceImpl<UserDao, User> implements IUser
     private UserDao userDao;
 
 
-
     @Override
     public Boolean check(User user) {
-        return userDao.selectById(user.getId()).equals(user);
+        User pre = userDao.selectByName(user.getUsername());
+        return pre != null
+                && pre.getUsername().equals(user.getUsername())
+                && pre.getPassword().equals(user.getPassword());
+    }
+
+    @Override
+    public Boolean contain(User user) {
+        User pre = userDao.selectByName(user.getUsername());
+        return pre != null
+                && pre.getUsername().equals(user.getUsername());
     }
 }

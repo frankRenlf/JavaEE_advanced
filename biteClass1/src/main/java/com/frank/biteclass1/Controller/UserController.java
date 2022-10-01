@@ -40,9 +40,17 @@ public class UserController {
         return new Result(true, iUserService.getById(id));
     }
 
-    @PostMapping
-    public Result getById(@RequestBody User user) {
+    @PostMapping("/login")
+    public Result login(@RequestBody User user) {
         return new Result(true, iUserService.check(user));
+    }
+
+    @PostMapping("/register")
+    public Result register(@RequestBody User user) {
+        if (!iUserService.contain(user)) {
+            return new Result(true, iUserService.save(user));
+        }
+        return new Result(true, false);
     }
 
 //    @PostMapping

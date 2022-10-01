@@ -17,4 +17,6 @@ import com.frank.biteclass1.domain.User;
  */
 public interface IUserService extends IService<User> {
     Boolean check(User user);
+
+    Boolean contain(User user);
 }
