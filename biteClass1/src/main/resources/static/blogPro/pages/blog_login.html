@@ -69,7 +69,6 @@
             data: JSON.stringify(user),
             url: '/user/login',
             success: function (body) {
-                let con = document.querySelector('.text1');
                 console.log(typeof (body.data));
                 console.log(body);
                 if (body.data) {
