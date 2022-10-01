@@ -63,13 +63,17 @@
                 let con = document.querySelector('.text1');
                 console.log(typeof (body.data));
                 console.log(body);
-                if (body.data) {
-                    alert('register success')
-                    window.location.href = './blog_login.html';
-                } else {
-                    alert('username already exist');
-                    uname = '';
-                    upassword = '';
+                if(user.username === ''||user.password===''){
+                    alert("null username or password")
+                }else {
+                    if (body.data) {
+                        alert('register success')
+                        window.location.href = './blog_login.html';
+                    } else {
+                        alert('username already exist');
+                        uname = '';
+                        upassword = '';
+                    }
                 }
                 // con.value = body.data.id;
             }

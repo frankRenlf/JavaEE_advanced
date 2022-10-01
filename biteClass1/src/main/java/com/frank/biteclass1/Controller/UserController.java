@@ -47,7 +47,9 @@ public class UserController {
 
     @PostMapping("/register")
     public Result register(@RequestBody User user) {
-        if (!iUserService.contain(user)) {
+        if (user.getUsername() != null && user.getPassword() != null
+                && !user.getUsername().equals("") && !user.getPassword().equals("")
+                && !iUserService.contain(user)) {
             return new Result(true, iUserService.save(user));
         }
         return new Result(true, false);
