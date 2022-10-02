@@ -3,6 +3,8 @@ package com.frank.biteclass1.Controller;
 import com.frank.biteclass1.Controller.utils.Result;
 import com.frank.biteclass1.domain.User;
 import com.frank.biteclass1.service.IUserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -30,6 +32,9 @@ import java.util.Map;
 @RequestMapping("/user")
 public class UserController {
 
+    private final static Logger log =
+            LoggerFactory.getLogger(UserController.class);
+
     @Autowired
     private IUserService iUserService;
 
@@ -53,8 +58,10 @@ public class UserController {
         if (user.getUsername() != null && user.getPassword() != null
                 && !user.getUsername().equals("") && !user.getPassword().equals("")
                 && !iUserService.contain(user)) {
+            log.info(user.getUsername()+" register success");
             return new Result(true, iUserService.save(user));
         }
+        log.info(user.getUsername()+" register failed");
         return new Result(true, false);
     }
 
