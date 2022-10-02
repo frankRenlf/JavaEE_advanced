@@ -3,6 +3,7 @@ package com.frank.biteclass1.Controller;
 import com.frank.biteclass1.Controller.utils.Result;
 import com.frank.biteclass1.domain.User;
 import com.frank.biteclass1.service.IUserService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,15 +26,15 @@ import java.util.Map;
  * @github : https://github.com/frankRenlf
  * @Description :
  */
-
-@RestController
 //@Controller
 //@ResponseBody
+@Slf4j
+@RestController
 @RequestMapping("/user")
 public class UserController {
 
-    private final static Logger log =
-            LoggerFactory.getLogger(UserController.class);
+//    private final static Logger log =
+//            LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     private IUserService iUserService;

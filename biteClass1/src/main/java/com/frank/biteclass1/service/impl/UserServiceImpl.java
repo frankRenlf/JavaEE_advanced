@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.frank.biteclass1.dao.UserDao;
 import com.frank.biteclass1.domain.User;
 import com.frank.biteclass1.service.IUserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,7 @@ import org.springframework.stereotype.Service;
  * @Description :
  */
 @Service
+@Slf4j
 public class UserServiceImpl extends ServiceImpl<UserDao, User> implements IUserService {
     @Autowired
     private UserDao userDao;
@@ -27,6 +29,7 @@ public class UserServiceImpl extends ServiceImpl<UserDao, User> implements IUser
 
     @Override
     public Boolean check(User user) {
+        log.trace("call check method");
         User pre = userDao.selectByName(user.getUsername());
         return pre != null
                 && pre.getUsername().equals(user.getUsername())

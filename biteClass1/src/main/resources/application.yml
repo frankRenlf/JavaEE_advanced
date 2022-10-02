@@ -34,3 +34,4 @@ logging:
       frank:
         biteclass1:
           Controller: trace
+          service: trace
