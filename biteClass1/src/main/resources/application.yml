@@ -19,4 +19,6 @@ mybatis-plus:
 
 student:
   id: 1
-  name: frank
+  name:
+    - frank
+    - lily

@@ -1,4 +1,4 @@
-package com.frank.biteclass1.domain;
+package com.frank.biteclass1.Controller;
 
 import com.frank.biteclass1.domain.Student;
 import org.springframework.beans.factory.annotation.Autowired;
