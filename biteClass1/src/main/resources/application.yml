@@ -16,3 +16,7 @@ mybatis-plus:
       id-type: auto
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+student:
+  id: 1
+  name: frank

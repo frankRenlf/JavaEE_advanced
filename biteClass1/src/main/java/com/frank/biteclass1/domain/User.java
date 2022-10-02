@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -29,4 +30,5 @@ public class User {
         this.username = username;
         this.password = password;
     }
+
 }
