@@ -33,3 +33,5 @@
 2022-10-02 17:44:31.997  INFO 22116 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-10-02 17:44:31.998  INFO 22116 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2022-10-02 17:44:48.689 TRACE 22116 --- [http-nio-80-exec-8] c.f.b.service.impl.UserServiceImpl       : call check method
+2022-10-02 17:47:10.678  INFO 22116 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-10-02 17:47:10.683  INFO 22116 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
