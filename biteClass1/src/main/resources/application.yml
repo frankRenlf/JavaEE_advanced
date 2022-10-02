@@ -22,3 +22,12 @@ student:
   name:
     - frank
     - lily
+
+
+logging:
+  level:
+    root: warn
+    com:
+      frank:
+        biteclass1:
+          Controller: trace

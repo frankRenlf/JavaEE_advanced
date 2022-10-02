@@ -58,11 +58,19 @@ public class UserController {
         if (user.getUsername() != null && user.getPassword() != null
                 && !user.getUsername().equals("") && !user.getPassword().equals("")
                 && !iUserService.contain(user)) {
-            log.info(user.getUsername()+" register success");
+            log.info(user.getUsername() + " register success");
             return new Result(true, iUserService.save(user));
         }
-        log.info(user.getUsername()+" register failed");
+        log.info(user.getUsername() + " register failed");
         return new Result(true, false);
+    }
+
+    @GetMapping("/testLogging")
+    public void testLogin() {
+        System.out.println("-------------------");
+        log.trace("trace");
+        log.warn("warn");
+        System.out.println("-------------------");
     }
 
 //    @PostMapping
