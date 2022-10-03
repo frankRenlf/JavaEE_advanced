@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.w3c.dom.Text;
 
+import java.io.File;
 import java.util.Date;
 
 /**
@@ -27,7 +28,7 @@ public class Article {
     private Integer id;
     private String title;
     private Date publish_time;
-    private Text content;
+    private byte[] content;
     private Integer user_id;
 
 }
