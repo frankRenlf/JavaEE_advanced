@@ -48,7 +48,6 @@
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/jquerysession.js"></script>
 <script>
-    sessionStorage.removeItem("id");
     let un = document.querySelector('.username');
     let pw = document.querySelector('.password');
     let btn = document.querySelector('.submit');
@@ -73,10 +72,8 @@
             success: function (body) {
                 console.log(typeof (body.data));
                 console.log(body);
-                console.log(sessionStorage.getItem("userid"))
                 if (body.data) {
                     $.session.set('userid', user.id)
-                    console.log(sessionStorage.getItem("userid"))
                     alert('login success')
                     window.location.href = './blog_list.html';
                 } else {
