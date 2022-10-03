@@ -76,7 +76,14 @@
 
 <script>
     let key = sessionStorage.getItem("userid");
-    console.log(key);
+
+    function con() {
+        if (key == null) {
+            window.location.href = "./blog_login.html";
+        }
+    }
+
+    con();
 </script>
 
 </body>
