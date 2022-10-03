@@ -18,14 +18,14 @@ import javax.annotation.PostConstruct;
  * @github : https://github.com/frankRenlf
  * @Description :
  */
-@Component
-public class ReadYML {
-
-    @Autowired
-    private Student student;
-
-    @PostConstruct
-    public void getStudent() {
-        System.out.println(student);
-    }
-}
+//@Component
+//public class ReadYML {
+//
+//    @Autowired
+//    private Student student;
+//
+//    @PostConstruct
+//    public void getStudent() {
+//        System.out.println(student);
+//    }
+//}

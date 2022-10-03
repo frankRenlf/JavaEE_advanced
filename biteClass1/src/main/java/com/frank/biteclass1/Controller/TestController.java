@@ -56,6 +56,7 @@ public class TestController {
         if (session != null) {
             session.setAttribute("username", "java");
         }
+        System.out.println(session.getAttribute("username"));
         return "session 存储成功";
     }
 
