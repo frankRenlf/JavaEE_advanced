@@ -7,6 +7,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -48,8 +51,14 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public Result login(@RequestBody User user) {
-        return new Result(true, iUserService.check(user));
+    public Result login(@RequestBody User user, HttpServletRequest request) {
+        Boolean key = iUserService.check(user);
+        HttpSession session = request.getSession(true);
+        if (key) {
+            session.setAttribute("username", user.getId());
+        }
+        System.out.println(session.getAttributeNames());
+        return new Result(true, key);
     }
 
     @PostMapping("/register")

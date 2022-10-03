@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.util.Arrays;
 
 /**
@@ -45,6 +46,17 @@ public class TestController {
     public String sess2(@SessionAttribute(value = "username", required =
             false) String username) {
         return "username：" + username;
+    }
+
+    @RequestMapping("/setsess")
+    @ResponseBody
+    public String setsess(HttpServletRequest request) {
+// 获取 HttpSession 对象，参数设置为 true 表示如果没有 session 对象就创建⼀个session
+        HttpSession session = request.getSession(true);
+        if (session != null) {
+            session.setAttribute("username", "java");
+        }
+        return "session 存储成功";
     }
 
 }
