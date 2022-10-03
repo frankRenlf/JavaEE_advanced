@@ -49,6 +49,11 @@ public class UserController {
         return new Result(true, iUserService.getById(id));
     }
 
+    @GetMapping
+    public Result getByIdTest(@RequestParam(value = "userid", required = false) Integer id) {
+        return new Result(true, iUserService.getById(id));
+    }
+
     @PostMapping("/login")
     public Result login(@RequestBody User user) {
         return new Result(true, iUserService.check(user));
