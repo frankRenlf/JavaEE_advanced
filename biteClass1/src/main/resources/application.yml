@@ -26,8 +26,8 @@ student:
 
 logging:
   file:
-    path: C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1\src\main\java\com\frank\biteclass1\logs
-    name:
+    path:
+    name: src\main\java\com\frank\biteclass1\logs\spring1.log
   level:
     root: info
     com:

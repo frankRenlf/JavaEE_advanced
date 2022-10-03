@@ -1,0 +1,49 @@
+2022-10-03 11:10:49.916  INFO 16812 --- [main] c.f.biteclass1.BiteClass1Application     : Starting BiteClass1Application using Java 15.0.2 on DESKTOP-24TA0GO with PID 16812 (C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1)
+2022-10-03 11:10:49.919  INFO 16812 --- [main] c.f.biteclass1.BiteClass1Application     : No active profile set, falling back to 1 default profile: "default"
+2022-10-03 11:10:50.726  INFO 16812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2022-10-03 11:10:50.734  INFO 16812 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-03 11:10:50.735  INFO 16812 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-03 11:10:50.821  INFO 16812 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-03 11:10:50.822  INFO 16812 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 866 ms
+2022-10-03 11:10:50.931  INFO 16812 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-10-03 11:10:51.017  INFO 16812 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-10-03 11:10:51.433  INFO 16812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2022-10-03 11:10:51.441  INFO 16812 --- [main] c.f.biteclass1.BiteClass1Application     : Started BiteClass1Application in 2.145 seconds (JVM running for 2.906)
+2022-10-03 11:13:34.719  INFO 16812 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-10-03 11:13:34.720  INFO 16812 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-10-03 11:13:59.449  INFO 11496 --- [main] c.f.biteclass1.BiteClass1Application     : Starting BiteClass1Application using Java 15.0.2 on DESKTOP-24TA0GO with PID 11496 (C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1)
+2022-10-03 11:13:59.452  INFO 11496 --- [main] c.f.biteclass1.BiteClass1Application     : No active profile set, falling back to 1 default profile: "default"
+2022-10-03 11:14:00.284  INFO 11496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2022-10-03 11:14:00.292  INFO 11496 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-03 11:14:00.292  INFO 11496 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-03 11:14:00.390  INFO 11496 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-03 11:14:00.391  INFO 11496 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 901 ms
+2022-10-03 11:14:00.506  INFO 11496 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-10-03 11:14:00.590  INFO 11496 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-10-03 11:14:01.062  INFO 11496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2022-10-03 11:14:01.070  INFO 11496 --- [main] c.f.biteclass1.BiteClass1Application     : Started BiteClass1Application in 1.972 seconds (JVM running for 2.514)
+2022-10-03 11:14:07.885  INFO 11496 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-03 11:14:07.885  INFO 11496 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-03 11:14:07.886  INFO 11496 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-03 11:14:07.899 TRACE 11496 --- [http-nio-80-exec-1] c.f.b.Controller.UserController          : trace
+2022-10-03 11:14:07.900  WARN 11496 --- [http-nio-80-exec-1] c.f.b.Controller.UserController          : warn
+2022-10-03 11:14:45.044  INFO 11496 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-10-03 11:14:45.045  INFO 11496 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-10-03 11:15:16.062  INFO 21448 --- [main] c.f.biteclass1.BiteClass1Application     : Starting BiteClass1Application using Java 15.0.2 on DESKTOP-24TA0GO with PID 21448 (C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1)
+2022-10-03 11:15:16.065  INFO 21448 --- [main] c.f.biteclass1.BiteClass1Application     : No active profile set, falling back to 1 default profile: "default"
+2022-10-03 11:15:16.822  INFO 21448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2022-10-03 11:15:16.829  INFO 21448 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-03 11:15:16.829  INFO 21448 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-03 11:15:16.916  INFO 21448 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-03 11:15:16.917  INFO 21448 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 811 ms
+2022-10-03 11:15:17.027  INFO 21448 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-10-03 11:15:17.112  INFO 21448 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-10-03 11:15:17.537  INFO 21448 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2022-10-03 11:15:17.545  INFO 21448 --- [main] c.f.biteclass1.BiteClass1Application     : Started BiteClass1Application in 1.834 seconds (JVM running for 2.335)
+2022-10-03 11:15:38.000  INFO 21448 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-03 11:15:38.001  INFO 21448 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-03 11:15:38.001  INFO 21448 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-10-03 11:15:38.015 TRACE 21448 --- [http-nio-80-exec-1] c.f.b.Controller.UserController          : trace
+2022-10-03 11:15:38.015  WARN 21448 --- [http-nio-80-exec-1] c.f.b.Controller.UserController          : warn
+2022-10-03 11:15:47.359  INFO 21448 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-10-03 11:15:47.360  INFO 21448 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
