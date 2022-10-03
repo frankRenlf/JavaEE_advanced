@@ -2,11 +2,8 @@ package com.frank.biteclass1.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.frank.biteclass1.dao.ArticleDao;
-import com.frank.biteclass1.dao.UserDao;
 import com.frank.biteclass1.domain.Article;
-import com.frank.biteclass1.domain.User;
 import com.frank.biteclass1.service.IArticleService;
-import com.frank.biteclass1.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

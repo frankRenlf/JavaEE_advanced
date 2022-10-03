@@ -1,16 +1,14 @@
 package com.frank.biteclass1;
 
-import com.frank.biteclass1.domain.Article;
 import com.frank.biteclass1.domain.User;
 import com.frank.biteclass1.service.IArticleService;
 import com.frank.biteclass1.service.IUserService;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.jupiter.api.Test;
+import org.mybatis.spring.SqlSessionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.io.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 @SpringBootTest
 class BiteClass1ApplicationTests {
@@ -36,8 +34,6 @@ class BiteClass1ApplicationTests {
 
     @Test
     void checkArticleSave() {
-
-
-        System.out.println();
+        System.out.println(iArticleService.getById(1));
     }
 }

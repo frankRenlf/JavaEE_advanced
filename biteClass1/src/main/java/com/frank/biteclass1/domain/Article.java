@@ -1,8 +1,7 @@
 package com.frank.biteclass1.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.*;
 
 import java.util.Date;
 
@@ -13,7 +12,7 @@ import java.util.Date;
  * @version : 1.0
  * @Project : biteClass1
  * @Package : com.frank.biteclass1.domain
- * @createTime : 2022/10/3 13:52
+ * @createTime : 2022/10/3 16:29
  * @Email : sc19lr@leeds.ac.uk
  * @github : https://github.com/frankRenlf
  * @Description :
@@ -22,6 +21,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Article {
+    @TableId
     private Integer id;
     private String title;
     private Date publish;

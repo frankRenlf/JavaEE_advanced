@@ -2,7 +2,6 @@ package com.frank.biteclass1.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.frank.biteclass1.domain.Article;
-import com.frank.biteclass1.domain.User;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,7 +16,6 @@ import com.frank.biteclass1.domain.User;
  * @Description :
  */
 public interface IArticleService extends IService<Article> {
-
 
 
 }
