@@ -28,13 +28,18 @@ public class UserServiceImpl extends ServiceImpl<UserDao, User> implements IUser
 
 
     @Override
-    public Boolean check(User user) {
+    public Integer check(User user) {
         log.trace("call check method");
         User pre = userDao.selectByName(user.getUsername());
-        return pre != null
+        Integer id = -1;
+        if (pre != null
                 && pre.getUsername().equals(user.getUsername())
-                && pre.getPassword().equals(user.getPassword());
+                && pre.getPassword().equals(user.getPassword())) {
+            id = pre.getId();
+        }
+        return id;
     }
+
 
     @Override
     public Boolean contain(User user) {

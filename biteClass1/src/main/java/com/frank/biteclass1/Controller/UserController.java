@@ -49,13 +49,13 @@ public class UserController {
 
     @PostMapping("/login")
     public Result login(@RequestBody User user, HttpServletRequest request) {
-        Boolean key = iUserService.check(user);
-//        HttpSession session = request.getSession(true );
-//        if (key) {
-//            session.setAttribute("userid", user.getId());
-//            System.out.println(session.getAttribute("userid"));
-//        }
-        return new Result(true, key);
+        Integer index = iUserService.check(user);
+        HttpSession session = request.getSession(true );
+        if (index>0) {
+            session.setAttribute("userid", index);
+            System.out.println(session.getAttribute("userid"));
+        }
+        return new Result(true, index>0);
     }
 
 

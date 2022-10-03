@@ -43,21 +43,33 @@ public class TestController {
 
     @RequestMapping("/sess2")
     @ResponseBody
-    public String sess2(@SessionAttribute(value = "username", required =
+    public String sess2(@SessionAttribute(value = "userid", required =
             false) String username) {
-        return "username：" + username;
+        return "userid：" + username;
     }
 
-    @RequestMapping("/setsess")
+    @RequestMapping("/sess1")
     @ResponseBody
     public String setsess(HttpServletRequest request) {
 // 获取 HttpSession 对象，参数设置为 true 表示如果没有 session 对象就创建⼀个session
         HttpSession session = request.getSession(true);
         if (session != null) {
-            session.setAttribute("username", "java");
+            session.setAttribute("userid", "java");
         }
-        System.out.println(session.getAttribute("username"));
+        System.out.println(session.getAttribute("userid"));
         return "session 存储成功";
+    }
+
+    @RequestMapping("/sess3")
+    @ResponseBody
+    public String delsess(HttpServletRequest request) {
+// 获取 HttpSession 对象，参数设置为 true 表示如果没有 session 对象就创建⼀个session
+        HttpSession session = request.getSession(true);
+        if (session != null) {
+            session.removeAttribute("userid");
+        }
+        System.out.println(session.getAttribute("userid"));
+        return "session del";
     }
 
 }

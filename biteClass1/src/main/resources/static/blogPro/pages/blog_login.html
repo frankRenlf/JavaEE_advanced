@@ -48,6 +48,10 @@
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/jquerysession.js"></script>
 <script>
+
+    sessionStorage.setItem("id", 2);
+    var key = sessionStorage.getItem("id");
+    console.log(key);
     let un = document.querySelector('.username');
     let pw = document.querySelector('.password');
     let btn = document.querySelector('.submit');
@@ -73,8 +77,10 @@
                 console.log(typeof (body.data));
                 console.log(body);
                 if (body.data) {
-                    $.session.set('userid', user.id)
-                    alert('login success')
+                    console.log(key);
+                    key = sessionStorage.getItem("userid");
+                    console.log(key);
+                    alert('login success');
                     window.location.href = './blog_list.html';
                 } else {
                     alert('invalid input');
