@@ -2,9 +2,7 @@ package com.frank.biteclass1.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.frank.biteclass1.domain.Article;
-import com.frank.biteclass1.domain.User;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
 /**
  * Created with IntelliJ IDEA.
