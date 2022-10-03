@@ -1399,3 +1399,5 @@
 2022-10-03 20:17:08.508  INFO 17484 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-10-03 20:17:08.509  INFO 17484 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2022-10-03 20:17:43.686 TRACE 17484 --- [http-nio-80-exec-6] c.f.b.service.impl.UserServiceImpl       : call check method
+2022-10-03 20:20:09.286  INFO 17484 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-10-03 20:20:09.290  INFO 17484 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
