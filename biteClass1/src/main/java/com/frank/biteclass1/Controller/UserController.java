@@ -29,9 +29,6 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/user")
 public class UserController {
 
-//    private final static Logger log =
-//            LoggerFactory.getLogger(UserController.class);
-
     @Autowired
     private IUserService iUserService;
 
