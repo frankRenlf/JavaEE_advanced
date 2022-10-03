@@ -40,7 +40,7 @@ public class ArticleController {
     @PostMapping("/update")
     public Result insert(@RequestPart("article") Article article, @RequestPart("file") MultipartFile file) {
         Date date = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         System.out.println(formatter.format(date));
 
         byte[] finalBytes = null;
@@ -57,7 +57,7 @@ public class ArticleController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return new Result(true, iArticleService.save(new Article(article.getId(), article.getTitle(), article.getPublish_time(), finalBytes, article.getUser_id())));
+        return new Result(true, iArticleService.save(new Article(article.getId(), article.getTitle(), article.getPublish(), finalBytes, article.getUserId())));
     }
 
 

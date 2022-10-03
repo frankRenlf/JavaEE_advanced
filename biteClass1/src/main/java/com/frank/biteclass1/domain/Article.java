@@ -3,9 +3,7 @@ package com.frank.biteclass1.domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.w3c.dom.Text;
 
-import java.io.File;
 import java.util.Date;
 
 /**
@@ -24,11 +22,10 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Article {
-
     private Integer id;
     private String title;
-    private Date publish_time;
+    private Date publish;
     private byte[] content;
-    private Integer user_id;
+    private Integer userId;
 
 }
