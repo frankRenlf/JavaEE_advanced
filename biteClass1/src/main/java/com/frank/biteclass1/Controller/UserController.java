@@ -66,6 +66,9 @@ public class UserController {
         return new Result(true, false);
     }
 
+    /**
+     * test log
+     */
     @GetMapping("/testLogging")
     public void testLogin() {
         System.out.println("-------------------");
