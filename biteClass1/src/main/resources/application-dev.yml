@@ -16,7 +16,7 @@ mybatis-plus:
       id-type: auto
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-#    map-underscore-to-camel-case: false
+    map-underscore-to-camel-case: true
 
 student:
   id: 1
