@@ -175,3 +175,12 @@
 2022-10-05 12:45:21.644  INFO 9908 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1479 ms
 2022-10-05 12:45:21.790  INFO 9908 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2022-10-05 12:45:21.898  INFO 9908 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-10-05 12:45:22.637  INFO 9908 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-05 12:45:22.686  INFO 9908 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2022-10-05 12:45:22.700  INFO 9908 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : Started BiteClass1Application in 3.123 seconds (JVM running for 4.835)
+2022-10-05 12:45:26.232  INFO 9908 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [__session:0.016855885217422095:userid=null;] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2022-10-05 12:45:26.240  INFO 9908 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-05 12:45:26.241  INFO 9908 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-05 12:45:26.242  INFO 9908 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-05 12:45:30.840 TRACE 9908 --- [http-nio-80-exec-2] c.f.b.service.impl.UserServiceImpl       : call check method
