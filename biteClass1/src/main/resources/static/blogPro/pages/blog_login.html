@@ -49,8 +49,7 @@
 <script src="../js/jquerysession.js"></script>
 <script>
     sessionStorage.removeItem("userid");
-    let un = document.querySelector('.username');
-    let pw = document.querySelector('.password');
+
     let btn = document.querySelector('.submit');
     let btn2 = document.querySelector('.register')
     btn2.onclick = function () {
@@ -58,12 +57,12 @@
     };
 
     $('.submit').on('click', function () {
-        let uname = un.value;
-        let upassword = pw.value;
+        let un = jQuery(".username");
+        let pw = jQuery('.password');
         let user = {
             "id": null,
-            "username": uname,
-            "password": upassword
+            "username": un.value,
+            "password": pw.value
         }
         $.ajax({
             type: "POST",
@@ -81,8 +80,9 @@
                     window.location.href = './blog_list.html';
                 } else {
                     alert('invalid input');
-                    uname = '';
-                    upassword = '';
+                    un.value = '';
+                    pw.value = '';
+                    un.focus();
                 }
                 // con.value = body.data.id;
             }
