@@ -49,8 +49,11 @@
 <script src="../js/jquerysession.js"></script>
 <script>
     sessionStorage.removeItem("userid");
-    let un = document.querySelector('.username');
-    let pw = document.querySelector('.password');
+    // let un = document.querySelector('.username');
+    // console.log(un);
+    let un = $('.username')[0];
+    let pw = $('.password')[0];
+    // console.log($('.username').val());
     let btn = document.querySelector('.submit');
     let btn2 = document.querySelector('.register')
     btn2.onclick = function () {
@@ -65,6 +68,8 @@
             "username": uname,
             "password": upassword
         }
+        console.log(user);
+        console.log(JSON.stringify(user));
         $.ajax({
             type: "POST",
             contentType: 'application/json',
