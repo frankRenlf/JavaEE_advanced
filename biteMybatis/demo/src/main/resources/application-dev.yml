@@ -1,0 +1,33 @@
+server:
+  port: 8082
+#  address: 0.0.0.0
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/mycnblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: RLFrlf930Frank_wjq
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  mapper-locations:
+
+
+logging:
+  file:
+    path:
+    name:
+  level:
+    root: info
+    com:
+      frank:
+        demo:
+          Controller: trace
+          service: trace
