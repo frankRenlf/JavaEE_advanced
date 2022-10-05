@@ -30,7 +30,7 @@ public class TestController {
     public String param10(HttpServletResponse response, HttpServletRequest
             request) {
         String name = request.getParameter("name");
-// 获取所有 cookie 信息
+        // 获取所有 cookie 信息
         Cookie[] cookies = request.getCookies();
         String userAgent = request.getHeader("User-Agent");
         return name + "：" + userAgent;
