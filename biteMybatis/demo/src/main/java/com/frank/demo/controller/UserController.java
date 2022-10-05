@@ -5,6 +5,7 @@ import com.frank.demo.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,9 +29,19 @@ public class UserController {
     @Autowired
     private IUserService iUserService;
 
-    @GetMapping
-    public Result getAll() {
+    @GetMapping("/fir")
+    public Result getAll1() {
         return new Result(true, iUserService.getAll());
+    }
+
+    @GetMapping("/sec")
+    public Result getAll2() {
+        return new Result(true, iUserService.list());
+    }
+
+    @GetMapping("{id}")
+    public Result getById(@PathVariable String id) {
+        return new Result(true, iUserService.getById(id));
     }
 
 }

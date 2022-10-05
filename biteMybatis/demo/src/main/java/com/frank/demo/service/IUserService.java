@@ -1,7 +1,7 @@
 package com.frank.demo.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.frank.demo.domain.User;
+import com.frank.demo.domain.UserInfo;
 
 import java.util.List;
 
@@ -17,8 +17,9 @@ import java.util.List;
  * @github : https://github.com/frankRenlf
  * @Description :
  */
-public interface IUserService extends IService<User> {
+public interface IUserService extends IService<UserInfo> {
 
-    public List<User> getAll();
+    public List<UserInfo> getAll();
 
+    public UserInfo getById(Integer id);
 }

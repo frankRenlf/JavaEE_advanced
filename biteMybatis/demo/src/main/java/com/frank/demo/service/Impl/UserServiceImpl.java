@@ -2,7 +2,7 @@ package com.frank.demo.service.Impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.frank.demo.dao.UserDao;
-import com.frank.demo.domain.User;
+import com.frank.demo.domain.UserInfo;
 import com.frank.demo.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,12 +24,17 @@ import java.util.List;
  */
 @Service
 @Slf4j
-public class UserServiceImpl extends ServiceImpl<UserDao, User> implements IUserService {
+public class UserServiceImpl extends ServiceImpl<UserDao, UserInfo> implements IUserService {
     @Autowired
     private UserDao userDao;
 
     @Override
-    public List<User> getAll() {
+    public List<UserInfo> getAll() {
         return userDao.getAll();
+    }
+
+    @Override
+    public UserInfo getById(Integer id) {
+        return userDao.getById(id);
     }
 }
