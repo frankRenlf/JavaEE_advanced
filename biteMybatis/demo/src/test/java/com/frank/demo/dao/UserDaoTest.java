@@ -1,0 +1,30 @@
+package com.frank.demo.dao;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * Created with IntelliJ IDEA.
+ *
+ * @author : Frank.Ren
+ * @version : 1.0
+ * @Project : biteClass1
+ * @Package : com.frank.demo.dao
+ * @createTime : 2022/10/5 21:22
+ * @Email : sc19lr@leeds.ac.uk
+ * @github : https://github.com/frankRenlf
+ * @Description :
+ */
+@SpringBootTest
+class UserDaoTest {
+
+    @Test
+    void getAll() {
+    }
+
+    @Test
+    void getById() {
+    }
+}
