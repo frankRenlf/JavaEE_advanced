@@ -28,6 +28,6 @@
     <select id="selectBySub" resultType="com.frank.demo.domain.UserInfo">
         select *
         from userinfo
-        where username like concat('%', #{username}, '%')
+        where username like concat('%', #{username}, '%') order by id ${sort}
     </select>
 </mapper>

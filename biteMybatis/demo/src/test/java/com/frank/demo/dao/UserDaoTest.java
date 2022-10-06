@@ -60,6 +60,6 @@ class UserDaoTest {
 
     @Test
     void selectBySub() {
-        System.out.println(userDao.selectBySub("d"));
+        System.out.println(userDao.selectBySub("d","desc"));
     }
 }
