@@ -40,8 +40,8 @@ public class UserController {
     }
 
     @GetMapping("{id}")
-    public Result getById(@PathVariable String id) {
-        return new Result(true, iUserService.getById(Integer.valueOf(id)));
+    public Result getById(@PathVariable Integer id) {
+        return new Result(true, iUserService.getById(id));
     }
 
 }
