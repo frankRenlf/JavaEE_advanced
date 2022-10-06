@@ -23,6 +23,10 @@ class UserDaoTest {
 
     @Autowired
     private UserMapper userDao;
+    @Test
+    void getUserById() {
+        System.out.println(userDao.getUserById(1));
+    }
 
     @Test
     void getAll() {
@@ -49,7 +53,7 @@ class UserDaoTest {
     @Test
     @Transactional
     void add() {
-        User userInfo = new User(null, "testadd", "123", "photo2", null, null, null);
+        User userInfo = new User(null, "testadd", "123", "photo2", null, null, null,null);
 
         System.out.println(userDao.add(userInfo));
         System.out.println(userInfo.getId());

@@ -10,7 +10,17 @@
         <result column="createTime" property="createTime"></result>
         <result column="updateTime" property="updateTime"></result>
         <result column="state" property="state"></result>
+        <collection property="articleList"
+                    resultMap="com.frank.demo.mapper.ArticleMapper.BaseMap"
+                    columnPrefix="a_">
+        </collection>
     </resultMap>
+    <select id="getUserById" resultMap="BaseMap">
+        select u.*, a.id a_id,a.title a_title
+        from userinfo u
+                 left join articleinfo a on u.id = a.uid
+        where u.id = #{id}
+    </select>
     <insert id="add" useGeneratedKeys="true" keyProperty="id">
         insert into userinfo (username, password, photo)
         values (#{user.username}, #{user.password}, #{user.photo})
@@ -29,7 +39,7 @@
         select *
         from userinfo
     </select>
-    <select id="getById1" resultType="com.frank.demo.domain.User">
+    <select id="getById1" resultType="com.frank.demo.domain.User" resultMap="BaseMap">
         select *
         from userinfo
         where id = #{id}

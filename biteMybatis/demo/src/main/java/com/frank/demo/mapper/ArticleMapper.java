@@ -19,7 +19,7 @@ import java.util.List;
  * @Description :
  */
 @Mapper
-public interface ArticleDao{
+public interface ArticleMapper {
 //    @Select("select ai.*,ui.* from articleinfo ai inner join userinfo ui where ai.uid = ui.id")
     public List<Article> selectById(@Param("id") Integer id);
 }

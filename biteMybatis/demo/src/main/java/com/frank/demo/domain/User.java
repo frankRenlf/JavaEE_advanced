@@ -1,11 +1,13 @@
 package com.frank.demo.domain;
 
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -28,9 +30,10 @@ public class User {
     private String name;
     private String password;
     private String photo;
-//    @TableField("createtime")
+    //    @TableField("createtime")
     private Date createTime;
-//    @TableField("updatetime")
+    @TableField("updatetime")
     private Date updateTime;
     private Integer state;
+    private List<Article> articleList;
 }

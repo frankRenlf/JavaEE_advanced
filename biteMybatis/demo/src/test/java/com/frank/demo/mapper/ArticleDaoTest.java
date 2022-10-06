@@ -20,7 +20,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class ArticleDaoTest {
     @Autowired
-    private ArticleDao articleDao;
+    private ArticleMapper articleDao;
     @Test
     void selectById() {
         System.out.println(articleDao.selectById(1));

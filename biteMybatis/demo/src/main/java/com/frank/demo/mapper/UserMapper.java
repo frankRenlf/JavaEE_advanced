@@ -35,4 +35,6 @@ public interface UserMapper {
     public List<User> selectBySub(@Param("username") String name, @Param("sort") String sort);
 
     public List<User> selectJoin(Integer id);
+
+    User getUserById(Integer id);
 }
