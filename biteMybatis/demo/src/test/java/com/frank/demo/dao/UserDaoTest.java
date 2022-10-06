@@ -57,4 +57,9 @@ class UserDaoTest {
         System.out.println(userDao.add(userInfo));
         System.out.println(userInfo.getId());
     }
+
+    @Test
+    void selectBySub() {
+        System.out.println(userDao.selectBySub("d"));
+    }
 }

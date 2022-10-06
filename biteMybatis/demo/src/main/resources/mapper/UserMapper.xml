@@ -25,4 +25,9 @@
         from userinfo
         where id = #{id}
     </select>
+    <select id="selectBySub" resultType="com.frank.demo.domain.UserInfo">
+        select *
+        from userinfo
+        where username like concat('%', #{username}, '%')
+    </select>
 </mapper>

@@ -33,4 +33,6 @@ public interface UserDao extends BaseMapper<UserInfo> {
 
     public int add(@Param("user") UserInfo userInfo);
 
+    public List<UserInfo> selectBySub(@Param("username") String name);
+
 }
