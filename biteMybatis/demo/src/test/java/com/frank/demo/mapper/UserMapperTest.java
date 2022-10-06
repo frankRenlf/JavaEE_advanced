@@ -1,6 +1,9 @@
 package com.frank.demo.mapper;
 
+import com.frank.demo.domain.User;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,11 +19,19 @@ import static org.junit.jupiter.api.Assertions.*;
  * @github : https://github.com/frankRenlf
  * @Description :
  */
+@SpringBootTest
 class UserMapperTest {
-
+    @Autowired
+    private UserMapper userMapper;
     @Test
     void getUserById() {
 
 
+    }
+
+    @Test
+    void getTest() {
+        User user = new User(2, "a", "123", "photo2", null, null, null,null);
+        System.out.println(userMapper.getTest(user));
     }
 }

@@ -16,7 +16,7 @@
         </collection>
     </resultMap>
     <select id="getUserById" resultMap="BaseMap">
-        select u.*, a.id a_id,a.title a_title
+        select u.*, a.id a_id, a.title a_title
         from userinfo u
                  left join articleinfo a on u.id = a.uid
         where u.id = #{id}
@@ -55,5 +55,13 @@
         from userinfo
                  inner join articleinfo
         where userinfo.id = articleinfo.uid
+    </select>
+    <select id="getTest" resultType="com.frank.demo.domain.User" resultMap="BaseMap">
+        select *
+        from userinfo
+        where id>= #{id}
+        <if test="name != null">
+            and username like concat('%', #{name}, '%')
+        </if>
     </select>
 </mapper>

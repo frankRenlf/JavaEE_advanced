@@ -21,6 +21,7 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper {
+    User user = new User();
 
     public List<User> getAll();
 
@@ -37,4 +38,6 @@ public interface UserMapper {
     public List<User> selectJoin(Integer id);
 
     User getUserById(Integer id);
+
+    List<User> getTest(User user);
 }

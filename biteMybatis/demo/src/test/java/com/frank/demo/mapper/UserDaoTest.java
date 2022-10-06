@@ -53,7 +53,7 @@ class UserDaoTest {
     @Test
     @Transactional
     void add() {
-        User userInfo = new User(null, "testadd", "123", "photo2", null, null, null,null);
+        User userInfo = new User(2, "d", "123", "photo2", null, null, null,null);
 
         System.out.println(userDao.add(userInfo));
         System.out.println(userInfo.getId());
