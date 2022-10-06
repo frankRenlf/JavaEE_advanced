@@ -28,5 +28,6 @@ public class Article {
     @TableField("updatetime")
     private LocalDateTime updateTime;
     private Integer rcount;
+    @TableField("ui.*")
     private User user;
 }
