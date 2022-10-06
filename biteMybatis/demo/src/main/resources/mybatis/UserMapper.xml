@@ -64,4 +64,16 @@
             and username like concat('%', #{name}, '%')
         </if>
     </select>
+    <select id="getTestTrim" resultType="com.frank.demo.domain.User">
+        select *
+        from userinfo
+        <trim prefix="where" suffixOverrides="and">
+            <if test="name!=null">
+                username like concat('%', #{name}, '%') and
+            </if>
+            <if test="password!=null">
+                password like concat('%', #{password}, '%') and
+            </if>
+        </trim>
+    </select>
 </mapper>

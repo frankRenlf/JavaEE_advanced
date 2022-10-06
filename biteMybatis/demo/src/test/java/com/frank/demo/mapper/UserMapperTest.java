@@ -34,4 +34,10 @@ class UserMapperTest {
         User user = new User(2, "a", "123", "photo2", null, null, null,null);
         System.out.println(userMapper.getTest(user));
     }
+
+    @Test
+    void getTestTrim() {
+        User user = new User(2, "a", "123", "photo2", null, null, null,null);
+        System.out.println(userMapper.getTest(user));
+    }
 }

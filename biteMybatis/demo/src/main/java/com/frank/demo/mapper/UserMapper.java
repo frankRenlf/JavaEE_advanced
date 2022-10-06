@@ -40,4 +40,6 @@ public interface UserMapper {
     User getUserById(Integer id);
 
     List<User> getTest(User user);
+
+    List<User> getTestTrim(User user);
 }
