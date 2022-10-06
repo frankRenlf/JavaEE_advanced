@@ -13,6 +13,7 @@ package com.frank.demo.domain;
  * @Description :
  */
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -22,7 +23,9 @@ public class Article {
     private Integer id;
     private String title;
     private String content;
+    @TableField("createtime")
     private LocalDateTime createTime;
+    @TableField("updatetime")
     private LocalDateTime updateTime;
     private Integer rcount;
     private User user;
