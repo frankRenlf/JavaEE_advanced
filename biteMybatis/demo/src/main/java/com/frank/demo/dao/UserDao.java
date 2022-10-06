@@ -3,6 +3,7 @@ package com.frank.demo.dao;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.frank.demo.domain.UserInfo;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -26,6 +27,6 @@ public interface UserDao extends BaseMapper<UserInfo> {
 
     public UserInfo getById(Integer id);
 
-    public int updateById(Integer id);
+    public int updateById(@Param("userid") Integer id,@Param("username") String name);
 
 }

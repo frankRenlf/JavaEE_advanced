@@ -27,10 +27,16 @@ class UserDaoTest {
 
     @Test
     void getAll() {
-        Assertions.assertNotNull(userDao.getById(2));
+        System.out.println(userDao.getAll());
     }
 
     @Test
     void getById() {
+        Assertions.assertNotNull(userDao.getById(2));
+    }
+
+    @Test
+    void updateById() {
+        System.out.println(userDao.updateById(1,"frank"));
     }
 }
