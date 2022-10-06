@@ -3,7 +3,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.frank.demo.dao.ArticleDao">
     <resultMap id="BaseMap" type="com.frank.demo.domain.Article">
-        <association property="user" resultMap="">
+        <id column="id" property="id"></id>
+        <result property="content" column="content"></result>
+        <result property="createTime" column="createtime"></result>
+        <association property="user" resultMap="com.frank.demo.dao.UserDao.BaseMap" columnPrefix="u_">
         </association>
     </resultMap>
+    <select id="selectById" resultType="com.frank.demo.domain.Article">
+        select a.*, u.*
+        from articleinfo a
+                 inner join
+             userinfo u on a.uid = u.id
+        where u.id = #{id}
+    </select>
 </mapper>
