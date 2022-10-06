@@ -26,4 +26,6 @@ public interface UserDao extends BaseMapper<UserInfo> {
 
     public UserInfo getById(Integer id);
 
+    public int updateById(Integer id);
+
 }
