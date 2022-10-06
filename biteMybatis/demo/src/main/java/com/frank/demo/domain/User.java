@@ -1,7 +1,6 @@
 package com.frank.demo.domain;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,15 +22,15 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("userinfo")
+//@TableName("userinfo")
 public class User {
     private Integer id;
     private String name;
     private String password;
     private String photo;
-    @TableField("createtime")
+//    @TableField("createtime")
     private Date createTime;
-    @TableField("updatetime")
+//    @TableField("updatetime")
     private Date updateTime;
     private Integer state;
 }

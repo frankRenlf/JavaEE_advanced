@@ -1,10 +1,8 @@
-package com.frank.demo.dao;
+package com.frank.demo.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.frank.demo.domain.Article;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -21,7 +19,7 @@ import java.util.List;
  * @Description :
  */
 @Mapper
-public interface ArticleDao extends BaseMapper<Article> {
+public interface ArticleDao{
 //    @Select("select ai.*,ui.* from articleinfo ai inner join userinfo ui where ai.uid = ui.id")
-    public List<Article> selectById(Integer id);
+    public List<Article> selectById(@Param("id") Integer id);
 }

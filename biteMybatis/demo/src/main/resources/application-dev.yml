@@ -16,10 +16,13 @@ mybatis-plus:
       id-type: auto
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mybatis/**Mapper.xml
+#mybatis:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 #    map-underscore-to-camel-case: true
-  mapper-locations:
-    classpath: mapper/**Mapper.xml
-
+#  mapper-locations: classpath:mybatis/**Mapper.xml
 
 logging:
   file:

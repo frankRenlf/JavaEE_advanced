@@ -36,12 +36,12 @@ public class UserController {
 
     @GetMapping("/sec")
     public Result getAll2() {
-        return new Result(true, iUserService.list());
+        return new Result(true);
     }
 
     @GetMapping("{id}")
     public Result getById(@PathVariable String id) {
-        return new Result(true, iUserService.getById(id));
+        return new Result(true, iUserService.getById(Integer.valueOf(id)));
     }
 
 }

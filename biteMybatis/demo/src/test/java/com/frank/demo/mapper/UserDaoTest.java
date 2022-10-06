@@ -1,7 +1,6 @@
-package com.frank.demo.dao;
+package com.frank.demo.mapper;
 
 import com.frank.demo.domain.User;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,7 +22,7 @@ import org.springframework.transaction.annotation.Transactional;
 class UserDaoTest {
 
     @Autowired
-    private UserDao userDao;
+    private UserMapper userDao;
 
     @Test
     void getAll() {
@@ -32,7 +31,7 @@ class UserDaoTest {
 
     @Test
     void getById() {
-        Assertions.assertNotNull(userDao.getById(2));
+        System.out.println(userDao.getById1(2));
     }
 
     @Test

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.frank.demo.mapper.ArticleDao">
+    <resultMap id="BaseMap" type="com.frank.demo.domain.Article">
+        <id property="id" column="id"></id>
+        <result property="title" column="title"></result>
+        <result property="content" column="content"></result>
+        <result property="createtime" column="createtime"></result>
+        <result property="updatetime" column="updatetime"></result>
+        <result property="uid" column="uid"></result>
+        <result property="rcount" column="rcount"></result>
+        <result property="state" column="state"></result>
+        <association property="user"
+                     resultMap="com.frank.demo.mapper.UserMapper.BaseMap"
+                     columnPrefix="u_">
+        </association>
+    </resultMap>
+    <select id="selectById" resultType="com.frank.demo.domain.Article" resultMap="BaseMap">
+        select a.*, u.id u_id
+        from articleinfo a
+                 inner join
+             userinfo u on a.uid = u.id
+        where u.id = #{id}
+    </select>
+</mapper>

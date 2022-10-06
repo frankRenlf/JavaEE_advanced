@@ -1,6 +1,5 @@
-package com.frank.demo.dao;
+package com.frank.demo.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.frank.demo.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -21,11 +20,11 @@ import java.util.List;
  */
 
 @Mapper
-public interface UserDao extends BaseMapper<User> {
+public interface UserMapper {
 
     public List<User> getAll();
 
-    public User getById(Integer id);
+    public User getById1(Integer id);
 
     public int updateById(@Param("userid") Integer id, @Param("username") String name);
 

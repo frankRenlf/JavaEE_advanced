@@ -13,21 +13,27 @@ package com.frank.demo.domain;
  * @Description :
  */
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+//@TableName("articleinfo")
 public class Article {
     private Integer id;
     private String title;
     private String content;
-    @TableField("createtime")
-    private LocalDateTime createTime;
-    @TableField("updatetime")
-    private LocalDateTime updateTime;
+    //    @TableField("createtime")
+    private LocalDateTime createtime;
+    //    @TableField("updatetime")
+    private LocalDateTime updatetime;
+    private Integer uid;
     private Integer rcount;
+    private Integer state;
     private User user;
 }
