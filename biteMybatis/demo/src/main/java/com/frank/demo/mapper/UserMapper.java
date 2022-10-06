@@ -42,4 +42,6 @@ public interface UserMapper {
     List<User> getTest(User user);
 
     List<User> testTrim(User user);
+
+    List<User> testWhere(User user);
 }

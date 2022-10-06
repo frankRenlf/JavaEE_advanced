@@ -30,6 +30,17 @@
         set username=#{username}
         where id = #{userid}
     </update>
+    <select id="testWhere" resultType="com.frank.demo.domain.User" resultMap="BaseMap">
+        select * from userinfo
+        <where>
+            <if test="id!=null">
+                and id>#{id}
+            </if>
+            <if test="name!=null">
+                and username like concat('%',#{name},'%')
+            </if>
+        </where>
+    </select>
     <delete id="deleteByIdInt">
         delete
         from userinfo

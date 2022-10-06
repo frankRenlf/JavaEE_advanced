@@ -40,4 +40,10 @@ class UserMapperTest {
         User user = new User(1, "t", "2", "photo2", null, null, null,null);
         System.out.println(userMapper.testTrim(user));
     }
+
+    @Test
+    void testWhere() {
+        User user = new User(2, "d", "2", "photo2", null, null, null,null);
+        System.out.println(userMapper.testWhere(user));
+    }
 }
