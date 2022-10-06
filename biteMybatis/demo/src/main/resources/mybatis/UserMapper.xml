@@ -64,7 +64,7 @@
             and username like concat('%', #{name}, '%')
         </if>
     </select>
-    <select id="getTestTrim" resultType="com.frank.demo.domain.User">
+    <select id="testTrim" resultType="com.frank.demo.domain.User" resultMap="BaseMap">
         select *
         from userinfo
         <trim prefix="where" suffixOverrides="and">

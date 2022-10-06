@@ -41,5 +41,5 @@ public interface UserMapper {
 
     List<User> getTest(User user);
 
-    List<User> getTestTrim(User user);
+    List<User> testTrim(User user);
 }
