@@ -1,9 +1,11 @@
 package com.frank.demo.dao;
 
+import com.frank.demo.domain.UserInfo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,7 +38,23 @@ class UserDaoTest {
     }
 
     @Test
+    @Transactional
     void updateById() {
-        System.out.println(userDao.updateById(1,"frank"));
+        System.out.println(userDao.updateById(1, "test"));
+    }
+
+    @Test
+    @Transactional
+    void deleteByIdInt() {
+        System.out.println(userDao.deleteByIdInt(2));
+    }
+
+    @Test
+    @Transactional
+    void add() {
+        UserInfo userInfo = new UserInfo(null, "testadd", "123", "photo2", null, null, null);
+
+        System.out.println(userDao.add(userInfo));
+        System.out.println(userInfo.getId());
     }
 }

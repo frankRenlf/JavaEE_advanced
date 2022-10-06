@@ -2,11 +2,20 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.frank.demo.dao.UserDao">
+    <insert id="add" useGeneratedKeys="true" keyProperty="id">
+        insert into userinfo (username, password, photo)
+        values (#{user.username}, #{user.password}, #{user.photo})
+    </insert>
     <update id="updateById">
         update userinfo
         set username=#{username}
         where id = #{userid}
     </update>
+    <delete id="deleteByIdInt">
+        delete
+        from userinfo
+        where id = #{userid}
+    </delete>
     <select id="getAll" resultType="com.frank.demo.domain.UserInfo">
         select *
         from userinfo

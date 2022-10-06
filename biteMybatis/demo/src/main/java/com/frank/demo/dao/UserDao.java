@@ -29,4 +29,8 @@ public interface UserDao extends BaseMapper<UserInfo> {
 
     public int updateById(@Param("userid") Integer id,@Param("username") String name);
 
+    public int deleteByIdInt(@Param("userid") Integer id);
+
+    public int add(@Param("user") UserInfo userInfo);
+
 }
