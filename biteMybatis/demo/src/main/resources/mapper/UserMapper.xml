@@ -16,18 +16,25 @@
         from userinfo
         where id = #{userid}
     </delete>
-    <select id="getAll" resultType="com.frank.demo.domain.UserInfo">
+    <select id="getAll" resultType="com.frank.demo.domain.User">
         select *
         from userinfo
     </select>
-    <select id="getById" resultType="com.frank.demo.domain.UserInfo">
+    <select id="getById" resultType="com.frank.demo.domain.User">
         select *
         from userinfo
         where id = #{id}
     </select>
-    <select id="selectBySub" resultType="com.frank.demo.domain.UserInfo">
+    <select id="selectBySub" resultType="com.frank.demo.domain.User">
         select *
         from userinfo
-        where username like concat('%', #{username}, '%') order by id ${sort}
+        where username like concat('%', #{username}, '%')
+        order by id ${sort}
+    </select>
+    <select id="selectJoin" resultType="com.frank.demo.domain.User">
+        select userinfo.id uid, articleinfo.id aid, userinfo.username
+        from userinfo
+                 inner join articleinfo
+        where userinfo.id = articleinfo.uid
     </select>
 </mapper>

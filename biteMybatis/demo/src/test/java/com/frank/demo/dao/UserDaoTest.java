@@ -1,13 +1,11 @@
 package com.frank.demo.dao;
 
-import com.frank.demo.domain.UserInfo;
+import com.frank.demo.domain.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -52,7 +50,7 @@ class UserDaoTest {
     @Test
     @Transactional
     void add() {
-        UserInfo userInfo = new UserInfo(null, "testadd", "123", "photo2", null, null, null);
+        User userInfo = new User(null, "testadd", "123", "photo2", null, null, null);
 
         System.out.println(userDao.add(userInfo));
         System.out.println(userInfo.getId());
@@ -61,5 +59,10 @@ class UserDaoTest {
     @Test
     void selectBySub() {
         System.out.println(userDao.selectBySub("d","desc"));
+    }
+
+    @Test
+    void selectJoin() {
+        System.out.println(userDao.selectJoin(1));
     }
 }

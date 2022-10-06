@@ -24,7 +24,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @TableName("userinfo")
-public class UserInfo {
+public class User {
     private Integer id;
     private String username;
     private String password;
