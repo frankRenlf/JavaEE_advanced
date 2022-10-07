@@ -48,4 +48,6 @@ public interface UserMapper {
     List<User> testWhere(User user);
 
     Integer testSet(User user);
+
+    List<User> testForeach(List<Integer> list);
 }

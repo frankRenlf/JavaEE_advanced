@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -58,6 +59,17 @@ class UserMapperTest {
     @Test
     void getAllUser() {
         List<User> list = userMapper.getAllUser();
+        for(User user:list){
+            System.out.println(user);
+        }
+    }
+
+    @Test
+    void testForeach() {
+        List<Integer> elem = new ArrayList<>();
+        elem.add(1);
+        elem.add(4);
+        List<User> list = userMapper.testForeach(elem);
         for(User user:list){
             System.out.println(user);
         }

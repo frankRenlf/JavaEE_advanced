@@ -104,5 +104,12 @@
             </if>
         </trim>
     </select>
+    <select id="testForeach" resultType="com.frank.demo.domain.User" resultMap="BaseMap">
+        select * from userinfo
+        where id in
+        <foreach collection="list" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </select>
 
 </mapper>
