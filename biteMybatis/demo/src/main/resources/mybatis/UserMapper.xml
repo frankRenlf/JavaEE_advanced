@@ -30,6 +30,18 @@
         set username=#{username}
         where id = #{userid}
     </update>
+    <update id="testSet" useGeneratedKeys="true" keyProperty="id">
+        update userinfo
+        <set>
+            <if test="name!=null">
+                username = #{name},
+            </if>
+            <if test="password!=null">
+                password = #{password},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
     <select id="testWhere" resultType="com.frank.demo.domain.User" resultMap="BaseMap">
         select * from userinfo
         <where>

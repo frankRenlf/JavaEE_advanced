@@ -46,4 +46,10 @@ class UserMapperTest {
         User user = new User(2, "d", "2", "photo2", null, null, null,null);
         System.out.println(userMapper.testWhere(user));
     }
+
+    @Test
+    void testSet() {
+        User user = new User(2, "test_set", "2", "photo2", null, null, null,null);
+        System.out.println(userMapper.testSet(user));
+    }
 }
