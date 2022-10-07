@@ -1,5 +1,6 @@
 package com.frank.demo.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.frank.demo.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -20,7 +21,7 @@ import java.util.List;
  */
 
 @Mapper
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<User> {
     User user = new User();
 
     public List<User> getAll();

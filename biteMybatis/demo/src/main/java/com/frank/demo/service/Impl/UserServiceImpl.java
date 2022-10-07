@@ -1,5 +1,6 @@
 package com.frank.demo.service.Impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.frank.demo.mapper.UserMapper;
 import com.frank.demo.domain.User;
 import com.frank.demo.service.IUserService;
@@ -23,7 +24,7 @@ import java.util.List;
  */
 @Service
 @Slf4j
-public class UserServiceImpl implements IUserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
     @Autowired
     private UserMapper userDao;
 

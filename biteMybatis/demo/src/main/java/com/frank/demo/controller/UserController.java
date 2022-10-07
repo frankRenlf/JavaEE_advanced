@@ -36,7 +36,7 @@ public class UserController {
 
     @GetMapping("/sec")
     public Result getAll2() {
-        return new Result(true);
+        return new Result(true,iUserService.list());
     }
 
     @GetMapping("{id}")
