@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -51,5 +53,13 @@ class UserMapperTest {
     void testSet() {
         User user = new User(2, "test_set", "2", "photo2", null, null, null,null);
         System.out.println(userMapper.testSet(user));
+    }
+
+    @Test
+    void getAllUser() {
+        List<User> list = userMapper.getAllUser();
+        for(User user:list){
+            System.out.println(user);
+        }
     }
 }

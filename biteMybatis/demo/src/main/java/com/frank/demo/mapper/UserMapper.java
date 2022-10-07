@@ -38,7 +38,7 @@ public interface UserMapper {
     public List<User> selectJoin(Integer id);
 
     User getUserById(Integer id);
-
+    List<User> getAllUser();
     List<User> getTest(User user);
 
     List<User> testTrim(User user);
