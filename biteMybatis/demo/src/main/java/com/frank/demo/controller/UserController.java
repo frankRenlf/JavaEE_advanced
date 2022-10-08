@@ -44,4 +44,7 @@ public class UserController {
         return new Result(true, iUserService.getById(id));
     }
 
+    public void fastTest(){
+        System.out.println("hello");
+    }
 }

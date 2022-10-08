@@ -3,6 +3,7 @@ package com.frank.demo.aop;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StopWatch;
 
 /**
  * Created with IntelliJ IDEA.
@@ -50,15 +51,19 @@ public class UserAspect {
     // 添加环绕通知
     @Around("pointcut()")
     public Object doAround(ProceedingJoinPoint joinPoint) {
+        StopWatch stopWatch = new StopWatch();
         Object obj = null;
         System.out.println("Around ⽅法开始执⾏");
         try {
-// 执⾏拦截⽅法
+            stopWatch.start();
+            // 执⾏拦截⽅法
             obj = joinPoint.proceed();
+            stopWatch.stop();
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
         System.out.println("Around ⽅法结束执⾏");
+        System.out.println(joinPoint.getSignature().getName() + " time consumption: " + stopWatch.getTotalTimeMillis() + "ms");
         return obj;
     }
 }

@@ -37,4 +37,9 @@ class UserControllerTest {
     void getById() {
         System.out.println(userController.getById(2));
     }
+
+    @Test
+    void fastTest() {
+        userController.fastTest();
+    }
 }
