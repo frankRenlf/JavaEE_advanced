@@ -37,29 +37,26 @@ function uploadImage(event) {
 function applyFilter() {
   // Create a string that will contain all the filters
   // to be used for the image
-  let filterString =
-    "brightness(" +
-    brightnessSlider.value +
-    "%" +
-    ") contrast(" +
-    contrastSlider.value +
-    "%" +
-    ") grayscale(" +
-    grayscaleSlider.value +
-    "%" +
-    ") saturate(" +
-    saturateSlider.value +
-    "%" +
-    ") sepia(" +
-    sepiaSlider.value +
-    "%" +
-    ") hue-rotate(" +
-    hueRotateSlider.value +
-    "deg" +
-    ")";
-
   // Apply the filter to the image
-  context.filter = filterString;
+  context.filter = "brightness(" +
+      brightnessSlider.value +
+      "%" +
+      ") contrast(" +
+      contrastSlider.value +
+      "%" +
+      ") grayscale(" +
+      grayscaleSlider.value +
+      "%" +
+      ") saturate(" +
+      saturateSlider.value +
+      "%" +
+      ") sepia(" +
+      sepiaSlider.value +
+      "%" +
+      ") hue-rotate(" +
+      hueRotateSlider.value +
+      "deg" +
+      ")";
 
   // Draw the edited image to canvas
   context.drawImage(image, 0, 0);
