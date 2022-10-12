@@ -1,43 +1,68 @@
-2022-10-07 16:14:11.443  INFO 8336 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : Starting BiteClass1Application using Java 15.0.2 on DESKTOP-24TA0GO with PID 8336 (C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1)
-2022-10-07 16:14:11.448  INFO 8336 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : The following 1 profile is active: "dev"
-2022-10-07 16:14:11.483  INFO 8336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-10-07 16:14:11.483  INFO 8336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-10-07 16:14:12.416  INFO 8336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
-2022-10-07 16:14:12.424  INFO 8336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-07 16:14:12.424  INFO 8336 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-10-07 16:14:12.490  INFO 8336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-07 16:14:12.490  INFO 8336 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1006 ms
-2022-10-07 16:14:12.606  INFO 8336 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2022-10-07 16:14:12.693  INFO 8336 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2022-10-07 16:14:13.421  INFO 8336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-10-07 16:14:13.458  INFO 8336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
-2022-10-07 16:14:13.467  INFO 8336 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : Started BiteClass1Application in 2.434 seconds (JVM running for 3.212)
-2022-10-07 16:14:32.766  INFO 8336 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [__session:0.016855885217422095:userid=null;] that contained an invalid cookie. That cookie will be ignored.
+2022-10-12 19:21:55.726  INFO 19000 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : Starting BiteClass1Application using Java 15.0.2 on DESKTOP-24TA0GO with PID 19000 (C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1)
+2022-10-12 19:21:55.731  INFO 19000 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : The following 1 profile is active: "dev"
+2022-10-12 19:21:55.795  INFO 19000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-12 19:21:55.796  INFO 19000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-12 19:21:57.023  INFO 19000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2022-10-12 19:21:57.036  INFO 19000 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-12 19:21:57.036  INFO 19000 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-12 19:21:57.141  INFO 19000 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-12 19:21:57.141  INFO 19000 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1344 ms
+2022-10-12 19:21:57.323  INFO 19000 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-10-12 19:21:57.471  INFO 19000 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-10-12 19:21:58.721  INFO 19000 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-12 19:21:58.785  INFO 19000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2022-10-12 19:21:58.796  INFO 19000 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : Started BiteClass1Application in 3.657 seconds (JVM running for 4.745)
+2022-10-12 19:22:42.579  INFO 19000 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [__session:0.016855885217422095:userid=null;] that contained an invalid cookie. That cookie will be ignored.
  Note: further occurrences of this error will be logged at DEBUG level.
-2022-10-07 16:14:32.772  INFO 8336 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-07 16:14:32.772  INFO 8336 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-10-07 16:14:32.773  INFO 8336 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-10-07 16:14:51.750 TRACE 8336 --- [http-nio-80-exec-10] c.f.b.service.impl.UserServiceImpl       : call check method
-2022-10-07 16:16:37.893  INFO 8336 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2022-10-07 16:16:37.897  INFO 8336 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2022-10-07 16:16:41.091  INFO 22036 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : Starting BiteClass1Application using Java 15.0.2 on DESKTOP-24TA0GO with PID 22036 (C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1)
-2022-10-07 16:16:41.092  INFO 22036 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : The following 1 profile is active: "dev"
-2022-10-07 16:16:41.140  INFO 22036 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-10-07 16:16:41.140  INFO 22036 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-10-07 16:16:42.166  INFO 22036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
-2022-10-07 16:16:42.174  INFO 22036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-07 16:16:42.175  INFO 22036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-10-07 16:16:42.249  INFO 22036 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-07 16:16:42.250  INFO 22036 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1109 ms
-2022-10-07 16:16:42.366  INFO 22036 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2022-10-07 16:16:42.465  INFO 22036 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2022-10-07 16:16:43.112  INFO 22036 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-10-07 16:16:43.152  INFO 22036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
-2022-10-07 16:16:43.161  INFO 22036 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : Started BiteClass1Application in 2.479 seconds (JVM running for 3.226)
-2022-10-07 16:16:56.808  INFO 22036 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [__session:0.016855885217422095:userid=null;] that contained an invalid cookie. That cookie will be ignored.
+2022-10-12 19:22:42.586  INFO 19000 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-12 19:22:42.586  INFO 19000 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-12 19:22:42.588  INFO 19000 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-12 19:23:02.613  WARN 19000 --- [http-nio-80-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'id': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false'); nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'id': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 4]]
+2022-10-12 19:23:30.734  WARN 19000 --- [http-nio-80-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'id': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false'); nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'id': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 4]]
+2022-10-12 19:24:16.001  INFO 19000 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-10-12 19:24:16.002  INFO 19000 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-10-12 19:24:19.791  INFO 9976 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : Starting BiteClass1Application using Java 15.0.2 on DESKTOP-24TA0GO with PID 9976 (C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1)
+2022-10-12 19:24:19.793  INFO 9976 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : The following 1 profile is active: "dev"
+2022-10-12 19:24:19.858  INFO 9976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-12 19:24:19.858  INFO 9976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-12 19:24:21.208  INFO 9976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2022-10-12 19:24:21.219  INFO 9976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-12 19:24:21.220  INFO 9976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-12 19:24:21.354  INFO 9976 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-12 19:24:21.355  INFO 9976 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1496 ms
+2022-10-12 19:24:21.577  INFO 9976 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-10-12 19:24:21.791  INFO 9976 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-10-12 19:24:22.664  INFO 9976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-12 19:24:22.709  INFO 9976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2022-10-12 19:24:22.719  INFO 9976 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : Started BiteClass1Application in 3.434 seconds (JVM running for 4.38)
+2022-10-12 19:24:27.163  INFO 9976 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [__session:0.016855885217422095:userid=null;] that contained an invalid cookie. That cookie will be ignored.
  Note: further occurrences of this error will be logged at DEBUG level.
-2022-10-07 16:16:56.813  INFO 22036 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-07 16:16:56.814  INFO 22036 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-10-07 16:16:56.815  INFO 22036 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-10-07 16:18:07.666  INFO 22036 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2022-10-07 16:18:07.667  INFO 22036 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-10-12 19:24:27.167  INFO 9976 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-12 19:24:27.168  INFO 9976 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-12 19:24:27.169  INFO 9976 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-12 19:24:30.608  WARN 9976 --- [http-nio-80-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.frank.biteclass1.domain.User` from Array value (token `JsonToken.START_ARRAY`); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `com.frank.biteclass1.domain.User` from Array value (token `JsonToken.START_ARRAY`)<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 1]]
+2022-10-12 19:25:13.881  INFO 9976 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-10-12 19:25:13.883  INFO 9976 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-10-12 19:25:17.807  INFO 1376 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : Starting BiteClass1Application using Java 15.0.2 on DESKTOP-24TA0GO with PID 1376 (C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\biteClass1)
+2022-10-12 19:25:17.809  INFO 1376 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : The following 1 profile is active: "dev"
+2022-10-12 19:25:17.881  INFO 1376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-12 19:25:17.881  INFO 1376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-12 19:25:19.284  INFO 1376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2022-10-12 19:25:19.296  INFO 1376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-12 19:25:19.296  INFO 1376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-12 19:25:19.413  INFO 1376 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-12 19:25:19.414  INFO 1376 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1532 ms
+2022-10-12 19:25:19.607  INFO 1376 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-10-12 19:25:19.746  INFO 1376 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-10-12 19:25:20.515  INFO 1376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-10-12 19:25:20.559  INFO 1376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2022-10-12 19:25:20.570  INFO 1376 --- [restartedMain] c.f.biteclass1.BiteClass1Application     : Started BiteClass1Application in 3.335 seconds (JVM running for 4.305)
+2022-10-12 19:25:26.627  INFO 1376 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [__session:0.016855885217422095:userid=null;] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2022-10-12 19:25:26.635  INFO 1376 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-12 19:25:26.635  INFO 1376 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-12 19:25:26.636  INFO 1376 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-10-12 19:25:30.287 TRACE 1376 --- [http-nio-80-exec-7] c.f.b.service.impl.UserServiceImpl       : call check method
+2022-10-12 19:25:40.309 TRACE 1376 --- [http-nio-80-exec-8] c.f.b.service.impl.UserServiceImpl       : call check method
+2022-10-12 19:25:51.419  INFO 1376 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-10-12 19:25:51.425  INFO 1376 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
