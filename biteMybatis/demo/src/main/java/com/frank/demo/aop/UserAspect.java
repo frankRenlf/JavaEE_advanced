@@ -1,9 +1,13 @@
 package com.frank.demo.aop;
 
+import com.frank.demo.controller.UserController;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StopWatch;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,12 +25,15 @@ import org.springframework.util.StopWatch;
 @Component
 public class UserAspect {
 
+    HttpSession session = UserController.session;
+
     @Pointcut(value = "execution(* com.frank.demo.controller.UserController.*(..))")
     public void pointcut() {
     }
 
     @Before("pointcut()")
     public void doBefore() {
+        session.getAttribute("userid");
         System.out.println("执⾏ Before ⽅法");
     }
 
