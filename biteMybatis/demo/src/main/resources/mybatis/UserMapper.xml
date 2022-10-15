@@ -4,7 +4,7 @@
 <mapper namespace="com.frank.demo.mapper.UserMapper">
     <resultMap id="BaseMap" type="com.frank.demo.domain.User">
         <id column="id" property="id"></id>
-        <result column="username" property="name"></result>
+        <result column="username" property="username"></result>
         <result column="password" property="password"></result>
         <result column="photo" property="photo"></result>
         <result column="createTime" property="createTime"></result>

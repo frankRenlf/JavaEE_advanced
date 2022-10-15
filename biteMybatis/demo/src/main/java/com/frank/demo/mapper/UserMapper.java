@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.frank.demo.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -22,6 +23,9 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper extends BaseMapper<User> {
+
+    @Select("select * from userinfo where username = #{username}")
+    public User selectByName(String username);
     User user = new User();
 
     public List<User> getAll();

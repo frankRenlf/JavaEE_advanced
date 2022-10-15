@@ -22,4 +22,7 @@ public interface IUserService extends IService<User> {
     public List<User> getAll();
 
     public User getById(Integer id);
+    Integer check(User user);
+
+    Boolean contain(User user);
 }

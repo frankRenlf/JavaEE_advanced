@@ -23,23 +23,23 @@ class UserControllerTest {
 
     @Autowired
     private UserController userController;
-    @Test
-    void getAll1() {
-        System.out.println(userController.getAll1());
-    }
-
-    @Test
-    void getAll2() {
-        System.out.println(userController.getAll2());
-    }
+//    @Test
+//    void getAll1() {
+//        System.out.println(userController.getAll1());
+//    }
+//
+//    @Test
+//    void getAll2() {
+//        System.out.println(userController.getAll2());
+//    }
 
     @Test
     void getById() {
         System.out.println(userController.getById(2));
     }
 
-    @Test
-    void fastTest() {
-        userController.fastTest();
-    }
+//    @Test
+//    void fastTest() {
+//        userController.fastTest();
+//    }
 }

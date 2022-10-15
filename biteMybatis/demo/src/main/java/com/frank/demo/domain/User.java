@@ -27,7 +27,7 @@ import java.util.List;
 //@TableName("userinfo")
 public class User {
     private Integer id;
-    private String name;
+    private String username;
     private String password;
     private String photo;
     //    @TableField("createtime")
@@ -36,4 +36,5 @@ public class User {
     private Date updateTime;
     private Integer state;
     private List<Article> articleList;
+
 }
