@@ -20,6 +20,6 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface UserDao extends BaseMapper<User> {
 
-    @Select("select * from tbl_user where username = #{username}")
+    @Select("select * from userinfo where username = #{username}")
     public User selectByName(String username);
 }

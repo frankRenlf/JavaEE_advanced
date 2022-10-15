@@ -47,11 +47,11 @@ public class UserController {
         return new Result(true, iUserService.getById(id));
     }
 
+    public static HttpSession session;
     @PostMapping("/login")
     public Result login(@RequestBody User user, HttpServletRequest request) {
         Integer index = iUserService.check(user);
-
-        HttpSession session = request.getSession(true );
+        session = request.getSession(true );
         if (index>0) {
             session.setAttribute("userid", index);
             System.out.println(session.getAttribute("userid"));
