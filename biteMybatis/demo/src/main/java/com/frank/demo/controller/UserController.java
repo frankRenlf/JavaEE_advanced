@@ -64,7 +64,7 @@ public class UserController {
                 && !user.getUsername().equals("") && !user.getPassword().equals("")
                 && !iUserService.contain(user)) {
             log.info(user.getUsername() + " register success");
-            return new Result(true, iUserService.save(user));
+            return new Result(true, iUserService.addUser(user));
         }
         log.info(user.getUsername() + " register failed");
         return new Result(true, false);

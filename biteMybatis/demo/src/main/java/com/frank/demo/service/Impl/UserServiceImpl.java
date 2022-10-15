@@ -57,4 +57,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         return pre != null
                 && pre.getUsername().equals(user.getUsername());
     }
+
+    @Override
+    public int addUser(User user) {
+        return userDao.add(user);
+    }
 }

@@ -63,10 +63,10 @@
                 let con = document.querySelector('.text1');
                 console.log(typeof (body.data));
                 console.log(body);
-                if(user.username === ''||user.password===''){
+                if (user.username === '' || user.password === '') {
                     alert("null username or password")
-                }else {
-                    if (body.data) {
+                } else {
+                    if (body.data != null) {
                         alert('register success')
                         window.location.href = './blog_login.html';
                     } else {

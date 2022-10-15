@@ -16,12 +16,26 @@
         </collection>
     </resultMap>
     <select id="getAllUser" resultType="com.frank.demo.domain.User" resultMap="BaseMap">
-        select u.*, a.id a_id, a.title a_title
+        select u.*,
+               a.id         a_id,
+               a.title      a_title,
+               a.content    a_content,
+               a.createtime a_createtime,
+               a.updatetime a_updatetime, a.uid a_uid,
+               a.rcount     a_rcount,
+               a.state      a_state
         from userinfo u
                  left join articleinfo a on u.id = a.uid
     </select>
     <select id="getUserById" resultMap="BaseMap">
-        select u.*, a.id a_id, a.title a_title
+        select u.*,
+               a.id         a_id,
+               a.title      a_title,
+               a.content    a_content,
+               a.createtime a_createtime,
+               a.updatetime a-updatetime, a.uid a_uid,
+               a.rcount     a_rcount,
+               a.state      a_state
         from userinfo u
                  left join articleinfo a on u.id = a.uid
         where u.id = #{id}

@@ -30,7 +30,7 @@ class UserDaoTest {
 
     @Test
     void getAll() {
-        System.out.println(userDao.getAll());
+        System.out.println(userDao.getAllUser());
     }
 
     @Test

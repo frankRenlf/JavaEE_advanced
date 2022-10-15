@@ -25,4 +25,6 @@ public interface IUserService extends IService<User> {
     Integer check(User user);
 
     Boolean contain(User user);
+
+    int addUser(User user);
 }
