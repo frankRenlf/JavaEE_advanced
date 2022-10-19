@@ -21,4 +21,6 @@ import java.util.List;
 public interface IArticleService extends IService<Article> {
 
     public List<Article> getAll();
+
+    public Article selectById(Integer id);
 }

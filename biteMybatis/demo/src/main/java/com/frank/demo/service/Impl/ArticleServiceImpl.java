@@ -1,6 +1,5 @@
 package com.frank.demo.service.Impl;
 
-import com.alibaba.druid.sql.ast.statement.SQLAlterTablePartitionLifecycle;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.frank.demo.domain.Article;
 import com.frank.demo.mapper.ArticleMapper;
@@ -31,10 +30,17 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     private ArticleMapper articleMapper;
 
 
+
+
     @Override
     public List<Article> getAll() {
 
         return articleMapper.selectAll();
 
+    }
+
+    @Override
+    public Article selectById(Integer id) {
+        return articleMapper.selectById(id);
     }
 }
