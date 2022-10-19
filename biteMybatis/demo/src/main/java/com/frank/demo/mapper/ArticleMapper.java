@@ -23,7 +23,7 @@ import java.util.List;
  */
 @Mapper
 public interface ArticleMapper extends BaseMapper<Article> {
-    @Select("select ai.*,ui.* from articleinfo ai inner join userinfo ui where ai.uid = ui.id")
+    @Select("select ai.*,ui.* from (articleinfo ai inner join userinfo ui where ai.uid = ui.id)")
     public List<Article> selectById(@Param("id") Integer id);
 
 
