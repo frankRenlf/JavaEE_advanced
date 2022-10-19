@@ -16,7 +16,7 @@
                      columnPrefix="u_">
         </association>
     </resultMap>
-    <select id="selectById" resultType="com.frank.demo.domain.Article" resultMap="BaseMap">
+    <select id="selectById2" resultType="com.frank.demo.domain.Article" resultMap="BaseMap">
         select a.*, u.id u_id
         from articleinfo a
                  inner join

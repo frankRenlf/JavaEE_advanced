@@ -40,7 +40,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     }
 
     @Override
-    public Article selectById(Integer id) {
-        return articleMapper.selectById(id);
+    public Article selectById2(Integer id) {
+        return articleMapper.selectById2(id);
     }
 }

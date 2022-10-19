@@ -2,7 +2,6 @@ package com.frank.demo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.frank.demo.domain.Article;
-import com.frank.demo.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -23,10 +22,10 @@ import java.util.List;
  */
 @Mapper
 public interface ArticleMapper extends BaseMapper<Article> {
-    @Select("select ai.*, ui.*\n" +
-            "from (articleinfo ai inner join userinfo ui on ai.uid = ui.id)\n" +
-            "where ai.id = id")
-    public Article selectById(@Param("id") Integer id);
+//    @Select("select ai.*, ui.*\n" +
+//            "from (articleinfo ai inner join userinfo ui on ai.uid = ui.id)\n" +
+//            "where ai.id = id")
+    public Article selectById2(@Param("id") Integer id);
 
 
     @Select("select ai.*,ui.* from articleinfo ai inner join userinfo ui where ai.uid = ui.id")

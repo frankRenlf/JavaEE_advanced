@@ -23,6 +23,6 @@ class ArticleDaoTest {
     private ArticleMapper articleDao;
     @Test
     void selectById() {
-        System.out.println(articleDao.selectById(1));
+        System.out.println(articleDao.selectById2(1));
     }
 }

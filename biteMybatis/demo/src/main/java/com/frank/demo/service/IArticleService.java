@@ -2,7 +2,6 @@ package com.frank.demo.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.frank.demo.domain.Article;
-import com.frank.demo.domain.User;
 
 import java.util.List;
 
@@ -22,5 +21,5 @@ public interface IArticleService extends IService<Article> {
 
     public List<Article> getAll();
 
-    public Article selectById(Integer id);
+    public Article selectById2(Integer id);
 }

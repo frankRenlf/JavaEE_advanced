@@ -31,7 +31,7 @@ public class ArticleController {
 
     @GetMapping("/articlelist/{id}")
     public Result getById(@PathVariable Integer id) {
-        return new Result(true, iArticleService.selectById(id));
+        return new Result(true, iArticleService.selectById2(id));
     }
 
     @GetMapping("/articlelist")
