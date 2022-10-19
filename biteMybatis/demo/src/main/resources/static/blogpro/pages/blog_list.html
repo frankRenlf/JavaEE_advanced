@@ -58,19 +58,6 @@
             </div>
             <a href="blog_details.html" class="detail">查看全文 &gt;&gt;</a>
         </div>
-        <div class="blog">
-            <div class="title">我的第二篇博客</div>
-            <div class="date">2021-06-02</div>
-            <div class="desc">
-                从今天起, 我要认真敲代码. Lorem ipsum, dolor sit amet consectetur
-                adipisicing elit. Cum distinctio ullam eum ut
-                veroab laborum numquam tenetur est in dolorum a sint, assumenda
-                adipisci similique quaerat vel.
-                Facere,
-                et.
-            </div>
-            <a href="#" class="detail">查看全文 &gt;&gt;</a>
-        </div>
     </div>
 </div>
 <script src="../js/jquery.min.js"></script>
@@ -78,10 +65,12 @@
     function getBlogList() {
         $.ajax({
             type: 'get',
-            url: 'blog',
+            url: '/article/articlelist',
             success: function (body) {
+                console.log(body);
+                console.log(body.data);
                 let container = document.querySelector('.container-right');
-                for (let blog of body) {
+                for (let blog of body.data) {
                     let blogDiv = document.createElement('div');
                     blogDiv.className = 'blog';
 
@@ -92,7 +81,7 @@
 
                     let dateDiv = document.createElement('div');
                     dateDiv.className = 'date';
-                    dateDiv.innerHTML = blog.postTime;
+                    dateDiv.innerHTML = blog.createtime;
                     blogDiv.appendChild(dateDiv);
 
                     let descDiv = document.createElement('div');
@@ -103,7 +92,7 @@
                     let a = document.createElement('a');
                     a.className = 'detail';
                     a.innerHTML = 'View Full >>';
-                    a.href = 'blog?blogId=' + blog.blogId;
+                    a.href = 'blog?blogId=' + blog.id;
                     blogDiv.appendChild(a);
 
                     container.appendChild(blogDiv);

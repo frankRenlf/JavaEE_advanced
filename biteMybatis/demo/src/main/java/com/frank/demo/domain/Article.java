@@ -14,6 +14,7 @@ package com.frank.demo.domain;
  */
 
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,7 +24,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-//@TableName("articleinfo")
+@TableName("articleinfo")
 public class Article {
     private Integer id;
     private String title;

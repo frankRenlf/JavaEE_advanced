@@ -33,7 +33,7 @@ public class UserAspect {
 
     @Before("pointcut()")
     public void doBefore() {
-        session.getAttribute("userid");
+//        session.getAttribute("userid");
         System.out.println("执⾏ Before ⽅法");
     }
 
