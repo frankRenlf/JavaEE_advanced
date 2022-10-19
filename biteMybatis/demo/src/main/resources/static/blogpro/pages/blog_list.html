@@ -73,7 +73,47 @@
         </div>
     </div>
 </div>
+<script src="../js/jquery.min.js"></script>
+<script>
+    function getBlogList() {
+        $.ajax({
+            type: 'get',
+            url: 'blog',
+            success: function (body) {
+                let container = document.querySelector('.container-right');
+                for (let blog of body) {
+                    let blogDiv = document.createElement('div');
+                    blogDiv.className = 'blog';
 
+                    let titleDiv = document.createElement('div');
+                    titleDiv.className = 'title';
+                    titleDiv.innerHTML = blog.title;
+                    blogDiv.appendChild(titleDiv);
+
+                    let dateDiv = document.createElement('div');
+                    dateDiv.className = 'date';
+                    dateDiv.innerHTML = blog.postTime;
+                    blogDiv.appendChild(dateDiv);
+
+                    let descDiv = document.createElement('div');
+                    descDiv.className = 'desc';
+                    descDiv.innerHTML = blog.content;
+                    blogDiv.appendChild(descDiv);
+
+                    let a = document.createElement('a');
+                    a.className = 'detail';
+                    a.innerHTML = 'View Full >>';
+                    a.href = 'blog?blogId=' + blog.blogId;
+                    blogDiv.appendChild(a);
+
+                    container.appendChild(blogDiv);
+                }
+            }
+        })
+    }
+
+    getBlogList();
+</script>
 <script>
     let key = sessionStorage.getItem("userid");
 
