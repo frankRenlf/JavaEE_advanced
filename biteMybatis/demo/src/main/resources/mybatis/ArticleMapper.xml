@@ -21,6 +21,6 @@
         from articleinfo a
                  inner join
              userinfo u on a.uid = u.id
-        where u.id = #{id}
+        where a.id = #{id}
     </select>
 </mapper>

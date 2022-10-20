@@ -18,7 +18,7 @@ import java.util.List;
  * @Description :
  */
 public interface IArticleService extends IService<Article> {
-
+public Integer count(Integer id);
     public List<Article> getAll();
 
     public Article selectById2(Integer id);

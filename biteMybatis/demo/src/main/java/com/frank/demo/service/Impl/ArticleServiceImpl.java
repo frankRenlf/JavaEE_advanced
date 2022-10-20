@@ -30,7 +30,10 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     private ArticleMapper articleMapper;
 
 
-
+    @Override
+    public Integer count(Integer id) {
+        return articleMapper.count(id);
+    }
 
     @Override
     public List<Article> getAll() {

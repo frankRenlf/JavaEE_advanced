@@ -48,7 +48,7 @@
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="../js/jquerysession.js"></script>
 <script>
-    sessionStorage.removeItem("userid");
+    // sessionStorage.removeItem("userid");
     // let un = document.querySelector('.username');
     // console.log(un);
     let un = $('.username')[0];
@@ -59,7 +59,7 @@
     btn2.onclick = function () {
         window.location.href = './blog_register.html';
     };
-
+    let ui = 0;
     $('.submit').on('click', function () {
         let uname = un.value;
         let upassword = pw.value;
@@ -74,15 +74,16 @@
             type: "POST",
             contentType: 'application/json',
             data: JSON.stringify(user),
-            dataType:'JSON',
+            dataType: 'JSON',
             url: '/user/login',
             success: function (body) {
                 console.log(typeof (body.data));
                 console.log(body);
-                if (body.data) {
-                    sessionStorage.setItem("userid", user.username);
-                    let key = sessionStorage.getItem("userid");
-                    console.log(key);
+                if (body.data > 0) {
+                    // sessionStorage.setItem("userid", user.username);
+                    // let key = sessionStorage.getItem("userid");
+                    // console.log(key);
+                    ui = body.data;
                     alert('login success');
                     window.location.href = './blog_list.html';
                 } else {

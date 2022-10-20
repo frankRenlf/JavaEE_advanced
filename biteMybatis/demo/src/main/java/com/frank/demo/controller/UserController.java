@@ -2,12 +2,15 @@ package com.frank.demo.controller;
 
 import com.frank.demo.controller.utils.Result;
 import com.frank.demo.domain.User;
+import com.frank.demo.service.IArticleService;
 import com.frank.demo.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.resource.HttpResource;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -30,6 +33,9 @@ public class UserController {
     @Autowired
     private IUserService iUserService;
 
+    @Autowired
+    private IArticleService iArticleService;
+
     @DeleteMapping("{id}")
     public Result delete(@PathVariable Integer id) {
         return new Result(iUserService.removeById(id));
@@ -37,7 +43,9 @@ public class UserController {
 
     @GetMapping("{id}")
     public Result getById(@PathVariable Integer id) {
-        return new Result(true, iUserService.getById(id));
+        User user = iUserService.getById(id);
+        user.setPassword(iArticleService.count(id).toString());
+        return new Result(true, user);
     }
 
     @GetMapping
@@ -45,16 +53,29 @@ public class UserController {
         return new Result(true, iUserService.getById(id));
     }
 
-    public static HttpSession session;
+    @GetMapping("/check")
+    public Result checkLogin(HttpServletRequest request, HttpServletResponse response) {
+        HttpSession session = request.getSession(false);
+        Integer index = 0;
+        if (session == null) {
+            response.setStatus(403);
+        } else {
+            index = (Integer) session.getAttribute("userid");
+        }
+        return new Result(true, index);
+    }
+
     @PostMapping("/login")
-    public Result login(@RequestBody User user, HttpServletRequest request) {
+    public Result login(@RequestBody User user, HttpServletRequest request, HttpServletResponse response) {
         Integer index = iUserService.check(user);
-        session = request.getSession(true );
-        if (index>0) {
+        HttpSession session = request.getSession(true);
+        if (index > 0) {
             session.setAttribute("userid", index);
             System.out.println(session.getAttribute("userid"));
+        } else {
+            response.setStatus(403);
         }
-        return new Result(true, index>0);
+        return new Result(true, index);
     }
 
 

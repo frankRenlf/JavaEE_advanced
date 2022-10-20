@@ -26,7 +26,8 @@ public interface ArticleMapper extends BaseMapper<Article> {
 //            "from (articleinfo ai inner join userinfo ui on ai.uid = ui.id)\n" +
 //            "where ai.id = id")
     public Article selectById2(@Param("id") Integer id);
-
+    @Select("select count(ai.id) from articleinfo ai inner join userinfo ui where ai.uid = ui.id")
+    public Integer count(Integer id);
 
     @Select("select ai.*,ui.* from articleinfo ai inner join userinfo ui where ai.uid = ui.id")
     public List<Article> selectAll();

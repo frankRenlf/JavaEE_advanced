@@ -25,7 +25,6 @@ import javax.servlet.http.HttpSession;
 @Component
 public class UserAspect {
 
-    HttpSession session = UserController.session;
 
     @Pointcut(value = "execution(* com.frank.demo.controller.UserController.*(..))")
     public void pointcut() {
