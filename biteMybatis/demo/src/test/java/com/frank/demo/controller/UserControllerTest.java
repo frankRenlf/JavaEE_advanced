@@ -33,10 +33,10 @@ class UserControllerTest {
 //        System.out.println(userController.getAll2());
 //    }
 
-    @Test
-    void getById() {
-        System.out.println(userController.getById(2));
-    }
+//    @Test
+//    void getById() {
+//        System.out.println(userController.getById(2));
+//    }
 
 //    @Test
 //    void fastTest() {

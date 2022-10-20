@@ -18,7 +18,7 @@ import java.util.List;
  * @Description :
  */
 public interface IUserService extends IService<User> {
-
+    Integer selectByArticleId(Integer id);
     public List<User> getAll();
 
     public User getById(Integer id);

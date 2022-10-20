@@ -9,3 +9,15 @@ function checkLogin() {
         },
     });
 }
+var userId = 0;
+function logOut() {
+    $.ajax({
+        type: "get",
+        url: "/user/logout",
+        success: function (body) {
+        },
+        error: function (body) {
+            location.assign("blog_login.html");
+        },
+    });
+}

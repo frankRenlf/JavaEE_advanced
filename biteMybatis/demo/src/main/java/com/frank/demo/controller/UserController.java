@@ -36,22 +36,23 @@ public class UserController {
     @Autowired
     private IArticleService iArticleService;
 
-    @DeleteMapping("{id}")
-    public Result delete(@PathVariable Integer id) {
-        return new Result(iUserService.removeById(id));
-    }
 
+    User currentUser = new User();
     @GetMapping("{id}")
-    public Result getById(@PathVariable Integer id) {
-        User user = iUserService.getById(id);
-        user.setPassword(iArticleService.count(id).toString());
+    public Result getUserByArticleId(@PathVariable Integer id) {
+        Integer userId = iUserService.selectByArticleId(id);
+        User user = iUserService.getById(userId);
+        user.setPassword(iArticleService.count(userId).toString());
         return new Result(true, user);
     }
 
     @GetMapping
-    public Result getByIdTest(@RequestParam(value = "userid", required = false) Integer id) {
-        return new Result(true, iUserService.getById(id));
+    public Result getById() {
+        User user = iUserService.getById(currentUser.getId());
+        user.setPassword(iArticleService.count(user.getId()).toString());
+        return new Result(true, user);
     }
+
 
     @GetMapping("/check")
     public Result checkLogin(HttpServletRequest request, HttpServletResponse response) {
@@ -61,17 +62,30 @@ public class UserController {
             response.setStatus(403);
         } else {
             index = (Integer) session.getAttribute("userid");
+            if (index == null) {
+                response.setStatus(403);
+            }
         }
         return new Result(true, index);
+    }
+
+    @GetMapping("/logout")
+    public Result logout(HttpServletRequest request, HttpServletResponse response) {
+        HttpSession session = request.getSession(false);
+        session.removeAttribute("userid");
+        return new Result(true);
     }
 
     @PostMapping("/login")
     public Result login(@RequestBody User user, HttpServletRequest request, HttpServletResponse response) {
         Integer index = iUserService.check(user);
+
         HttpSession session = request.getSession(true);
         if (index > 0) {
             session.setAttribute("userid", index);
             System.out.println(session.getAttribute("userid"));
+            currentUser = iUserService.getById(index);
+            System.out.println(currentUser);
         } else {
             response.setStatus(403);
         }

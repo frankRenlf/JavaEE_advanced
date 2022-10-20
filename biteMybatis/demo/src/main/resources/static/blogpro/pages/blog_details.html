@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/blog_list.css">
     <link rel="stylesheet" href="../css/blog_detail.css">
+    <link rel="stylesheet" href="../editor.md-master/css/editormd.min.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../editor.md-master/lib/marked.min.js"></script>
+    <script src="../editor.md-master/lib/prettify.min.js"></script>
+    <script src="../editor.md-master/editormd.js"></script>
 </head>
 
 <body>
@@ -28,15 +33,15 @@
     <div class="container-left">
         <div class="card">
             <img src="../images/male.png" class="avtar" alt="">
-            <h3>Frank</h3>
+            <h3></h3>
             <a href="https://github.com/frankRenlf">github 地址</a>
             <div class="counter">
                 <span>文章</span>
                 <span>分类</span>
             </div>
             <div class="counter">
-                <span>2</span>
-                <span>1</span>
+                <span class="number"></span>
+                <span>0</span>
             </div>
         </div>
     </div>
@@ -45,23 +50,55 @@
     <div class="container-right">
         <!-- 每一篇博客包含标题, 摘要, 时间 -->
         <div class="blog-content">
-            <h3>我的第一篇博客</h3>
-            <div class="date">2021-06-02</div>
-            <div class="text">
-                从今天起, 我要认真敲代码. Lorem ipsum, dolor sit amet consectetur
-                adipisicing elit. Cum distinctio ullam eum ut
-                veroab laborum numquam tenetur est in dolorum a sint, assumenda
-                adipisci similique quaerat vel.
-                Facere,
-                et.
-            </div>
+            <h3></h3>
+            <div class="date"></div>
+            <div id="content1" style="opacity: 80%;"></div>
         </div>
     </div>
 </div>
-<script src="../js/jquery.min.js"></script>
 <script src="../js/app.js"></script>
 <script>
     checkLogin();
+
+    function getBlog() {
+        $.ajax({
+            type: 'get',
+            url: '/article/articlelist/' + location.search.substring(location.search.lastIndexOf('=') + 1, location.search.length),
+            success: function (body) {
+                let h3 = document.querySelector('.blog-content h3');
+                h3.innerHTML = body.data.title;
+                let divDate = document.querySelector('.blog-content .date')
+                divDate.innerHTML = body.data.createtime;
+                //
+                // let divContent = document.querySelector('.blog-content .text');
+                // divContent.innerHTML = body.content;
+                editormd.markdownToHTML('content1', {
+                    markdown: body.data.content,
+                    opacity: "80 %",
+                });
+            }
+        });
+    }
+
+    getBlog();
+
+    function getUserInfo() {
+        console.log(userId);
+        $.ajax({
+            type: "get",
+            url: "/user/" + location.search.substring(location.search.lastIndexOf('=') + 1, location.search.length),
+            success: function (body) {
+                console.log(typeof body);
+                console.log(body);
+                let username = document.querySelector(".card h3");
+                let number = document.querySelector(".number");
+                username.innerHTML = body.data.username;
+                number.innerHTML = body.data.password;
+            },
+        });
+    }
+
+    getUserInfo();
 </script>
 </body>
 

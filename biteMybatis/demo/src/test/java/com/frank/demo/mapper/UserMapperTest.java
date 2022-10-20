@@ -28,8 +28,7 @@ class UserMapperTest {
     private UserMapper userMapper;
     @Test
     void getUserById() {
-
-
+        System.out.println(userMapper.selectByArticleId(2));
     }
 
     @Test

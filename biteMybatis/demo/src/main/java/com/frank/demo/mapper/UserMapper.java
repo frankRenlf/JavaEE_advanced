@@ -26,6 +26,10 @@ public interface UserMapper extends BaseMapper<User> {
 
     @Select("select * from userinfo where username = #{username}")
     public User selectByName(String username);
+
+    @Select("select ui.id from articleinfo ai inner join userinfo ui on ai.uid = ui.id where ai.id = #{id}")
+    public Integer selectByArticleId(Integer id);
+
     User user = new User();
 
     public List<User> getAll();

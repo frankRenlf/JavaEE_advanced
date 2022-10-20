@@ -29,6 +29,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     private UserMapper userDao;
 
     @Override
+    public Integer selectByArticleId(Integer id) {
+        return userDao.selectByArticleId(id);
+    }
+
+    @Override
     public List<User> getAll() {
         return userDao.getAll();
     }
