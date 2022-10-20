@@ -1,14 +1,14 @@
 package com.frank.demo.controller;
 
 import com.frank.demo.controller.utils.Result;
+import com.frank.demo.domain.Article;
+import com.frank.demo.presistence.Info;
 import com.frank.demo.service.IArticleService;
 
+import com.frank.demo.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -37,5 +37,17 @@ public class ArticleController {
     @GetMapping("/articlelist")
     public Result getAll() {
         return new Result(true, iArticleService.getAll());
+    }
+
+    @PostMapping("/add")
+    public Result addArticle(@RequestBody Article article) {
+//        Info info = new Info();
+        Integer id = UserController.currentUser.getId() == null ?
+                (new Info()).user.getId() : UserController.currentUser.getId();
+        article.setUid(id);
+        System.out.println("---------------------");
+        System.out.println(article.getUid());
+        System.out.println("---------------------");
+        return new Result(true, iArticleService.save(article));
     }
 }

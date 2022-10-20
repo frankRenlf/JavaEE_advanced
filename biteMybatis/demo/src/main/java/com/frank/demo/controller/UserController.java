@@ -37,7 +37,7 @@ public class UserController {
     private IArticleService iArticleService;
 
 
-    User currentUser = new User();
+    public static User currentUser = new User();
     @GetMapping("{id}")
     public Result getUserByArticleId(@PathVariable Integer id) {
         Integer userId = iUserService.selectByArticleId(id);
