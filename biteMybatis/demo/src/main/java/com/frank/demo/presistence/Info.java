@@ -20,6 +20,6 @@ public class Info {
     public User user;
 
     public Info() {
-        this.user = UserController.currentUser;
+//        this.user = UserController.currentUser;
     }
 }

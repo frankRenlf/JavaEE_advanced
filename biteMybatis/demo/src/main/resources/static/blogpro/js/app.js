@@ -9,7 +9,6 @@ function checkLogin() {
         },
     });
 }
-var userId = 0;
 function logOut() {
     $.ajax({
         type: "get",

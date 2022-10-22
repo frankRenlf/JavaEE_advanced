@@ -37,7 +37,8 @@ public class UserController {
     private IArticleService iArticleService;
 
 
-    public static User currentUser = new User();
+//    public static User currentUser = new User();
+
     @GetMapping("{id}")
     public Result getUserByArticleId(@PathVariable Integer id) {
         Integer userId = iUserService.selectByArticleId(id);
@@ -47,8 +48,10 @@ public class UserController {
     }
 
     @GetMapping
-    public Result getById() {
-        User user = iUserService.getById(currentUser.getId());
+    public Result getById(HttpServletRequest request) {
+        HttpSession session = request.getSession(true);
+        Integer id = (Integer) session.getAttribute("userid");
+        User user = iUserService.getById(id);
         user.setPassword(iArticleService.count(user.getId()).toString());
         return new Result(true, user);
     }
@@ -84,8 +87,8 @@ public class UserController {
         if (index > 0) {
             session.setAttribute("userid", index);
             System.out.println(session.getAttribute("userid"));
-            currentUser = iUserService.getById(index);
-            System.out.println(currentUser);
+//            currentUser = iUserService.getById(index);
+//            System.out.println(currentUser);
         } else {
             response.setStatus(403);
         }

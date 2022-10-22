@@ -10,6 +10,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -40,10 +43,12 @@ public class ArticleController {
     }
 
     @PostMapping("/add")
-    public Result addArticle(@RequestBody Article article) {
+    public Result addArticle(@RequestBody Article article, HttpServletRequest request) {
 //        Info info = new Info();
-        Integer id = UserController.currentUser.getId() == null ?
-                (new Info()).user.getId() : UserController.currentUser.getId();
+        HttpSession session = request.getSession(true);
+//        Integer id = UserController.currentUser.getId() == null ?
+//                (new Info()).user.getId() : UserController.currentUser.getId();
+        Integer id = (Integer) session.getAttribute("userid");
         article.setUid(id);
         System.out.println("---------------------");
         System.out.println(article.getUid());
