@@ -51,4 +51,9 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     public List<Article> getUserArticles(Integer userid) {
         return articleMapper.selectByUserid(userid);
     }
+
+    @Override
+    public void deleteByUidAndCreatetime(String createtime, Integer userid) {
+        articleMapper.deleteByCreateTimeAndUserId(createtime, userid);
+    }
 }

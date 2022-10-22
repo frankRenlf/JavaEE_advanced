@@ -25,4 +25,6 @@ public interface IArticleService extends IService<Article> {
     public Article selectById2(Integer id);
 
     public List<Article> getUserArticles(Integer userid);
+
+    public void deleteByUidAndCreatetime(String createtime,Integer userid);
 }

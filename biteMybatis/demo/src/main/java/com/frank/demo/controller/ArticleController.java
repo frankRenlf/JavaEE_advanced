@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.net.http.HttpRequest;
 
 /**
  * Created with IntelliJ IDEA.
@@ -61,5 +62,12 @@ public class ArticleController {
         System.out.println(article.getUid());
         System.out.println("---------------------");
         return new Result(true, iArticleService.save(article));
+    }
+
+    @PostMapping("/del/{createtime}")
+    public Result delArticle(HttpServletRequest request, @PathVariable String createtime) {
+        HttpSession session = request.getSession(true);
+        iArticleService.deleteByUidAndCreatetime(createtime, (Integer) session.getAttribute("userid"));
+        return new Result(true);
     }
 }

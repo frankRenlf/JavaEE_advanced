@@ -53,7 +53,9 @@
         <div class="blog-content">
             <h3></h3>
             <div class="date"></div>
-            <div id="content1" style="opacity: 80%;"></div>
+            <div id="editor">
+                <textarea style="opacity: 80%;"></textarea>
+            </div>
         </div>
     </div>
 </div>
@@ -73,9 +75,10 @@
                 //
                 // let divContent = document.querySelector('.blog-content .text');
                 // divContent.innerHTML = body.content;
-                editormd.markdownToHTML('content1', {
+                editormd.markdownToHTML('editor', {
                     markdown: body.data.content,
                     opacity: "80 %",
+                    saveHTMLToTextarea: true
                 });
             }
         });
