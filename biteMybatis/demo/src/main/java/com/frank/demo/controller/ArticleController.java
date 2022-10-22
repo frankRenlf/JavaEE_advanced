@@ -42,6 +42,13 @@ public class ArticleController {
         return new Result(true, iArticleService.getAll());
     }
 
+    @GetMapping("/articlelist/user")
+    public Result getUserArticles(HttpServletRequest request) {
+        HttpSession session = request.getSession(true);
+        Integer userid = (Integer) session.getAttribute("userid");
+        return new Result(true, iArticleService.getUserArticles(userid));
+    }
+
     @PostMapping("/add")
     public Result addArticle(@RequestBody Article article, HttpServletRequest request) {
 //        Info info = new Info();

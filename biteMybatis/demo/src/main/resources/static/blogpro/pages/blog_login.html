@@ -79,13 +79,13 @@
             success: function (body) {
                 console.log(typeof (body.data));
                 console.log(body);
-                if (body.data > 0) {
+                if (body.data) {
                     // sessionStorage.setItem("userid", user.username);
                     // let key = sessionStorage.getItem("userid");
                     // console.log(key);
                     ui = body.data;
                     userId = body.data;
-                    console.log("userId: "+userId)
+                    console.log("userId: " + userId)
                     alert('login success');
                     window.location.href = './blog_list.html';
                 } else {
@@ -95,6 +95,12 @@
                     un.focus();
                 }
                 // con.value = body.data.id;
+            },
+            error: function (body) {
+                alert('invalid input');
+                un.value = '';
+                pw.value = '';
+                un.focus();
             }
         });
     });

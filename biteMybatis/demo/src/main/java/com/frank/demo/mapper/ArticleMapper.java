@@ -33,7 +33,10 @@ public interface ArticleMapper extends BaseMapper<Article> {
             "where ui.id = #{id}")
     public Integer count(Integer id);
 
-    @Select("select ai.*,ui.* from articleinfo ai inner join userinfo ui where ai.uid = ui.id")
+    @Select("select ai.*,ui.* from articleinfo ai inner join userinfo ui on ai.uid = ui.id where ui.id = #{id}")
+    public List<Article> selectByUserid(Integer id);
+
+    @Select("select ai.*,ui.* from articleinfo ai inner join userinfo ui on ai.uid = ui.id")
     public List<Article> selectAll();
 
 

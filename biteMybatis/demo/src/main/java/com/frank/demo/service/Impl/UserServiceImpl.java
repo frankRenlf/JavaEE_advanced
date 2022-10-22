@@ -60,7 +60,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     public Boolean contain(User user) {
         User pre = userDao.selectByName(user.getUsername());
         return pre != null
-                && pre.getUsername().equals(user.getUsername());
+                && !pre.getUsername().equals(user.getUsername());
     }
 
     @Override

@@ -23,4 +23,6 @@ public interface IArticleService extends IService<Article> {
     public List<Article> getAll();
 
     public Article selectById2(Integer id);
+
+    public List<Article> getUserArticles(Integer userid);
 }

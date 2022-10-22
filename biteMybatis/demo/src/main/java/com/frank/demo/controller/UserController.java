@@ -82,7 +82,8 @@ public class UserController {
     @PostMapping("/login")
     public Result login(@RequestBody User user, HttpServletRequest request, HttpServletResponse response) {
         Integer index = iUserService.check(user);
-
+        System.out.println("----------------");
+        System.out.println(index);
         HttpSession session = request.getSession(true);
         if (index > 0) {
             session.setAttribute("userid", index);
@@ -92,7 +93,7 @@ public class UserController {
         } else {
             response.setStatus(403);
         }
-        return new Result(true, index);
+        return new Result(true, index > 0);
     }
 
 
@@ -102,7 +103,10 @@ public class UserController {
                 && !user.getUsername().equals("") && !user.getPassword().equals("")
                 && !iUserService.contain(user)) {
             log.info(user.getUsername() + " register success");
-            return new Result(true, iUserService.addUser(user));
+            System.out.println("----------");
+            int val = iUserService.addUser(user);
+            System.out.println(val);
+            return new Result(true, val);
         }
         log.info(user.getUsername() + " register failed");
         return new Result(true, false);

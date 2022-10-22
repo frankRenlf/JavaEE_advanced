@@ -24,6 +24,7 @@
     <span class="spacer"></span>
 
     <a href="./blog_list.html">Home page</a>
+    <a href="./blog_mylist.html">User page</a>
     <a href="./blog_edit.html">edit blog</a>
     <a href="./blog_login.html">Log out</a>
 </div>
@@ -83,7 +84,6 @@
     getBlog();
 
     function getUserInfo() {
-        console.log(userId);
         $.ajax({
             type: "get",
             url: "/user/" + location.search.substring(location.search.lastIndexOf('=') + 1, location.search.length),

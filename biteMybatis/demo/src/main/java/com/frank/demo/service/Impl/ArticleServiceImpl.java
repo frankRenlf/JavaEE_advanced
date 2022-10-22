@@ -46,4 +46,9 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     public Article selectById2(Integer id) {
         return articleMapper.selectById2(id);
     }
+
+    @Override
+    public List<Article> getUserArticles(Integer userid) {
+        return articleMapper.selectByUserid(userid);
+    }
 }
