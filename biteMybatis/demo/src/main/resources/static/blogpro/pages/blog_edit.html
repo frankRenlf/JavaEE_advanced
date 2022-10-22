@@ -72,7 +72,7 @@
             success: function (body) {
                 alert("submit success");
                 title1.value = '';
-                editor.markdown = "# 在这里写下一篇博客";
+                editor.setMarkdown("# 在这里写下一篇博客");
                 title1.focus();
             },
             error: function (body) {
