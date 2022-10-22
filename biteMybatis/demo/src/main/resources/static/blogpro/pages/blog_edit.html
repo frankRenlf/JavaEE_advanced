@@ -71,7 +71,9 @@
             data: JSON.stringify(article),
             success: function (body) {
                 alert("submit success");
+                title1.value = '';
                 editor.markdown = "# 在这里写下一篇博客";
+                title1.focus();
             },
             error: function (body) {
                 alert("submit failed");
