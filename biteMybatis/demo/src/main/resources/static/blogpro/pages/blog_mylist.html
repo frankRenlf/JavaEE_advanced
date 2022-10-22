@@ -100,24 +100,24 @@
                     blogDiv.appendChild(a);
 
                     let del = document.createElement('button');
-                    a.className = 'detail';
-                    a.innerHTML = "delete";
-                    a.onclick = function () {
+                    del.className = 'detail';
+                    del.innerHTML = "delete";
+                    del.onclick = function () {
                         $.ajax({
                             type: 'post',
-                            url: '/article/del'+blog.createtime,
+                            url: '/article/del/' + blog.createtime,
                             contentType: 'json',
-                            success:function (body){
+                            success: function (body) {
                                 alert("delete success");
                                 getBlogList();
                             },
-                            error: function (body){
+                            error: function (body) {
                                 alert("delete failed");
                             }
                         })
                     }
 
-
+                    blogDiv.appendChild(del);
                     container.appendChild(blogDiv);
                 }
             }
