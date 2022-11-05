@@ -1,4 +1,5 @@
 import com.domain.User;
+import com.service.UserService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -39,17 +40,13 @@ public class Application {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         createThreadPool();
     }
 
-    public static void main1(String[] args) {
+    public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
-        User user1 = context.getBean("user1", User.class);
-//        user1.sayHi();
-        System.out.println(user1.id);
-        user1.id = 2;
-        User user2 = context.getBean("user1", User.class);
-        System.out.println(user1 == user2);
+        UserService userService = context.getBean("userService",UserService.class);
+        userService.testUser();
     }
 }
