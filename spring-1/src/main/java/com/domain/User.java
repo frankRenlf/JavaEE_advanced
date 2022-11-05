@@ -1,3 +1,5 @@
+package com.domain;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -11,6 +13,13 @@
  * @Description :
  */
 public class User {
+
+    public Integer id;
+
+    public User() {
+        this.id = 1;
+    }
+
     public void sayHi(){
         System.out.println("Hi frank");
     }

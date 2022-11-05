@@ -1,3 +1,4 @@
+import com.domain.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -16,7 +17,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Application {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
-        User user = (User) context.getBean("user1", User.class);
-        user.sayHi();
+        User user1 = (User) context.getBean("user1", User.class);
+//        user1.sayHi();
+        user1.id=2;
+        User user2 = (User) context.getBean("user1", User.class);
+        System.out.println(user2.id);
     }
 }
