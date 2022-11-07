@@ -2,6 +2,7 @@ package com.service;
 
 import com.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
@@ -20,6 +21,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     @Autowired
+    @Qualifier(value = "user2")
     private User user;
 
     public void testUser() {

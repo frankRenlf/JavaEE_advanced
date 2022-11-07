@@ -1,5 +1,8 @@
 package com.domain;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -12,15 +15,25 @@ package com.domain;
  * @github : https://github.com/frankRenlf
  * @Description :
  */
+@Component
 public class User {
 
     public Integer id;
 
     public User() {
-        this.id = 1;
     }
 
-    public void sayHi(){
-        System.out.println("Hi frank");
+    public User(Integer id) {
+        this.id = id;
+    }
+
+    @Bean(name = {"user1"})
+    public User user11() {
+        return new User(1);
+    }
+
+    @Bean
+    public User user2() {
+        return new User(2);
     }
 }
