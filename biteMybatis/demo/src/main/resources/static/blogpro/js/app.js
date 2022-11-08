@@ -5,6 +5,7 @@ function checkLogin() {
         success: function (body) {
         },
         error: function (body) {
+            alert('invalid login');
             location.assign("blog_login.html");
         },
     });

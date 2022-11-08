@@ -61,7 +61,7 @@
 </div>
 <script src="../js/app.js"></script>
 <script>
-    checkLogin();
+    // checkLogin();
 
     function getBlog() {
         $.ajax({
@@ -80,6 +80,10 @@
                     opacity: "80 %",
                     saveHTMLToTextarea: true
                 });
+            },
+            error: function (body) {
+                alert('invalid login');
+                window.location.href = './blog_login.html';
             }
         });
     }

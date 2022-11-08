@@ -64,7 +64,7 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../js/app.js"></script>
 <script>
-    checkLogin();
+    // checkLogin();
 
     function getBlogList() {
         $.ajax({
@@ -120,6 +120,10 @@
                     blogDiv.appendChild(del);
                     container.appendChild(blogDiv);
                 }
+            },
+            error: function (body) {
+                alert('invalid login');
+                window.location.href = './blog_login.html';
             }
         })
     }
