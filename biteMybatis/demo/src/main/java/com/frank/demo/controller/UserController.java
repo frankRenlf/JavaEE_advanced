@@ -39,6 +39,13 @@ public class UserController {
 
 //    public static User currentUser = new User();
 
+    @GetMapping("/testAdvice/{id}")
+    public Result testAdvice(@PathVariable Integer id) {
+        int ret = id/0;
+        return new Result(true);
+    }
+
+
     @GetMapping("{id}")
     public Result getUserByArticleId(@PathVariable Integer id) {
         Integer userId = iUserService.selectByArticleId(id);

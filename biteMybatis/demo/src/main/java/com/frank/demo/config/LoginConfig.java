@@ -1,6 +1,7 @@
 package com.frank.demo.config;
 
 import com.frank.demo.config.interceptors.LoginInterceptor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -19,19 +20,33 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  */
 @Configuration
 public class LoginConfig implements WebMvcConfigurer {
+
+    @Autowired
+    private LoginInterceptor loginInterceptor;
+
     // 添加拦截器
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new LoginInterceptor())
+        registry.addInterceptor(loginInterceptor)
                 .addPathPatterns("/**") // 拦截所有接⼝
                 .excludePathPatterns("/**/*.js")
                 .excludePathPatterns("/**/*.css")
-                .excludePathPatterns("/**/*.png")
-                .excludePathPatterns("/**/*.jpg")
-                .excludePathPatterns("/blogPro/pages/blog_login.html")
-                .excludePathPatterns("/blogPro/pages/blog_register.html")
+//                .excludePathPatterns("/**/*.png")
+//                .excludePathPatterns("/**/*.jpg")
+                .excludePathPatterns("/blogpro/images/**")
+                .excludePathPatterns("/**/blog_login.html")
+                .excludePathPatterns("/**/blog_register.html")
                 .excludePathPatterns("/**/login")
+                .excludePathPatterns("/**/testAdvice/**")
                 .excludePathPatterns("/**/register");
         ; // 排除接⼝
+    }
+
+    public LoginInterceptor getLoginInterceptor() {
+        return loginInterceptor;
+    }
+
+    public void setLoginInterceptor(LoginInterceptor loginInterceptor) {
+        this.loginInterceptor = loginInterceptor;
     }
 }
