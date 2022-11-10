@@ -1,7 +1,9 @@
 import com.domain.User;
 import com.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 import java.util.concurrent.*;
 
@@ -40,13 +42,17 @@ public class Application {
         }
     }
 
+    @Autowired
+    private UserService userService;
+
     public static void main1(String[] args) {
         createThreadPool();
     }
 
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
-        UserService userService = context.getBean("userService",UserService.class);
+        UserService userService = context.getBean("userService", UserService.class);
         userService.testUser();
+
     }
 }
