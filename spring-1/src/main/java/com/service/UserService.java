@@ -21,7 +21,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     @Autowired
-    @Qualifier(value = "user")
+    @Qualifier(value = "user11")
     private User user;
 
     public void testUser() {
