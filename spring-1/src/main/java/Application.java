@@ -53,6 +53,7 @@ public class Application {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
         UserService userService = context.getBean("userService", UserService.class);
         userService.testUser();
-
+//        UserService userService1 = new UserService();
+//        userService1.testUser();
     }
 }

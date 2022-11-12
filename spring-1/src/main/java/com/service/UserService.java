@@ -19,17 +19,17 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserService {
-
-    //    @Qualifier(value = "user1")
-    private final Object user2;
-
     @Autowired
-    public UserService(Object user2) {
-        this.user2 = user2;
-    }
+    @Qualifier(value = "user1")
+    private User user2;
+
+
+//    public UserService(Object user2) {
+//        this.user2 = user2;
+//    }
 
     public void testUser() {
-        System.out.println(((User) user2).id);
+        System.out.println(user2.id);
     }
 
 }
