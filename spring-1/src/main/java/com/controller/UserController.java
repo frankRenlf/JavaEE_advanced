@@ -1,6 +1,8 @@
 package com.controller;
 
 import com.domain.User;
+import com.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -18,10 +20,11 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class UserController {
 
-    private User user;
+    @Autowired
+    private UserService userService;
 
-    public void testUser() {
-        System.out.println(user.id);
+    public void testConUser() {
+        userService.testUser();
     }
 
 }

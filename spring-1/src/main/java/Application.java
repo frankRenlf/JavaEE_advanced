@@ -1,3 +1,4 @@
+import com.controller.UserController;
 import com.domain.User;
 import com.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,8 +52,8 @@ public class Application {
 
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
-        UserService userService = context.getBean("userService", UserService.class);
-        userService.testUser();
+        UserController userController = context.getBean("userController", UserController.class);
+        userController.testConUser();
 //        UserService userService1 = new UserService();
 //        userService1.testUser();
     }

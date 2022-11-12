@@ -21,7 +21,7 @@ public class User {
     public Integer id;
 
     public User() {
-        this.id = 1;
+        this.id = 0;
     }
 
     public User(Integer id) {
