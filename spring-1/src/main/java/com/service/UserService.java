@@ -23,13 +23,16 @@ public class UserService {
     @Qualifier(value = "user2")
     private User user2;
 
-
+    @Autowired
+    @Qualifier(value = "user2")
+    private User user1;
 //    public UserService(Object user2) {
 //        this.user2 = user2;
 //    }
 
     public void testUser() {
-        System.out.println(user2.id);
+        user1.id = 3;
+        System.out.println(user2.id + " " + user1.id);
     }
 
 }
