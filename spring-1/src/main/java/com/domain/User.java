@@ -1,6 +1,8 @@
 package com.domain;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -33,6 +35,7 @@ public class User {
         return new User(1);
     }
 
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     @Bean
     public User user2() {
         return new User(2);
