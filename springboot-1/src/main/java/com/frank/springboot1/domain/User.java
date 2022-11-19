@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @TableName("userinfo")
 public class User {
-    @TableId("id")
+//    @TableId("id")
     Integer userId;
     String username;
     String password;
