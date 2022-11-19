@@ -3,4 +3,7 @@ server:
 spring:
   datasource:
     druid:
-      url: 
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/mycnblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: RLFrlf930Frank_wjq
