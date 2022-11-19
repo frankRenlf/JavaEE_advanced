@@ -1,4 +1,4 @@
-package com.frank.springboot1.dao;
+package com.frank.springboot1.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.frank.springboot1.domain.User;
@@ -17,8 +17,7 @@ import org.apache.ibatis.annotations.Mapper;
  * @Description :
  */
 @Mapper
-public interface UserDao extends BaseMapper<User> {
+public interface UserMapper extends BaseMapper<User> {
 
-
-
+    User mySelectById(Integer id);
 }

@@ -16,4 +16,7 @@ import com.frank.springboot1.domain.User;
  * @Description :
  */
 public interface IUserService extends IService<User> {
+
+    User selectById(Integer id);
+
 }

@@ -1,10 +1,12 @@
 package com.frank.springboot1.service.Impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.frank.springboot1.dao.UserDao;
+import com.frank.springboot1.mapper.UserMapper;
 import com.frank.springboot1.domain.User;
 import com.frank.springboot1.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.stereotype.Service;
 
 /**
@@ -21,5 +23,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @Slf4j
-public class UserServiceImpl extends ServiceImpl<UserDao, User> implements IUserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
+    @Autowired
+    private UserMapper userMapper;
+    @Override
+    public User selectById(Integer id) {
+        return userMapper.mySelectById(id);
+    }
 }
