@@ -32,6 +32,9 @@ public class UserController {
         return new Result(true,iUserService.getById(id));
     }
 
-
+    @GetMapping("/list")
+    public Result retUserList(){
+        return new Result(true,iUserService.list());
+    }
 
 }
