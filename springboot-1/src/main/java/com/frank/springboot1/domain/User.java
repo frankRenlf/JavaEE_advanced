@@ -21,11 +21,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("userinfo")
+@TableName("user_info")
 public class User {
     @TableId("id")
     Integer userId;
-    String username;
-    String password;
+    String userName;
+    String userPassword;
 
 }

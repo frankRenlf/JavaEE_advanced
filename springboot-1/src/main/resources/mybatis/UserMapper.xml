@@ -4,8 +4,8 @@
 <mapper namespace="com.frank.springboot1.mapper.UserMapper">
     <resultMap id="BaseMap" type="com.frank.springboot1.domain.User">
         <id column="id" property="userId"></id>
-        <result column="username" property="username"></result>
-        <result column="password" property="password"></result>
+        <result column="user_name" property="userName"></result>
+        <result column="user_password" property="userPassword"></result>
 <!--        <result column="photo" property="photo"></result>-->
 <!--        <result column="createTime" property="createTime"></result>-->
 <!--        <result column="updateTime" property="updateTime"></result>-->

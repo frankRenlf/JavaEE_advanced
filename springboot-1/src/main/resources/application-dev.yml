@@ -4,7 +4,7 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/mycnblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+      url: jdbc:mysql://localhost:3306/myblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
       username: root
       password: RLFrlf930Frank_wjq
 
@@ -16,5 +16,5 @@ mybatis-plus:
       id-type: auto
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-    map-underscore-to-camel-case: false
+    map-underscore-to-camel-case: true
   mapper-locations: classpath:mybatis/**Mapper.xml

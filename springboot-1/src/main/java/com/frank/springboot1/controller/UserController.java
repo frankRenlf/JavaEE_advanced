@@ -29,7 +29,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     public Result retUser(@PathVariable Integer id){
-        return new Result(true,iUserService.selectById(id));
+        return new Result(true,iUserService.getById(id));
     }
 
     @GetMapping("/list")
