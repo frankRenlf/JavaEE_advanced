@@ -2,11 +2,12 @@ package com.frank.springboot1.controller;
 
 import com.frank.springboot1.controller.utils.Result;
 import com.frank.springboot1.service.IUserService;
-import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -29,11 +30,15 @@ public class UserController {
     private IUserService iUserService;
 
     @Value("${mybatis-plus.mapper-locations}")
-    private static String config;
+    private String config;
+
+    @PostConstruct
+    public void postConstruct() {
+        System.out.println(config);
+    }
 
     @GetMapping("/{id}")
     public Result retUser(@PathVariable Integer id){
-        System.out.println(config);
         return new Result(true,iUserService.getById(id));
     }
 
