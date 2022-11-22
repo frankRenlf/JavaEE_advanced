@@ -38,7 +38,12 @@ public class LoginConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/**/blog_register.html")
                 .excludePathPatterns("/**/login")
                 .excludePathPatterns("/**/testAdvice/**")
-                .excludePathPatterns("/**/register");
+                .excludePathPatterns("/**/register")
+                .excludePathPatterns("/ImageEditorJavaScript/**")
+                .excludePathPatterns("/LeedsInfo/**")
+                .excludePathPatterns("/photo-editor/**")
+                .excludePathPatterns("/advanced/**")
+                .excludePathPatterns("/home/**");
         ; // 排除接⼝
     }
 
