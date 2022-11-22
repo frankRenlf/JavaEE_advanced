@@ -2,6 +2,7 @@ package com.frank.springboot1.controller;
 
 import com.frank.springboot1.controller.utils.Result;
 import com.frank.springboot1.service.IUserService;
+import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,8 +28,12 @@ public class UserController {
     @Autowired
     private IUserService iUserService;
 
+    @Value("${mybatis-plus.mapper-locations}")
+    private static String config;
+
     @GetMapping("/{id}")
     public Result retUser(@PathVariable Integer id){
+        System.out.println(config);
         return new Result(true,iUserService.getById(id));
     }
 
