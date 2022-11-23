@@ -1,24 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>links</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog List</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/blog_list.css">
 </head>
+
 <body>
-<p>I'll just put four websites on it. My server may not be able to move any more;
 
-    Also, some well done websites can't be released, because their databases are a bit vulnerable to attacks. I play on the intranet when I play, so it's OK, but I don't think it can be released this time;
+<div class="nav">
 
-    The Internet is very messy. One afternoon, I was attacked tens of thousands of times. I was afraid that my server would be crashed
+    <img src="images/note.png" alt="note">
+    <span class="title">My websites</span>
+    <span class="spacer"></span>
 
-    Some security measures have been taken for these websites, but this server has low resistance to ddos attacks</p>
-<ul>
-    <li><a href="http://frankly.ren/blogpro/pages/blog_login.html"> blog system </a></li>
-    <li><a href="http://frankly.ren/LeedsInfo/main.html"> University of Leeds </a></li>
-    <li><a href="http://frankly.ren/photo-editor/pages/index.html"> photo editor demo1 </a></li>
-    <li><a href="http://frankly.ren/ImageEditorJavaScript/index.html"> photo editor demo2 </a></li>
-    <li><a href="http://frankly.ren/advanced/index.html"> photo editor advanced </a></li>
-</ul>
+
+</div>
+
+<div class="container">
+    <!-- 左侧个人信息 -->
+    <!-- 左侧个人信息 -->
+    <div class="container-left">
+        <div class="card">
+            <img src="images/home.png" class="avtar" alt="home">
+            <h3>frankRenlf</h3>
+            <a href="https://github.com/frankRenlf">github link</a>
+            <div class="counter">
+                <!--                <span>articles</span>-->
+                <!--                <span>sort</span>-->
+            </div>
+            <div class="counter">
+                <!--                <span class="number"></span>-->
+                <!--                <span>0</span>-->
+            </div>
+        </div>
+    </div>
+
+    <!-- 右侧内容详情 -->
+    <div class="container-right">
+        <div class="blog">
+            <!--                    <div class="title">我的第一篇博客</div>-->
+            <!--                    <div class="date">2021-06-02</div>-->
+            <div class="desc">
+                <div id="root">
+                    <p>I'll just put five websites on it. My server may not be able to move any more;
+
+                        Also, some well done websites can't be released, because their databases are a bit vulnerable to attacks. I play on the intranet when I play, so it's OK, but I don't think it can be released this time;
+
+                        The Internet is very messy. One afternoon, I was attacked tens of thousands of times. I was afraid that my server would be crashed
+
+                        Some security measures have been taken for these websites, but this server has low resistance to ddos attacks</p>
+                    <ul>
+                        <li>link to <a href="http://frankly.ren/blogpro/pages/blog_login.html"> blog system </a></li>
+                        <li>link to <a href="http://frankly.ren/LeedsInfo/main.html"> University of Leeds </a></li>
+                        <li>link to <a href="http://frankly.ren/photo-editor/pages/index.html"> photo editor demo1 </a></li>
+                        <li>link to <a href="http://frankly.ren/ImageEditorJavaScript/index.html"> photo editor demo2 </a></li>
+                        <li>link to <a href="http://frankly.ren/advanced/index.html"> photo editor advanced </a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--                    <a href="blog_details.html" class="detail">查看全文 &gt;&gt;</a>-->
+        </div>
+    </div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/app.js"></script>
+<script>
+    // checkLogin();
+    function getBlogList() {
+        $.ajax({
+            type: 'get',
+            url: '/article/articlelist',
+            success: function (body) {
+                console.log(body);
+                console.log(body.data);
+                let container = document.querySelector('.container-right');
+                for (let blog of body.data) {
+                    let blogDiv = document.createElement('div');
+                    blogDiv.className = 'blog';
+
+                    let titleDiv = document.createElement('div');
+                    titleDiv.className = 'title';
+                    titleDiv.innerHTML = blog.title;
+                    blogDiv.appendChild(titleDiv);
+
+                    let dateDiv = document.createElement('div');
+                    dateDiv.className = 'date';
+                    dateDiv.innerHTML = blog.createtime;
+                    blogDiv.appendChild(dateDiv);
+
+                    let descDiv = document.createElement('div');
+                    descDiv.className = 'desc';
+                    descDiv.innerHTML = blog.content;
+                    blogDiv.appendChild(descDiv);
+
+                    let a = document.createElement('a');
+                    a.className = 'detail';
+                    a.innerHTML = 'View Full >>';
+                    a.href = 'blog_details.html?blogId=' + blog.id;
+                    blogDiv.appendChild(a);
+
+                    container.appendChild(blogDiv);
+                }
+            },
+            error: function (body) {
+                alert('invalid login');
+                window.location.href = './blog_login.html';
+            }
+        })
+    }
+
+    getBlogList();
+
+    function getUserInfo() {
+        $.ajax({
+            type: "get",
+            url: "/user",
+            success: function (body) {
+                console.log(typeof body);
+                console.log(body);
+                let username = document.querySelector(".card h3");
+                let number = document.querySelector(".number");
+                username.innerHTML = body.data.username;
+                number.innerHTML = body.data.password;
+            },
+        });
+    }
+
+    getUserInfo();
+</script>
+
 
 </body>
+
 </html>
+
