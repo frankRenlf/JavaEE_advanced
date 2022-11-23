@@ -6,7 +6,7 @@
 
 html, body{
     height: 100%;
-    background-image: url('../images/bg.jpg');
+    background-image: url('../images/bg2.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -25,7 +25,7 @@ html, body{
     width: 40px;
     height: 40px;
     border-radius: 50%
-} 
+}
 
 .nav .spacer {
     width: 70%;
@@ -99,5 +99,5 @@ html, body{
     justify-content: space-around;
 }
 .container-right{
-    
+
 }
