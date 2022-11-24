@@ -27,5 +27,7 @@ logging:
     root: info
     com:
       frank:
-        springboot1: debug
+        springboot1:
+          controller: debug
+          service: debug
 

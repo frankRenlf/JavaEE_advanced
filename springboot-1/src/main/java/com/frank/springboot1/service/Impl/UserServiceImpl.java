@@ -28,6 +28,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     private UserMapper userMapper;
     @Override
     public User selectById(Integer id) {
+        log.warn("test log->debug");
         return userMapper.mySelectById(id);
     }
 }

@@ -16,6 +16,6 @@
 <!--        </collection>-->
     </resultMap>
     <select id="mySelectById" resultType="com.frank.springboot1.domain.User" resultMap="BaseMap">
-        select * from userinfo where id = #{id}
+        select * from user_info where id = #{id}
     </select>
 </mapper>
