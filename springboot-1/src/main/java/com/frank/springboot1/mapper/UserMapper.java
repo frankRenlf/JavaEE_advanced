@@ -20,4 +20,5 @@ import org.apache.ibatis.annotations.Mapper;
 public interface UserMapper extends BaseMapper<User> {
 
     User mySelectById(Integer id);
+
 }
