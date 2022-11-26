@@ -1,6 +1,7 @@
 package com.frank.springboot1.controller;
 
 import com.frank.springboot1.controller.utils.Result;
+import com.frank.springboot1.domain.User;
 import com.frank.springboot1.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,9 +51,9 @@ public class UserController {
         return new Result(true, iUserService.list());
     }
 
-    @GetMapping("/servlet")
-    public Result testServlet(HttpServletRequest request, HttpServletResponse response) {
-        return new Result(true, request.getParameter("name"), "success");
+    @GetMapping("/login")
+    public Result testServlet(User user) {
+        return new Result(true, user, "success");
     }
 
 }
