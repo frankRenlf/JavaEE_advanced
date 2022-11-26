@@ -90,4 +90,9 @@ public class UserController {
         return new Result(true, session.getAttribute("username"), "success");
     }
 
+    @GetMapping("/cookie")
+    public Result param11(@CookieValue("frank") String val) throws IOException {
+        return new Result(true, val, "success");
+    }
+
 }
