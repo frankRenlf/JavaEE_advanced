@@ -79,4 +79,15 @@ public class UserController {
         return filePath + " 上传成功." + fileName;
     }
 
+    @PostMapping("/set")
+    public Result param10(HttpSession session, @RequestBody User user) throws IOException {
+        session.setAttribute("username", user.getUserName());
+        return new Result(true, "success");
+    }
+
+    @GetMapping("/get")
+    public Result param11(HttpSession session) throws IOException {
+        return new Result(true, session.getAttribute("username"), "success");
+    }
+
 }

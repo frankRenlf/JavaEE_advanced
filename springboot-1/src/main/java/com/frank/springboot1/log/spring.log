@@ -984,3 +984,40 @@ Caused by: java.io.FileNotFoundException: C:\Users\11195\IdeaProjects\JavaEE_adv
 2022-11-26 16:27:58.735  INFO 16360 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2022-11-26 16:28:04.690  INFO 16360 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2022-11-26 16:28:04.691  INFO 16360 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-26 16:38:53.082  INFO 18076 --- [restartedMain] c.f.springboot1.Springboot1Application   : Starting Springboot1Application using Java 15.0.2 on DESKTOP-24TA0GO with PID 18076 (C:\Users\11195\IdeaProjects\JavaEE_advanced\springboot-1\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\springboot-1)
+2022-11-26 16:38:53.083  INFO 18076 --- [restartedMain] c.f.springboot1.Springboot1Application   : The following 1 profile is active: "dev"
+2022-11-26 16:38:53.131  INFO 18076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-26 16:38:53.131  INFO 18076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-26 16:38:54.191  INFO 18076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2022-11-26 16:38:54.201  INFO 18076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-26 16:38:54.201  INFO 18076 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-26 16:38:54.287  INFO 18076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-26 16:38:54.288  INFO 18076 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1156 ms
+2022-11-26 16:38:54.446  INFO 18076 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-11-26 16:38:54.568  INFO 18076 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-26 16:38:55.157  INFO 18076 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-26 16:38:55.210  INFO 18076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2022-11-26 16:38:55.221  INFO 18076 --- [restartedMain] c.f.springboot1.Springboot1Application   : Started Springboot1Application in 2.583 seconds (JVM running for 3.268)
+2022-11-26 16:39:14.414  INFO 18076 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-26 16:39:14.414  INFO 18076 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-26 16:39:14.415  INFO 18076 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-11-26 16:39:41.299  INFO 18076 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-11-26 16:39:41.300  INFO 18076 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-11-26 16:39:46.622  INFO 19496 --- [restartedMain] c.f.springboot1.Springboot1Application   : Starting Springboot1Application using Java 15.0.2 on DESKTOP-24TA0GO with PID 19496 (C:\Users\11195\IdeaProjects\JavaEE_advanced\springboot-1\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\springboot-1)
+2022-11-26 16:39:46.623  INFO 19496 --- [restartedMain] c.f.springboot1.Springboot1Application   : The following 1 profile is active: "dev"
+2022-11-26 16:39:46.672  INFO 19496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-26 16:39:46.672  INFO 19496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-26 16:39:47.663  INFO 19496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2022-11-26 16:39:47.672  INFO 19496 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-26 16:39:47.672  INFO 19496 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-26 16:39:47.753  INFO 19496 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-26 16:39:47.754  INFO 19496 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1081 ms
+2022-11-26 16:39:47.911  INFO 19496 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-11-26 16:39:48.037  INFO 19496 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-11-26 16:39:48.633  INFO 19496 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-11-26 16:39:48.680  INFO 19496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2022-11-26 16:39:48.693  INFO 19496 --- [restartedMain] c.f.springboot1.Springboot1Application   : Started Springboot1Application in 2.481 seconds (JVM running for 3.163)
+2022-11-26 16:39:54.376  INFO 19496 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-26 16:39:54.377  INFO 19496 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-11-26 16:39:54.378  INFO 19496 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-11-26 16:39:54.391  WARN 19496 --- [http-nio-80-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
