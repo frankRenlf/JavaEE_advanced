@@ -51,8 +51,13 @@ public class UserController {
         return new Result(true, iUserService.list());
     }
 
-    @GetMapping("/login")
-    public Result testServlet(User user) {
+    @GetMapping("/login1")
+    public Result testServlet(User user2) {
+        return new Result(true, user2, "success");
+    }
+
+    @GetMapping("/login2")
+    public Result testLogin2(@RequestBody User user) {
         return new Result(true, user, "success");
     }
 

@@ -9,27 +9,31 @@
 
 <body>
     <div id="root">
-        account:<input class="name" type="text" value=""></br>
-        password:<input class="password" type="password" value="">
+        account:<input id="name" type="text" value=""></br>
+        password:<input id="password" type="password" value="">
         </br><input type="button" onclick="sub()" value="submit">
     </div>
+    <script>
+        function sub() {
+            jQuery.ajax({
+                url: '/user/login2',
+                type: 'GET',
+                contentType: 'application/json',
+                dataType: 'JSON',
+                data: JSON.stringify({
+                    'userName': jQuery('#name').val(),
+                    'userPassword': jQuery('#password').val(),
+                }),
+                success: function (res) {
+                    console.log(res);
+                },
+                error: function () {
+                    console.log(this.data);
+                }
+            })
+        }
+    </script>
 </body>
-<script>
-    function sub() {
-        jQuery.ajax({
-            url: 'http://127.0.0.1/user/login',
-            type: 'get',
-            contentType: 'json',
-            data: JSON.stringify({
-                'userName': jQuery('.name').val(),
-                'userPassword': jQuery('.password').val(),
-            }),
-            success: function (res) {
-                console.log(this.data);
-                console.log(res);
-            }
-        })
-    }
-</script>
+
 
 </html>
