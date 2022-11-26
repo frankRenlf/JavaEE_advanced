@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -38,19 +40,19 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public Result retUser(@PathVariable Integer id){
+    public Result retUser(@PathVariable Integer id) {
         log.warn("test log->debug");
-        return new Result(true,iUserService.selectById(id));
+        return new Result(true, iUserService.selectById(id));
     }
 
     @GetMapping("/list")
-    public Result retUserList(){
-        return new Result(true,iUserService.list());
+    public Result retUserList() {
+        return new Result(true, iUserService.list());
     }
 
     @GetMapping("/servlet")
-    public Result testServlet(){
-        return new Result(true,iUserService.list());
+    public Result testServlet(HttpServletRequest request, HttpServletResponse response) {
+        return new Result(true, request.getParameter("name"), "success");
     }
 
 }
