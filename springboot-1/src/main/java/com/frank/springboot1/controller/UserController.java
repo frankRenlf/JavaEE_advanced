@@ -56,7 +56,7 @@ public class UserController {
         return new Result(true, user2, "success");
     }
 
-    @GetMapping("/login2")
+    @PostMapping("/login2")
     public Result testLogin2(@RequestBody User user) {
         return new Result(true, user, "success");
     }
