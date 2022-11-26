@@ -17,14 +17,15 @@
 <script>
     function sub() {
         jQuery.ajax({
-            url: '/user/login',
+            url: 'http://127.0.0.1/user/login',
             type: 'get',
             contentType: 'json',
             data: JSON.stringify({
-                'userName': jQuery('.name').val,
-                'userPassword': jQuery('.password').val,
+                'userName': jQuery('.name').val(),
+                'userPassword': jQuery('.password').val(),
             }),
             success: function (res) {
+                console.log(this.data);
                 console.log(res);
             }
         })
