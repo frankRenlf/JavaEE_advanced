@@ -15,20 +15,22 @@
     </div>
     <script>
         function sub() {
-            jQuery.ajax({
-                url: '/user/login2',
+            let user = {
+                'userName': jQuery('#name').val(),
+                'userPassword': jQuery('#password').val(),
+            };
+            $.ajax({
                 type: 'GET',
+                url: '/user/login2',
                 contentType: 'application/json',
                 dataType: 'JSON',
-                data: JSON.stringify({
-                    'userName': jQuery('#name').val(),
-                    'userPassword': jQuery('#password').val(),
-                }),
-                success: function (res) {
-                    console.log(res);
+                data: JSON.stringify(user),
+                success: function (body) {
+                    alert("submit success");
+                    console.log(body);
                 },
-                error: function () {
-                    console.log(this.data);
+                error: function (body) {
+                    alert("submit failed");
                 }
             })
         }
