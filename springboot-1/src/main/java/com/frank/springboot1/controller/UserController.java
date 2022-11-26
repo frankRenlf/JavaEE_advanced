@@ -72,11 +72,11 @@ public class UserController {
         String fileName = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
         // ⽂件保存地址
         String filePath = ClassUtils.getDefaultClassLoader().getResource("static").getPath() +
-                "/" + UUID.randomUUID() + fileName;
+                "/img/" + UUID.randomUUID() + fileName;
         // 保存⽂件
         file.transferTo(new File(filePath));
 //        file.transferTo(new File("img.png"));
-        return filePath + " 上传成功.";
+        return filePath + " 上传成功." + fileName;
     }
 
 }
