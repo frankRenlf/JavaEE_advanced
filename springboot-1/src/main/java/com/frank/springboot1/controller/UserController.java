@@ -48,4 +48,9 @@ public class UserController {
         return new Result(true,iUserService.list());
     }
 
+    @GetMapping("/servlet")
+    public Result testServlet(){
+        return new Result(true,iUserService.list());
+    }
+
 }
