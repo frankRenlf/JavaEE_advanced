@@ -3,6 +3,7 @@
 2022-11-29 12:54:57.558  INFO 14076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2022-11-29 12:54:57.558  INFO 14076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2022-11-29 12:54:58.372  INFO 14076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2022-11-29 12:54:58.379  INFO 14076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
 2022-11-29 12:54:58.379  INFO 14076 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
 2022-11-29 12:54:58.450  INFO 14076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
 2022-11-29 12:54:58.450  INFO 14076 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 889 ms
