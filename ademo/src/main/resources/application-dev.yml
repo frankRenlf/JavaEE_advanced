@@ -18,16 +18,16 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
   mapper-locations: classpath:mybatis/**Mapper.xml
-#
-#logging:
-#  file:
-#    path: ./src/main/java/com/frank/springboot1/log
-#    name:
-#  level:
-#    root: info
-#    com:
-#      frank:
-#        springboot1:
-#          controller: debug
-#          service: debug
+
+logging:
+  file:
+    path: ./src/main/java/com/example/ademo/log
+    name:
+  level:
+    root: info
+    com:
+      example:
+        ademo:
+          controller: debug
+          mapper: debug
 
