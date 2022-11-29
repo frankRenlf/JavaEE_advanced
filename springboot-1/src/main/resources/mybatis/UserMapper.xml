@@ -5,7 +5,7 @@
     <resultMap id="BaseMap" type="com.frank.springboot1.domain.User">
         <id column="id" property="userId"></id>
         <result column="user_name" property="userName"></result>
-        <result column="user_password" property="userPassword"></result>
+        <result column="user_password" property="password"></result>
 <!--        <result column="photo" property="photo"></result>-->
 <!--        <result column="createTime" property="createTime"></result>-->
 <!--        <result column="updateTime" property="updateTime"></result>-->
@@ -16,6 +16,6 @@
 <!--        </collection>-->
     </resultMap>
     <select id="mySelectById" resultType="com.frank.springboot1.domain.User" resultMap="BaseMap">
-        select * from user_info where id = #{id}
+        select * from userinfo where id = #{id}
     </select>
 </mapper>
