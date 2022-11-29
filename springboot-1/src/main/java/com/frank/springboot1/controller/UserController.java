@@ -66,6 +66,11 @@ public class UserController {
         return new Result(true, user, "success");
     }
 
+    @GetMapping("/param")
+    public Result testParam(@RequestParam("t") String time) {
+        return new Result(true, time, "success");
+    }
+
     @PostMapping("/file")
     public String param9(String name, @RequestPart("file") MultipartFile file) throws IOException {
         // 获取⽂件后缀名
