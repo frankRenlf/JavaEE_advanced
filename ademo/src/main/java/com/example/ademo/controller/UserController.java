@@ -32,7 +32,7 @@ public class UserController {
     @GetMapping("/{id}")
     public Result retUser(@PathVariable Integer id) {
 //        log.warn("test log->debug");
-        return new Result(true, iUserService.getById(id));
+        return new Result(true, iUserService.mySelectById(id));
     }
 
 }

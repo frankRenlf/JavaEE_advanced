@@ -17,4 +17,7 @@ import org.springframework.stereotype.Service;
  * @Description :
  */
 public interface IUserService extends IService<User> {
+
+    User mySelectById(Integer id);
+
 }
