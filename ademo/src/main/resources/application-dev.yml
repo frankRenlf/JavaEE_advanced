@@ -1,0 +1,33 @@
+server:
+  port: 80
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/mycnblog?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: RLFrlf930Frank_wjq
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix:
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mybatis/**Mapper.xml
+#
+#logging:
+#  file:
+#    path: ./src/main/java/com/frank/springboot1/log
+#    name:
+#  level:
+#    root: info
+#    com:
+#      frank:
+#        springboot1:
+#          controller: debug
+#          service: debug
+
