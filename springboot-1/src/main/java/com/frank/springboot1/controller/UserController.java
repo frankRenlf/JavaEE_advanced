@@ -97,8 +97,8 @@ public class UserController {
         return new Result(true, val, "success");
     }
 
-    @GetMapping("/ag")
-    public Result param11(@CookieValue("frank") String val) throws IOException {
+    @GetMapping("/head")
+    public Result param12(@) throws IOException {
         return new Result(true, val, "success");
     }
 
