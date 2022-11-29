@@ -98,8 +98,8 @@ public class UserController {
     }
 
     @GetMapping("/head")
-    public Result param12(@) throws IOException {
-        return new Result(true, val, "success");
+    public Result param12(@RequestHeader("User-Agent") String userAgent){
+        return new Result(true, userAgent, "success");
     }
 
 }
