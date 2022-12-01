@@ -45,9 +45,15 @@ public class ArticleController {
         return new Result(true, iArticleService.myInsert(article));
     }
 
-    @PostMapping("/remove")
-    public Result remove(@RequestBody Article article) {
+    @PostMapping("/remove/{id}")
+    public Result remove(@PathVariable Integer id) {
 //        log.warn("test log->debug");
-        return new Result(true, iArticleService.myInsert(article));
+        return new Result(true, iArticleService.myRemoveById(id));
+    }
+
+    @PostMapping("/update")
+    public Result update(@RequestBody Article article) {
+//        log.warn("test log->debug");
+        return new Result(true, iArticleService.myUpdate(article));
     }
 }
