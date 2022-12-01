@@ -16,7 +16,7 @@
         <!--                    columnPrefix="a_">-->
         <!--        </collection>-->
     </resultMap>
-    <update id="myInsert">
+    <update id="myInsert" useGeneratedKeys="true" keyProperty="articleId">
         insert into articleinfo(title, content, uid)
         values (#{title}, #{content}, #{uid})
     </update>

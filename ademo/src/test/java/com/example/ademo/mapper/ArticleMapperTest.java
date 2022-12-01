@@ -39,4 +39,5 @@ class ArticleMapperTest {
     void myInsert() {
         System.out.println(articleMapper.myInsert(new Article("current", "my first work", 2)));
     }
+
 }
