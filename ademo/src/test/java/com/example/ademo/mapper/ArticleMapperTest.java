@@ -37,7 +37,9 @@ class ArticleMapperTest {
 
     @Test
     void myInsert() {
-        System.out.println(articleMapper.myInsert(new Article("current", "my first work", 2)));
+        Article article = new Article("current", "my first work", 2);
+        articleMapper.myInsert(article);
+        System.out.println(article.getArticleId());
     }
 
 }
