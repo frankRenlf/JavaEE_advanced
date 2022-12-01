@@ -27,4 +27,8 @@ public interface ArticleMapper extends BaseMapper<Article> {
 
     Integer myInsert(Article article);
 
+    Integer myRemoveById(Integer id);
+
+    Integer myUpdate(Article article);
+
 }

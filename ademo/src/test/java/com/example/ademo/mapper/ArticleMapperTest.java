@@ -42,4 +42,8 @@ class ArticleMapperTest {
         System.out.println(article.getArticleId());
     }
 
+    @Test
+    void myRemoveById() {
+        System.out.println(articleMapper.myRemoveById(19));
+    }
 }

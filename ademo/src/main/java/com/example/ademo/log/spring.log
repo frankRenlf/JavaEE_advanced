@@ -307,3 +307,11 @@ java.lang.IllegalArgumentException: Cannot format given Object as a Date
 2022-12-01 20:59:13.590  INFO 19072 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 2022-12-01 20:59:27.768  INFO 19072 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2022-12-01 20:59:27.785  INFO 19072 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-12-01 22:54:45.956  INFO 11616 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Starting ArticleMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 11616 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\ademo)
+2022-12-01 22:54:45.957 DEBUG 11616 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Running with Spring Boot v2.7.6, Spring v5.3.24
+2022-12-01 22:54:45.958  INFO 11616 --- [main] c.e.ademo.mapper.ArticleMapperTest       : The following 1 profile is active: "dev"
+2022-12-01 22:54:47.232  INFO 11616 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-12-01 22:54:47.524  INFO 11616 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-12-01 22:54:48.910  INFO 11616 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Started ArticleMapperTest in 3.36 seconds (JVM running for 4.437)
+2022-12-01 22:54:49.976  INFO 11616 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-12-01 22:54:49.982  INFO 11616 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

@@ -20,6 +20,14 @@
         insert into articleinfo(title, content, uid)
         values (#{title}, #{content}, #{uid})
     </update>
+    <update id="myUpdate">
+        update 
+    </update>
+    <delete id="myRemoveById">
+        delete
+        from articleinfo
+        where id = #{id}
+    </delete>
     <select id="mySelectById" resultType="com.example.ademo.domain.Article" resultMap="BaseMap">
         select *
         from articleinfo
