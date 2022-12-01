@@ -1,14 +1,12 @@
 package com.example.ademo.controller;
 
 import com.example.ademo.controller.utils.Result;
+import com.example.ademo.domain.Article;
 import com.example.ademo.service.IArticleService;
 import com.example.ademo.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -39,5 +37,11 @@ public class ArticleController {
     public Result retList() {
 //        log.warn("test log->debug");
         return new Result(true, iArticleService.myList());
+    }
+
+    @PostMapping("/insert")
+    public Result insert(@RequestBody Article article) {
+//        log.warn("test log->debug");
+        return new Result(true, iArticleService.myInsert(article));
     }
 }

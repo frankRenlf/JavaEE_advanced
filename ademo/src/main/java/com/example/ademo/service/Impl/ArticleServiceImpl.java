@@ -38,4 +38,9 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper,Article> imple
     public List<Article> myList() {
         return articleMapper.myList();
     }
+
+    @Override
+    public Integer myInsert(Article article) {
+        return articleMapper.myInsert(article);
+    }
 }

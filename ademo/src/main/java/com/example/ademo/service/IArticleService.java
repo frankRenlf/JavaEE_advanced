@@ -21,4 +21,5 @@ import java.util.List;
 public interface IArticleService extends IService<Article> {
     Article mySelectById(Integer id);
     List<Article> myList();
+    Integer myInsert(Article article);
 }
