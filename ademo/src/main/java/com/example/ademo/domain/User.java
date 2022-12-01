@@ -35,7 +35,7 @@ public class User {
     String updateTime;
     Integer state;
 
-    public User(Integer userId, String username, String password, String photo, Timestamp createTime, Timestamp updateTime, Integer uid, Integer state) {
+    public User(Integer userId, String username, String password, String photo, Timestamp createTime, Timestamp updateTime, Integer state) {
         this.userId = userId;
         this.username = username;
         this.password = password;

@@ -191,3 +191,33 @@ java.lang.IllegalArgumentException: Cannot format given Object as a Date
 2022-12-01 17:59:38.504  INFO 19644 --- [main] com.example.ademo.mapper.UserMapperTest  : Started UserMapperTest in 4.046 seconds (JVM running for 5.564)
 2022-12-01 17:59:39.768  INFO 19644 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2022-12-01 17:59:39.773  INFO 19644 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-12-01 20:08:28.935  INFO 12884 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Starting ArticleMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 12884 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\ademo)
+2022-12-01 20:08:28.936 DEBUG 12884 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Running with Spring Boot v2.7.6, Spring v5.3.24
+2022-12-01 20:08:28.937  INFO 12884 --- [main] c.e.ademo.mapper.ArticleMapperTest       : The following 1 profile is active: "dev"
+2022-12-01 20:08:30.314  INFO 12884 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-12-01 20:08:30.564  INFO 12884 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-12-01 20:08:32.033  INFO 12884 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Started ArticleMapperTest in 3.582 seconds (JVM running for 4.943)
+2022-12-01 20:08:33.425  INFO 12884 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-12-01 20:08:33.432  INFO 12884 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-12-01 20:08:51.808  INFO 156 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Starting ArticleMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 156 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\ademo)
+2022-12-01 20:08:51.810 DEBUG 156 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Running with Spring Boot v2.7.6, Spring v5.3.24
+2022-12-01 20:08:51.810  INFO 156 --- [main] c.e.ademo.mapper.ArticleMapperTest       : The following 1 profile is active: "dev"
+2022-12-01 20:08:53.408  INFO 156 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-12-01 20:08:53.693  INFO 156 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-12-01 20:08:55.423  INFO 156 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Started ArticleMapperTest in 4.286 seconds (JVM running for 5.982)
+2022-12-01 20:08:56.869  INFO 156 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-12-01 20:08:56.877  INFO 156 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-12-01 20:14:18.945  INFO 23756 --- [restartedMain] com.example.ademo.AdemoApplication       : Starting AdemoApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 23756 (C:\Users\11195\IdeaProjects\JavaEE_advanced\ademo\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\ademo)
+2022-12-01 20:14:18.947  INFO 23756 --- [restartedMain] com.example.ademo.AdemoApplication       : The following 1 profile is active: "dev"
+2022-12-01 20:14:18.995  INFO 23756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-01 20:14:18.995  INFO 23756 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-01 20:14:20.116  INFO 23756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2022-12-01 20:14:20.126  INFO 23756 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-01 20:14:20.126  INFO 23756 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2022-12-01 20:14:20.227  INFO 23756 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-01 20:14:20.227  INFO 23756 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1231 ms
+2022-12-01 20:14:20.373  INFO 23756 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-12-01 20:14:20.483  INFO 23756 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-12-01 20:14:21.066  INFO 23756 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-01 20:14:21.110  INFO 23756 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2022-12-01 20:14:21.120  INFO 23756 --- [restartedMain] com.example.ademo.AdemoApplication       : Started AdemoApplication in 2.709 seconds (JVM running for 3.966)

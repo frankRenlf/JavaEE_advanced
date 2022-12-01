@@ -26,7 +26,6 @@ import java.text.SimpleDateFormat;
 @NoArgsConstructor
 @TableName("articleinfo")
 public class Article {
-
     @TableId("id")
     Integer articleId;
     String title;
@@ -37,7 +36,7 @@ public class Article {
     Integer rcount;
     Integer state;
 
-    public Article(Integer articleId, String title, String content, String createTime, String updateTime, Integer uid, Integer rcount, Integer state) {
+    public Article(Integer articleId, String title, String content, Timestamp createTime, Timestamp updateTime, Integer uid, Integer rcount, Integer state) {
         this.articleId = articleId;
         this.title = title;
         this.content = content;
