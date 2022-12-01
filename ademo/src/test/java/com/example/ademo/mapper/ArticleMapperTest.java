@@ -46,4 +46,9 @@ class ArticleMapperTest {
     void myRemoveById() {
         System.out.println(articleMapper.myRemoveById(19));
     }
+
+    @Test
+    void myUpdate() {
+        System.out.println(articleMapper.myUpdate(new Article(18,"change2", "what's up 2")));
+    }
 }

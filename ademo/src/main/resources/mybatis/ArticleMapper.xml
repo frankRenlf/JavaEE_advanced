@@ -21,7 +21,10 @@
         values (#{title}, #{content}, #{uid})
     </update>
     <update id="myUpdate">
-        update 
+        update articleinfo
+        set title   = #{title},
+            content = #{content}
+        where id = #{articleId}
     </update>
     <delete id="myRemoveById">
         delete

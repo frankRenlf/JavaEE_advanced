@@ -36,6 +36,13 @@ public class Article {
     Integer rcount;
     Integer state;
 
+
+    public Article(Integer articleId, String title, String content) {
+        this.articleId = articleId;
+        this.title = title;
+        this.content = content;
+    }
+
     public Article(String title, String content, Integer uid) {
 
         this.title = title;
