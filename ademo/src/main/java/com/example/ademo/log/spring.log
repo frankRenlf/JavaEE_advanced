@@ -1,16 +1,19 @@
-2022-11-29 12:54:57.526  INFO 14076 --- [restartedMain] com.example.ademo.AdemoApplication       : Starting AdemoApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 14076 (C:\Users\11195\IdeaProjects\JavaEE_advanced\ademo\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\ademo)
-2022-11-29 12:54:57.527  INFO 14076 --- [restartedMain] com.example.ademo.AdemoApplication       : The following 1 profile is active: "dev"
-2022-11-29 12:54:57.558  INFO 14076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-11-29 12:54:57.558  INFO 14076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-11-29 12:54:58.372  INFO 14076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
-2022-11-29 12:54:58.379  INFO 14076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-11-29 12:54:58.379  INFO 14076 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
-2022-11-29 12:54:58.450  INFO 14076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-11-29 12:54:58.450  INFO 14076 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 889 ms
-2022-11-29 12:54:58.591  INFO 14076 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2022-11-29 12:54:58.683  INFO 14076 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2022-11-29 12:54:59.109  INFO 14076 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-11-29 12:54:59.145  INFO 14076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
-2022-11-29 12:54:59.154  INFO 14076 --- [restartedMain] com.example.ademo.AdemoApplication       : Started AdemoApplication in 1.958 seconds (JVM running for 2.593)
-2022-11-29 12:55:09.706  INFO 14076 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2022-11-29 12:55:09.707  INFO 14076 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-12-01 15:25:30.116  INFO 23832 --- [restartedMain] com.example.ademo.AdemoApplication       : Starting AdemoApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 23832 (C:\Users\11195\IdeaProjects\JavaEE_advanced\ademo\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\ademo)
+2022-12-01 15:25:30.122  INFO 23832 --- [restartedMain] com.example.ademo.AdemoApplication       : The following 1 profile is active: "dev"
+2022-12-01 15:25:30.185  INFO 23832 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-12-01 15:25:30.185  INFO 23832 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-12-01 15:25:31.496  INFO 23832 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2022-12-01 15:25:31.505  INFO 23832 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-12-01 15:25:31.505  INFO 23832 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2022-12-01 15:25:31.591  INFO 23832 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-12-01 15:25:31.591  INFO 23832 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1405 ms
+2022-12-01 15:25:31.730  INFO 23832 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-12-01 15:25:31.850  INFO 23832 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-12-01 15:25:32.420  INFO 23832 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-12-01 15:25:32.465  INFO 23832 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2022-12-01 15:25:32.475  INFO 23832 --- [restartedMain] com.example.ademo.AdemoApplication       : Started AdemoApplication in 2.825 seconds (JVM running for 3.745)
+2022-12-01 15:25:40.739  INFO 23832 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-01 15:25:40.739  INFO 23832 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-01 15:25:40.742  INFO 23832 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-12-01 15:26:16.835  INFO 23832 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-12-01 15:26:16.840  INFO 23832 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
