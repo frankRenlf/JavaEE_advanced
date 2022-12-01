@@ -44,4 +44,10 @@ public class ArticleController {
 //        log.warn("test log->debug");
         return new Result(true, iArticleService.myInsert(article));
     }
+
+    @PostMapping("/remove")
+    public Result remove(@RequestBody Article article) {
+//        log.warn("test log->debug");
+        return new Result(true, iArticleService.myInsert(article));
+    }
 }

@@ -44,4 +44,14 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper,Article> imple
         articleMapper.myInsert(article);
         return article.getArticleId();
     }
+
+    @Override
+    public Integer myRemoveById(Integer id) {
+        return articleMapper.myRemoveById(id);
+    }
+
+    @Override
+    public Integer myUpdate(Article article) {
+        return articleMapper.myUpdate(article);
+    }
 }

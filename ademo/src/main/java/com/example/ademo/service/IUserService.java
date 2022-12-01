@@ -1,6 +1,7 @@
 package com.example.ademo.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.ademo.domain.Article;
 import com.example.ademo.domain.User;
 import org.springframework.stereotype.Service;
 
@@ -22,5 +23,6 @@ public interface IUserService extends IService<User> {
 
     User mySelectById(Integer id);
     List<User> myList();
+//    Integer myUpdate(Article article);
 
 }
