@@ -256,3 +256,8 @@ java.lang.IllegalArgumentException: Cannot format given Object as a Date
 2022-12-01 20:30:09.156  INFO 12344 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2022-12-01 20:30:09.207  INFO 12344 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
 2022-12-01 20:30:09.218  INFO 12344 --- [restartedMain] com.example.ademo.AdemoApplication       : Started AdemoApplication in 2.692 seconds (JVM running for 3.437)
+2022-12-01 20:32:00.166  INFO 12344 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-01 20:32:00.167  INFO 12344 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-12-01 20:32:00.169  INFO 12344 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-12-01 20:32:09.335  INFO 12344 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-12-01 20:32:09.339  INFO 12344 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
