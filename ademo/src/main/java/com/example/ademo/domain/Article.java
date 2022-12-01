@@ -37,16 +37,17 @@ public class Article {
     Integer rcount;
     Integer state;
 
-    public Article(Integer userId, String username, String password, String photo, Timestamp createTime, Timestamp updateTime, Integer uid, Integer state) {
-        this.articleId = userId;
-        this.username = username;
-        this.password = password;
-        this.photo = photo;
+    public Article(Integer articleId, String title, String content, String createTime, String updateTime, Integer uid, Integer rcount, Integer state) {
+        this.articleId = articleId;
+        this.title = title;
+        this.content = content;
         if (createTime != null && updateTime != null) {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             this.createTime = simpleDateFormat.format(createTime);
             this.updateTime = simpleDateFormat.format(updateTime);
         }
+        this.uid = uid;
+        this.rcount = rcount;
         this.state = state;
     }
 
