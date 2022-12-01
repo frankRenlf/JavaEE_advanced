@@ -1,5 +1,6 @@
 package com.example.ademo.mapper;
 
+import com.example.ademo.domain.Article;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -32,5 +33,10 @@ class ArticleMapperTest {
     @Test
     void myList() {
         System.out.println(articleMapper.myList());
+    }
+
+    @Test
+    void myInsert() {
+        System.out.println(articleMapper.myInsert(new Article("current", "my first work", 2)));
     }
 }
