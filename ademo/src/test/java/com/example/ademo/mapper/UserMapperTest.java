@@ -29,6 +29,6 @@ class UserMapperTest {
 
     @Test
     void myList() {
-        
+        System.out.println(userMapper.myList());
     }
 }
