@@ -16,10 +16,17 @@
         <!--                    columnPrefix="a_">-->
         <!--        </collection>-->
     </resultMap>
+    <update id="myInsert">
+        insert into articleinfo(title, content, uid)
+        values (#{title}, #{content}, #{uid})
+    </update>
     <select id="mySelectById" resultType="com.example.ademo.domain.Article" resultMap="BaseMap">
-        select * from articleinfo where id = #{id}
+        select *
+        from articleinfo
+        where id = #{id}
     </select>
     <select id="myList" resultType="com.example.ademo.domain.Article" resultMap="BaseMap">
-        select * from articleinfo
+        select *
+        from articleinfo
     </select>
 </mapper>

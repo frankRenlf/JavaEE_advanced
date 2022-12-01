@@ -25,4 +25,6 @@ public interface ArticleMapper extends BaseMapper<Article> {
 
     List<Article> myList();
 
+    Integer myInsert(Article article);
+
 }
