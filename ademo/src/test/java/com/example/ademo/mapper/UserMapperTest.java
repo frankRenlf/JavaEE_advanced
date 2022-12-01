@@ -27,4 +27,7 @@ class UserMapperTest {
         System.out.println(userMapper.mySelectById(2));
     }
 
+    @Test
+    void myList() {
+    }
 }

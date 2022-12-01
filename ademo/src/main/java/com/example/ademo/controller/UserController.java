@@ -35,4 +35,10 @@ public class UserController {
         return new Result(true, iUserService.mySelectById(id));
     }
 
+    @GetMapping("/list")
+    public Result retList() {
+//        log.warn("test log->debug");
+        return new Result(true, iUserService.myList());
+    }
+
 }

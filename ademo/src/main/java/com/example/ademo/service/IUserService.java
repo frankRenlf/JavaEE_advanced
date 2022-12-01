@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.ademo.domain.User;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -19,5 +21,6 @@ import org.springframework.stereotype.Service;
 public interface IUserService extends IService<User> {
 
     User mySelectById(Integer id);
+    List<User> myList();
 
 }

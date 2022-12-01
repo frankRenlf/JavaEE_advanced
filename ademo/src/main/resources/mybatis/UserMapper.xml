@@ -6,10 +6,10 @@
         <id column="id" property="userId"></id>
         <result column="username" property="username"></result>
         <result column="password" property="password"></result>
-<!--        <result column="photo" property="photo"></result>-->
-<!--        <result column="createTime" property="createTime"></result>-->
-<!--        <result column="updateTime" property="updateTime"></result>-->
-<!--        <result column="state" property="state"></result>-->
+        <result column="photo" property="photo"></result>
+        <result column="createtime" property="createTime"></result>
+        <result column="updatetime" property="updateTime"></result>
+        <result column="state" property="state"></result>
 <!--        <collection property="articleList"-->
 <!--                    resultMap="com.frank.demo.mapper.ArticleMapper.BaseMap"-->
 <!--                    columnPrefix="a_">-->
@@ -17,5 +17,8 @@
     </resultMap>
     <select id="mySelectById" resultType="com.example.ademo.domain.User" resultMap="BaseMap">
         select * from userinfo where id = #{id}
+    </select>
+    <select id="myList" resultType="com.example.ademo.domain.User" resultMap="BaseMap">
+        select * from userinfo
     </select>
 </mapper>

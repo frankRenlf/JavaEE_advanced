@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -28,5 +30,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public User mySelectById(Integer id) {
         return userMapper.mySelectById(id);
+    }
+
+    @Override
+    public List<User> myList() {
+        return userMapper.myList();
     }
 }

@@ -6,6 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -27,5 +30,37 @@ public class User {
     Integer userId;
     String username;
     String password;
+    String photo;
+    String createTime;
+    String updateTime;
+    Integer state;
 
+    public User(Integer userId, String username, String password, String photo, Timestamp createTime, Timestamp updateTime, Integer uid, Integer state) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
+        this.photo = photo;
+        if (createTime != null && updateTime != null) {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            this.createTime = simpleDateFormat.format(createTime);
+            this.updateTime = simpleDateFormat.format(updateTime);
+        }
+        this.state = state;
+    }
+
+    public void setCreateTime(Timestamp createTime) {
+//        this.createTime = createTime;
+        if (createTime != null) {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            this.createTime = simpleDateFormat.format(createTime);
+        }
+    }
+
+    public void setUpdateTime(Timestamp updateTime) {
+//        this.updateTime = updateTime;
+        if (updateTime != null) {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            this.updateTime = simpleDateFormat.format(updateTime);
+        }
+    }
 }

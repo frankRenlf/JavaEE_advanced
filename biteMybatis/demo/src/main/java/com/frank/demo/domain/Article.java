@@ -60,7 +60,6 @@ public class Article {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             this.createtime = simpleDateFormat.format(createtime);
         }
-
     }
 
     public void setUpdatetime(Timestamp updatetime) {
