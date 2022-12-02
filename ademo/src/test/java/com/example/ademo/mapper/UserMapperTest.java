@@ -37,4 +37,9 @@ class UserMapperTest {
     void verify() {
         System.out.println(userMapper.verify(new User("frank","123")));
     }
+
+    @Test
+    void mySelectByIdArticles() {
+        System.out.println(userMapper.mySelectByIdArticles(2));
+    }
 }

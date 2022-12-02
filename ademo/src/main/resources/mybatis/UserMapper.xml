@@ -10,10 +10,10 @@
         <result column="createtime" property="createTime"></result>
         <result column="updatetime" property="updateTime"></result>
         <result column="state" property="state"></result>
-        <!--        <collection property="articleList"-->
-        <!--                    resultMap="com.frank.demo.mapper.ArticleMapper.BaseMap"-->
-        <!--                    columnPrefix="a_">-->
-        <!--        </collection>-->
+        <collection property="list"
+                    resultMap="com.example.ademo.mapper.ArticleMapper.BaseMap"
+                    columnPrefix="a_">
+        </collection>
     </resultMap>
     <select id="mySelectById" resultType="com.example.ademo.domain.User" resultMap="BaseMap">
         select *
@@ -29,5 +29,17 @@
         from userinfo
         where username = #{username}
           and password = #{password}
+    </select>
+    <select id="mySelectByIdArticles" resultType="com.example.ademo.domain.User" resultMap="BaseMap">
+        select u.*
+             , a.id         a_id
+             , a.title      a_title
+             , a.createtime a_createtime
+             , a.updatetime a_updatetime
+             , a.rcount     a_rcount
+             , count(*)     number
+        from userinfo u
+                 left join articleinfo a on u.id = a.uid
+        where u.id = #{id}
     </select>
 </mapper>
