@@ -47,6 +47,9 @@
         where title like concat('%', #{title}, '%')
     </select>
     <select id="mySelectByIdUser" resultType="com.example.ademo.domain.Article" resultMap="BaseMap">
-
+        select *
+        from articleinfo a
+                 left join userinfo u on a.uid = u.id
+        where a.id = #{id}
     </select>
 </mapper>

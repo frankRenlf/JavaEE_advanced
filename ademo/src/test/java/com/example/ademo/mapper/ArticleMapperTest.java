@@ -56,4 +56,9 @@ class ArticleMapperTest {
     void myFindByTitle() {
         System.out.println(articleMapper.myFindByTitle("4"));
     }
+
+    @Test
+    void mySelectByIdUser() {
+        System.out.println(articleMapper.mySelectByIdUser(2));
+    }
 }
