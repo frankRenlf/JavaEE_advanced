@@ -66,10 +66,10 @@
                 title like concat('%', #{title}, '%')
             </if>
             <if test="createTime != null">
-                createtime >= #{createTime}
+                createtime <![CDATA[ >= ]]>  #{createTime}
             </if>
             <if test="updateTime != null">
-                updatetime  #{updateTime}
+                updatetime <![CDATA[ <= ]]> #{updateTime}
             </if>
         </trim>
 

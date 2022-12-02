@@ -61,4 +61,11 @@ class ArticleMapperTest {
     void mySelectByIdUser() {
         System.out.println(articleMapper.mySelectByIdUser(2));
     }
+
+    @Test
+    void mySelectByParams() {
+        Article article = new Article();
+        article.setTitle("r");
+        System.out.println(articleMapper.mySelectByParams(article));
+    }
 }
