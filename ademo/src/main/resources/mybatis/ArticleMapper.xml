@@ -63,13 +63,13 @@
         from articleinfo
         <trim prefix="where" prefixOverrides="and">
             <if test="title != null">
-                title like concat('%', #{title}, '%')
+                and title like concat('%', #{title}, '%')
             </if>
             <if test="createTime != null">
-                createtime <![CDATA[ >= ]]>  #{createTime}
+                and createtime <![CDATA[ >= ]]>  #{createTime}
             </if>
             <if test="updateTime != null">
-                updatetime <![CDATA[ <= ]]> #{updateTime}
+                and updatetime <![CDATA[ <= ]]> #{updateTime}
             </if>
         </trim>
 

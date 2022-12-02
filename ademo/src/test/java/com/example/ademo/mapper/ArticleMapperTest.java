@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.sql.Date;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -65,7 +67,9 @@ class ArticleMapperTest {
     @Test
     void mySelectByParams() {
         Article article = new Article();
-        article.setTitle("r");
+        article.setTitle("c");
+        article.setCreateTime(Date.valueOf("2022-10-22"));
+        article.setUpdateTime(Date.valueOf("2022-12-1"));
         System.out.println(articleMapper.mySelectByParams(article));
     }
 }

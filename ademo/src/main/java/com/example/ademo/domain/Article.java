@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
@@ -30,8 +31,8 @@ public class Article {
     Integer articleId;
     String title;
     String content;
-    String createTime;
-    String updateTime;
+    Date createTime;
+    Date updateTime;
     Integer uid;
     Integer rcount;
     Integer state;
@@ -55,30 +56,30 @@ public class Article {
         this.articleId = articleId;
         this.title = title;
         this.content = content;
-        if (createTime != null && updateTime != null) {
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            this.createTime = simpleDateFormat.format(createTime);
-            this.updateTime = simpleDateFormat.format(updateTime);
-        }
+//        if (createTime != null && updateTime != null) {
+//            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//            this.createTime = simpleDateFormat.format(createTime);
+//            this.updateTime = simpleDateFormat.format(updateTime);
+//        }
         this.uid = uid;
         this.rcount = rcount;
         this.state = state;
     }
 
-    public void setCreateTime(Timestamp createTime) {
-//        this.createTime = createTime;
-        if (createTime != null) {
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            this.createTime = simpleDateFormat.format(createTime);
-        }
-    }
-
-    public void setUpdateTime(Timestamp updateTime) {
-//        this.updateTime = updateTime;
-        if (updateTime != null) {
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            this.updateTime = simpleDateFormat.format(updateTime);
-        }
-    }
+//    public void setCreateTime(Timestamp createTime) {
+////        this.createTime = createTime;
+//        if (createTime != null) {
+//            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//            this.createTime = simpleDateFormat.format(createTime);
+//        }
+//    }
+//
+//    public void setUpdateTime(Timestamp updateTime) {
+////        this.updateTime = updateTime;
+//        if (updateTime != null) {
+//            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//            this.updateTime = simpleDateFormat.format(updateTime);
+//        }
+//    }
 
 }
