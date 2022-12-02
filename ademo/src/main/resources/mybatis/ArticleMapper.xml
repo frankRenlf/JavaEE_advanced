@@ -39,6 +39,7 @@
     <select id="myList" resultType="com.example.ademo.domain.Article" resultMap="BaseMap">
         select *
         from articleinfo
+        order by id ${order}
     </select>
     <select id="myFindByTitle" resultType="com.example.ademo.domain.Article" resultMap="BaseMap">
         select *

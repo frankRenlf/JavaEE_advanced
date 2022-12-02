@@ -35,8 +35,8 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper,Article> imple
     }
 
     @Override
-    public List<Article> myList() {
-        return articleMapper.myList();
+    public List<Article> myList(String order) {
+        return articleMapper.myList(order);
     }
 
     @Override

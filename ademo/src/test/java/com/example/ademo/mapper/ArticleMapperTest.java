@@ -32,7 +32,7 @@ class ArticleMapperTest {
 
     @Test
     void myList() {
-        System.out.println(articleMapper.myList());
+        System.out.println(articleMapper.myList("desc"));
     }
 
     @Test

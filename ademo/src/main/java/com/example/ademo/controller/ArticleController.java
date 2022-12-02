@@ -33,10 +33,10 @@ public class ArticleController {
         return new Result(true, iArticleService.mySelectById(id));
     }
 
-    @GetMapping("/list")
-    public Result retList() {
+    @GetMapping("/list/{order}")
+    public Result retList(@PathVariable String order) {
 //        log.warn("test log->debug");
-        return new Result(true, iArticleService.myList());
+        return new Result(true, iArticleService.myList(order));
     }
 
     @PostMapping("/insert")
