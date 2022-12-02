@@ -47,15 +47,31 @@
         where title like concat('%', #{title}, '%')
     </select>
     <select id="mySelectByIdUser" resultType="com.example.ademo.domain.Article" resultMap="BaseMap">
-        select
-            a.*,
-            u.id u_id,
-            u.username u_username,
-            u.photo u_photo,
-            u.createtime u_createtime,
-            u.updatetime u_updatetime
+        select a.*,
+               u.id         u_id,
+               u.username   u_username,
+               u.photo      u_photo,
+               u.createtime u_createtime,
+               u.updatetime u_updatetime
         from articleinfo a
                  left join userinfo u on a.uid = u.id
         where a.id = #{id}
+    </select>
+    <select id="mySelectByParams" resultType="com.example.ademo.domain.Article" resultMap="BaseMap"
+            parameterType="com.example.ademo.domain.Article">
+        select *
+        from articleinfo
+        <trim prefix="where" prefixOverrides="and">
+            <if test="title != null">
+                title like concat('%', #{title}, '%')
+            </if>
+            <if test="createTime != null">
+                createtime >= #{createTime}
+            </if>
+            <if test="updateTime != null">
+                updatetime  #{updateTime}
+            </if>
+        </trim>
+
     </select>
 </mapper>

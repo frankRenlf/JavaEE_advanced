@@ -35,4 +35,6 @@ public interface ArticleMapper extends BaseMapper<Article> {
 
     Article mySelectByIdUser(Integer id);
 
+    List<Article> mySelectByParams(Article article);
+
 }
