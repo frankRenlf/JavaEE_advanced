@@ -54,6 +54,6 @@ class ArticleMapperTest {
 
     @Test
     void myFindByTitle() {
-        System.out.println(articleMapper.myFindByTitle("c"));
+        System.out.println(articleMapper.myFindByTitle("4"));
     }
 }
