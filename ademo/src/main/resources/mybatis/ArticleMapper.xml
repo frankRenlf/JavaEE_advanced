@@ -40,7 +40,7 @@
         select *
         from articleinfo
     </select>
-    <select id="myFindByTitle" resultType="com.example.ademo.domain.Article">
+    <select id="myFindByTitle" resultType="com.example.ademo.domain.Article" resultMap="BaseMap">
         select *
         from articleinfo
         where title like concat('%', #{title}, '%')

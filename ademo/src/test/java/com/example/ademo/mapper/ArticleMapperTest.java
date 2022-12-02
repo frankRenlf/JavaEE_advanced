@@ -51,4 +51,9 @@ class ArticleMapperTest {
     void myUpdate() {
         System.out.println(articleMapper.myUpdate(new Article(18,"change2", "what's up 2")));
     }
+
+    @Test
+    void myFindByTitle() {
+        System.out.println(articleMapper.myFindByTitle("c"));
+    }
 }
