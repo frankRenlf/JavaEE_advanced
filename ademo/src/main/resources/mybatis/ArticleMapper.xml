@@ -11,10 +11,10 @@
         <result column="uid" property="uid"></result>
         <result column="rcount" property="rcount"></result>
         <result column="state" property="state"></result>
-        <!--        <collection property="articleList"-->
-        <!--                    resultMap="com.frank.demo.mapper.ArticleMapper.BaseMap"-->
-        <!--                    columnPrefix="a_">-->
-        <!--        </collection>-->
+        <association property="user"
+                     resultMap="com.example.ademo.mapper.UserMapper.BaseMap"
+                     columnPrefix="u_">
+        </association>
     </resultMap>
     <update id="myInsert" useGeneratedKeys="true" keyProperty="articleId">
         insert into articleinfo(title, content, uid)
@@ -45,5 +45,8 @@
         select *
         from articleinfo
         where title like concat('%', #{title}, '%')
+    </select>
+    <select id="mySelectByIdUser" resultType="com.example.ademo.domain.Article" resultMap="BaseMap">
+
     </select>
 </mapper>

@@ -33,4 +33,6 @@ public interface ArticleMapper extends BaseMapper<Article> {
 
     List<Article> myFindByTitle(String sub);
 
+    Article mySelectByIdUser(Integer id);
+
 }
