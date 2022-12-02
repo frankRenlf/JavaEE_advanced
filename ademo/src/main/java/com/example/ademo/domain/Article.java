@@ -35,6 +35,7 @@ public class Article {
     Integer uid;
     Integer rcount;
     Integer state;
+    User user;
 
 
     public Article(Integer articleId, String title, String content) {

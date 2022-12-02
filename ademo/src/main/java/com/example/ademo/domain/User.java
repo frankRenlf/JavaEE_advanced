@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -34,6 +35,7 @@ public class User {
     String createTime;
     String updateTime;
     Integer state;
+    List<Article> list;
 
     public User(String username, String password) {
         this.username = username;
