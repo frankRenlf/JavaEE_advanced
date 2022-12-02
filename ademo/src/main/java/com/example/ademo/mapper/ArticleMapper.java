@@ -31,4 +31,6 @@ public interface ArticleMapper extends BaseMapper<Article> {
 
     Integer myUpdate(Article article);
 
+    List<Article> myFindByTitle(String sub);
+
 }
