@@ -1,5 +1,6 @@
 package com.example.ademo.mapper;
 
+import com.example.ademo.domain.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,5 +31,10 @@ class UserMapperTest {
     @Test
     void myList() {
         System.out.println(userMapper.myList());
+    }
+
+    @Test
+    void verify() {
+        System.out.println(userMapper.verify(new User("frank","123")));
     }
 }

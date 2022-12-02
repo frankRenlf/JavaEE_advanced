@@ -10,15 +10,24 @@
         <result column="createtime" property="createTime"></result>
         <result column="updatetime" property="updateTime"></result>
         <result column="state" property="state"></result>
-<!--        <collection property="articleList"-->
-<!--                    resultMap="com.frank.demo.mapper.ArticleMapper.BaseMap"-->
-<!--                    columnPrefix="a_">-->
-<!--        </collection>-->
+        <!--        <collection property="articleList"-->
+        <!--                    resultMap="com.frank.demo.mapper.ArticleMapper.BaseMap"-->
+        <!--                    columnPrefix="a_">-->
+        <!--        </collection>-->
     </resultMap>
     <select id="mySelectById" resultType="com.example.ademo.domain.User" resultMap="BaseMap">
-        select * from userinfo where id = #{id}
+        select *
+        from userinfo
+        where id = #{id}
     </select>
     <select id="myList" resultType="com.example.ademo.domain.User" resultMap="BaseMap">
-        select * from userinfo
+        select *
+        from userinfo
+    </select>
+    <select id="verify" resultType="com.example.ademo.domain.User" resultMap="BaseMap">
+        select *
+        from userinfo
+        where username = #{username}
+          and password = #{password}
     </select>
 </mapper>
