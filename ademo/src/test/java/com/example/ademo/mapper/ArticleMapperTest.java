@@ -29,7 +29,7 @@ class ArticleMapperTest {
 
     @Test
     void mySelectById() {
-        System.out.println(articleMapper.mySelectById(2));
+        System.out.println(articleMapper.mySelectById(2).getCreateTime());
     }
 
     @Test

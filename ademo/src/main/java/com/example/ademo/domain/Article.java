@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.text.DateFormat;
 import java.util.Date;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
@@ -82,4 +83,14 @@ public class Article {
 //        }
 //    }
 
+
+    public String getCreateTime() {
+        DateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return dateformat.format(createTime);
+    }
+
+    public String getUpdateTime() {
+        DateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return dateformat.format(updateTime);
+    }
 }
