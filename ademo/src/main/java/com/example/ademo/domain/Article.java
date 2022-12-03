@@ -85,12 +85,18 @@ public class Article {
 
 
     public String getCreateTime() {
-        DateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        return dateformat.format(createTime);
+        if (createTime != null) {
+            DateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            return dateformat.format(createTime);
+        }
+        return null;
     }
 
     public String getUpdateTime() {
-        DateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        return dateformat.format(updateTime);
+        if (updateTime != null) {
+            DateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            return dateformat.format(updateTime);
+        }
+        return null;
     }
 }
