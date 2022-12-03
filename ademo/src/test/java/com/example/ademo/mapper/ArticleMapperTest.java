@@ -67,7 +67,7 @@ class ArticleMapperTest {
     @Test
     void mySelectByParams() {
         Article article = new Article();
-//        article.setTitle("c");
+        article.setTitle("4");
 //        Date s = new Date("Thu Oct 05 16:43:50 CST 2022");
 //        Date e = new Date("Thu Oct 22 16:43:51 CST 2022");
 //        article.setCreateTime(s);
