@@ -127,3 +127,5 @@
 2022-12-03 10:52:07.983  INFO 14532 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
 2022-12-03 10:52:08.200  INFO 14532 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2022-12-03 10:52:09.529  INFO 14532 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Started ArticleMapperTest in 3.092 seconds (JVM running for 4.35)
+2022-12-03 10:52:11.029  INFO 14532 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-12-03 10:52:11.034  INFO 14532 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
