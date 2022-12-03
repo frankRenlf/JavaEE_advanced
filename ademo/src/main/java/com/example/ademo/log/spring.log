@@ -54,3 +54,27 @@
 2022-12-03 10:30:00.196  INFO 14100 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Started ArticleMapperTest in 5.64 seconds (JVM running for 7.87)
 2022-12-03 10:30:01.488  INFO 14100 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2022-12-03 10:30:01.495  INFO 14100 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-12-03 10:34:56.927  INFO 16684 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Starting ArticleMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 16684 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\ademo)
+2022-12-03 10:34:56.929 DEBUG 16684 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Running with Spring Boot v2.7.6, Spring v5.3.24
+2022-12-03 10:34:56.930  INFO 16684 --- [main] c.e.ademo.mapper.ArticleMapperTest       : The following 1 profile is active: "dev"
+2022-12-03 10:34:58.149  INFO 16684 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-12-03 10:34:58.383  INFO 16684 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-12-03 10:34:59.791  INFO 16684 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Started ArticleMapperTest in 3.333 seconds (JVM running for 4.509)
+2022-12-03 10:35:01.046  INFO 16684 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-12-03 10:35:01.053  INFO 16684 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-12-03 10:36:12.323  INFO 3656 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Starting ArticleMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 3656 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\ademo)
+2022-12-03 10:36:12.324 DEBUG 3656 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Running with Spring Boot v2.7.6, Spring v5.3.24
+2022-12-03 10:36:12.325  INFO 3656 --- [main] c.e.ademo.mapper.ArticleMapperTest       : The following 1 profile is active: "dev"
+2022-12-03 10:36:13.469  INFO 3656 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-12-03 10:36:13.662  INFO 3656 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-12-03 10:36:14.892  INFO 3656 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Started ArticleMapperTest in 2.973 seconds (JVM running for 4.223)
+2022-12-03 10:36:15.907  INFO 3656 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-12-03 10:36:15.912  INFO 3656 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-12-03 10:36:30.637  INFO 23128 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Starting ArticleMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 23128 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\ademo)
+2022-12-03 10:36:30.638 DEBUG 23128 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Running with Spring Boot v2.7.6, Spring v5.3.24
+2022-12-03 10:36:30.639  INFO 23128 --- [main] c.e.ademo.mapper.ArticleMapperTest       : The following 1 profile is active: "dev"
+2022-12-03 10:36:31.718  INFO 23128 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-12-03 10:36:31.915  INFO 23128 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-12-03 10:36:33.397  INFO 23128 --- [main] c.e.ademo.mapper.ArticleMapperTest       : Started ArticleMapperTest in 3.174 seconds (JVM running for 4.227)
+2022-12-03 10:36:34.411  INFO 23128 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-12-03 10:36:34.417  INFO 23128 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
