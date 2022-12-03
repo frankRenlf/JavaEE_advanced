@@ -61,7 +61,7 @@
             parameterType="com.example.ademo.domain.Article">
         select *
         from articleinfo
-        <trim prefix="where" prefixOverrides="and">
+        <trim prefix="where" prefixOverrides="and" suffix="" suffixOverrides="">
             <if test="title != null">
                 and title like concat('%', #{title}, '%')
             </if>
