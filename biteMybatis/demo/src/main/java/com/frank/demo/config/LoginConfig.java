@@ -41,6 +41,7 @@ public class LoginConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/**/register")
                 .excludePathPatterns("/ImageEditorJavaScript/**")
                 .excludePathPatterns("/LeedsInfo/**")
+                .excludePathPatterns("/gluttonous_snake/**")
                 .excludePathPatterns("/photo-editor/**")
                 .excludePathPatterns("/advanced/**")
                 .excludePathPatterns("/home/**");
