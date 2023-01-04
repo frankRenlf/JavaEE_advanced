@@ -29,6 +29,6 @@ public interface UserMapper extends BaseMapper<User> {
 
     User mySelectByIdArticles(Integer id);
 
-
+    List<User> mySelectByParams(User user);
 
 }
