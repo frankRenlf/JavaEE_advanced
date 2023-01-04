@@ -51,10 +51,10 @@
                 username like concat('%', #{username}, '%') and
             </if>
             <if test="createTime != null">
-                and createtime <![CDATA[ >= ]]>  #{createTime}
+                createtime <![CDATA[ >= ]]>  #{createTime} and
             </if>
             <if test="updateTime != null">
-                and updatetime <![CDATA[ <= ]]> #{updateTime}
+                updatetime <![CDATA[ <= ]]> #{updateTime} and
             </if>
         </trim>
     </select>

@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Date;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -46,11 +48,11 @@ class UserMapperTest {
     @Test
     void mySelectByParams() {
         User user=new User();
-        user.setUsername("4");
-//        Date s = new Date("Thu Oct 05 16:43:50 CST 2022");
-//        Date e = new Date("Thu Oct 22 16:43:51 CST 2022");
-//        article.setCreateTime(s);
-//        article.setUpdateTime(e);
-        System.out.println(userMapper.mySelectByParams());
+        user.setUsername("t");
+        Date s = new Date("Thu Oct 06 16:43:50 CST 2022");
+        Date e = new Date("Thu Oct 15 16:43:51 CST 2022");
+        user.setCreateTime(s);
+        user.setUpdateTime(e);
+        System.out.println(userMapper.mySelectByParams(user));
     }
 }
