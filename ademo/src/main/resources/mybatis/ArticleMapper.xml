@@ -10,7 +10,7 @@
         <result column="updatetime" property="updateTime"></result>
         <result column="uid" property="uid"></result>
         <result column="rcount" property="rcount"></result>
-        <result column="state" property="state"></result>
+        <result column="state" property="state"/>
         <association property="user"
                      resultMap="com.example.ademo.mapper.UserMapper.BaseMap"
                      columnPrefix="u_">
