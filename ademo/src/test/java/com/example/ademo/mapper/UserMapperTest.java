@@ -42,4 +42,15 @@ class UserMapperTest {
     void mySelectByIdArticles() {
         System.out.println(userMapper.mySelectByIdArticles(1));
     }
+
+    @Test
+    void mySelectByParams() {
+        User user=new User();
+        user.setUsername("4");
+//        Date s = new Date("Thu Oct 05 16:43:50 CST 2022");
+//        Date e = new Date("Thu Oct 22 16:43:51 CST 2022");
+//        article.setCreateTime(s);
+//        article.setUpdateTime(e);
+        System.out.println(userMapper.mySelectByParams());
+    }
 }

@@ -43,4 +43,19 @@
                  left join articleinfo a on u.id = a.uid
         where u.id = #{id}
     </select>
+    <select id="mySelectByParams" resultType="com.example.ademo.domain.User" resultMap="BaseMap">
+        select *
+        from userinfo
+        <trim prefix="where" prefixOverrides="" suffixOverrides="and">
+            <if test="username !=null">
+                username like concat('%', #{username}, '%') and
+            </if>
+            <if test="createTime != null">
+                and createtime <![CDATA[ >= ]]>  #{createTime}
+            </if>
+            <if test="updateTime != null">
+                and updatetime <![CDATA[ <= ]]> #{updateTime}
+            </if>
+        </trim>
+    </select>
 </mapper>

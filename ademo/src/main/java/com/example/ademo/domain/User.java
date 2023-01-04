@@ -7,7 +7,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,8 +34,8 @@ public class User {
     String username;
     String password;
     String photo;
-    String createTime;
-    String updateTime;
+    Date createTime;
+    Date updateTime;
     Integer state;
     List<Article> list;
 
@@ -47,27 +49,27 @@ public class User {
         this.username = username;
         this.password = password;
         this.photo = photo;
-        if (createTime != null && updateTime != null) {
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            this.createTime = simpleDateFormat.format(createTime);
-            this.updateTime = simpleDateFormat.format(updateTime);
-        }
+//        if (createTime != null && updateTime != null) {
+//            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//            this.createTime = simpleDateFormat.format(createTime);
+//            this.updateTime = simpleDateFormat.format(updateTime);
+//        }
         this.state = state;
     }
 
-    public void setCreateTime(Timestamp createTime) {
-//        this.createTime = createTime;
+    public String getCreateTime() {
         if (createTime != null) {
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            this.createTime = simpleDateFormat.format(createTime);
+            DateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            return dateformat.format(createTime);
         }
+        return null;
     }
 
-    public void setUpdateTime(Timestamp updateTime) {
-//        this.updateTime = updateTime;
+    public String getUpdateTime() {
         if (updateTime != null) {
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            this.updateTime = simpleDateFormat.format(updateTime);
+            DateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            return dateformat.format(updateTime);
         }
+        return null;
     }
 }
