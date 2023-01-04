@@ -37,4 +37,6 @@ public interface ArticleMapper extends BaseMapper<Article> {
 
     List<Article> mySelectByParams(Article article);
 
+    Integer myDeleteListId(List<Integer> listId);
+
 }

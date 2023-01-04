@@ -31,6 +31,7 @@
         from articleinfo
         where id = #{id}
     </delete>
+
     <select id="mySelectById" resultType="com.example.ademo.domain.Article" resultMap="BaseMap">
         select *
         from articleinfo
@@ -74,4 +75,10 @@
         </trim>
 
     </select>
+    <delete id="myDeleteListId">
+        delete from articleinfo where id in
+        <foreach collection="listId" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
 </mapper>

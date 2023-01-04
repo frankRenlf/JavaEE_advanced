@@ -5,7 +5,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -51,7 +53,7 @@ class ArticleMapperTest {
 
     @Test
     void myUpdate() {
-        System.out.println(articleMapper.myUpdate(new Article(18,"change2", "what's up 2")));
+        System.out.println(articleMapper.myUpdate(new Article(18, "change2", "what's up 2")));
     }
 
     @Test
@@ -73,5 +75,13 @@ class ArticleMapperTest {
         article.setCreateTime(s);
         article.setUpdateTime(e);
         System.out.println(articleMapper.mySelectByParams(article));
+    }
+
+    @Test
+    void myDeleteListId() {
+        List<Integer> list = new ArrayList<>();
+        list.add(16);
+        list.add(18);
+        System.out.println(articleMapper.myDeleteListId(list));
     }
 }
