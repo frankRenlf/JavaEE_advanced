@@ -5,7 +5,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -49,8 +51,8 @@ class UserMapperTest {
     void mySelectByParams() {
         User user=new User();
         user.setUsername("t");
-        Date s = new Date("Thu Oct 06 16:43:50 CST 2022");
-        Date e = new Date("Thu Oct 15 16:43:51 CST 2022");
+        Date s = new Date(122, Calendar.OCTOBER,6);
+        Date e = new Date(122, Calendar.DECEMBER,7);
         user.setCreateTime(s);
         user.setUpdateTime(e);
         System.out.println(userMapper.mySelectByParams(user));
