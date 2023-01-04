@@ -40,6 +40,6 @@ class UserMapperTest {
 
     @Test
     void mySelectByIdArticles() {
-        System.out.println(userMapper.mySelectByIdArticles(2));
+        System.out.println(userMapper.mySelectByIdArticles(1));
     }
 }
