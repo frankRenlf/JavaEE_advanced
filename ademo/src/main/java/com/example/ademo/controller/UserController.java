@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 /**
  * Created with IntelliJ IDEA.
  *
@@ -30,9 +34,20 @@ public class UserController {
     private IUserService iUserService;
 
     @GetMapping("/{id}")
-    public Result retUser(@PathVariable Integer id) {
+    public Result retUser(@PathVariable Integer id, HttpSession session) {
 //        log.warn("test log->debug");
+        session.setAttribute("userId", id);
+        System.out.println(session.getAttribute("userId"));
+//            currentUser = iUserService.getById(index);
+//            System.out.println(currentUser);
+
         return new Result(true, iUserService.mySelectById(id));
+    }
+    @GetMapping("/logout")
+    public Result retUser(HttpSession session) {
+//        log.warn("test log->debug");
+        session.removeAttribute("userId");
+        return new Result(true);
     }
 
     @GetMapping("/list")
@@ -40,7 +55,6 @@ public class UserController {
 //        log.warn("test log->debug");
         return new Result(true, iUserService.myList());
     }
-
 
 
 }
