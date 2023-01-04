@@ -36,8 +36,9 @@
              , a.title      a_title
              , a.createtime a_createtime
              , a.updatetime a_updatetime
-             , a.uid         a_uid
+             , a.uid        a_uid
              , a.rcount     a_rcount
+             , a.state      a_state
         from userinfo u
                  left join articleinfo a on u.id = a.uid
         where u.id = #{id}
