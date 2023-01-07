@@ -1,5 +1,7 @@
 package com.example.ademo.aop;
 
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -21,16 +23,26 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LoginAOP {
     @Pointcut("execution(* com.example.ademo.controller.UserController.retUser(..))")
-    public void pointcut(){}
+    public void pointcut() {
+    }
 
     @Pointcut("execution(* com.example.ademo.controller.UserController.retList(..))")
-    public void pointcut2(){}
+    public void pointcut2() {
+    }
+
     @Before("pointcut()")
-    public void before(){
+    public void before() {
         System.out.println("----id-----before---------");
     }
+
     @Before("pointcut2()")
-    public void before2(){
+    public void before2() {
         System.out.println("----list-----before---------");
+    }
+
+    @Around("pointcut2()")
+    public Object around(ProceedingJoinPoint proceedingJoinPoint) {
+        Object res = null;
+        return res;
     }
 }
