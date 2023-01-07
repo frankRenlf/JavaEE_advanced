@@ -41,8 +41,14 @@ public class LoginAOP {
     }
 
     @Around("pointcut2()")
-    public Object around(ProceedingJoinPoint proceedingJoinPoint) {
+    public Object around(ProceedingJoinPoint joinPoint) {
         Object res = null;
+        System.out.println("around---beafore");
+        try {
+            res = joinPoint.proceed();
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
         return res;
     }
 }
