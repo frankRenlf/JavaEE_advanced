@@ -33,11 +33,8 @@ public class UserController {
 
     @GetMapping("/{id}")
     public Result retUser(@PathVariable Integer id, HttpSession session) {
-//        log.warn("test log->debug");
         session.setAttribute("userId", id);
         System.out.println(session.getAttribute("userId"));
-//            currentUser = iUserService.getById(index);
-//            System.out.println(currentUser);
         return new Result(true, iUserService.mySelectById(id));
     }
 
@@ -50,7 +47,7 @@ public class UserController {
 
     @GetMapping("/list")
     public Result retList() {
-//        log.warn("test log->debug");
+        log.warn("test log->debug");
         int x = 10 / 0;
         return new Result(true, iUserService.myList());
     }
