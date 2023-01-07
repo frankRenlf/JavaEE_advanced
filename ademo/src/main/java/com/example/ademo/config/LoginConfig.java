@@ -1,6 +1,6 @@
-package com.example.ademo.controller.utils;
+package com.example.ademo.config;
 
-import com.example.ademo.controller.utils.Interceptors.LoginInterceptor;
+import com.example.ademo.config.Interceptors.LoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

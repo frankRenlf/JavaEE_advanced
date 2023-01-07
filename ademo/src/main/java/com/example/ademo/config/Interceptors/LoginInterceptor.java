@@ -1,6 +1,5 @@
-package com.example.ademo.controller.utils.Interceptors;
+package com.example.ademo.config.Interceptors;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
@@ -14,7 +13,7 @@ import javax.servlet.http.HttpSession;
  * @author : Frank.Ren
  * @version : 1.0
  * @Project : ademo
- * @Package : com.example.ademo.controller.utils.Interceptors
+ * @Package : com.example.ademo.config.Interceptors
  * @createTime : 2023/1/4 22:32
  * @Email : sc19lr@leeds.ac.uk
  * @github : https://github.com/frankRenlf
