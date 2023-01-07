@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class LoginAOP {
-    @Pointcut("execution(com.example.ademo.controller.UserController.*(..))")
+    @Pointcut("execution(* com.example.ademo.controller.UserController.retUser(..))")
     public void pointcut(){}
 
     @Before("pointcut()")
