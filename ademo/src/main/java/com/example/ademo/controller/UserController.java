@@ -43,6 +43,7 @@ public class UserController {
 
         return new Result(true, iUserService.mySelectById(id));
     }
+
     @GetMapping("/logout")
     public Result logout(HttpSession session) {
 //        log.warn("test log->debug");
