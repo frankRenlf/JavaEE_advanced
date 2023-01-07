@@ -23,8 +23,14 @@ public class LoginAOP {
     @Pointcut("execution(* com.example.ademo.controller.UserController.retUser(..))")
     public void pointcut(){}
 
+    @Pointcut("execution(* com.example.ademo.controller.UserController.retList(..))")
+    public void pointcut2(){}
     @Before("pointcut()")
     public void before(){
-        System.out.println("---------before---------");
+        System.out.println("----id-----before---------");
+    }
+    @Before("pointcut2()")
+    public void before2(){
+        System.out.println("----list-----before---------");
     }
 }
