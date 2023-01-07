@@ -44,7 +44,7 @@ public class UserController {
         return new Result(true, iUserService.mySelectById(id));
     }
     @GetMapping("/logout")
-    public Result retUser(HttpSession session) {
+    public Result logout(HttpSession session) {
 //        log.warn("test log->debug");
         session.removeAttribute("userId");
         return new Result(true);
