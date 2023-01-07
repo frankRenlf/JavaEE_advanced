@@ -25,7 +25,7 @@ public class MyExceptionAdvice {
         HashMap<String, Object> result = new HashMap<>();
         result.put("status", -1);
         result.put("data", null);
-        result.put("message", "error_info: " + e.getMessage());
+        result.put("message", "error_info " + e.getMessage());
         return result;
     }
 
