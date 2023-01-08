@@ -52,7 +52,7 @@ public class ArticleController {
 //        log.warn("test log->debug");
         Object data = iArticleService.myInsert(article);
 
-            int x = 10 / 0;
+        int x = 10 / 0;
 
         return new Result(true, data);
     }
