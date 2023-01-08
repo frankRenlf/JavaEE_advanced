@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -41,6 +43,20 @@ public class ArticleController {
         TransactionStatus transactionStatus = dataSourceTransactionManager.getTransaction(transactionDefinition);
         Object data = iArticleService.myInsert(article);
         dataSourceTransactionManager.rollback(transactionStatus);
+        return new Result(true, data);
+    }
+
+    @Transactional(isolation = Isolation.SERIALIZABLE)
+    @PostMapping("/insert2")
+    public Result insert2(@RequestBody Article article) {
+//        log.warn("test log->debug");
+        Object data = iArticleService.myInsert(article);
+        try {
+            int x = 10 / 0;
+        } catch (Exception e) {
+            System.out.println(e);
+            throw e;
+        }
         return new Result(true, data);
     }
 
