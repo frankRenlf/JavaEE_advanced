@@ -6,6 +6,9 @@ import com.example.ademo.service.IArticleService;
 import com.example.ademo.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.TransactionStatus;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -27,6 +30,20 @@ public class ArticleController {
     @Autowired
     private IArticleService iArticleService;
 
+    @Autowired(required = false)
+    private DataSourceTransactionManager dataSourceTransactionManager;
+    @Autowired(required = false)
+    private TransactionDefinition transactionDefinition;
+
+    @PostMapping("/insert")
+    public Result insert(@RequestBody Article article) {
+//        log.warn("test log->debug");
+        TransactionStatus transactionStatus = dataSourceTransactionManager.getTransaction(transactionDefinition);
+        Object data = iArticleService.myInsert(article);
+        dataSourceTransactionManager.rollback(transactionStatus);
+        return new Result(true, data);
+    }
+
     @GetMapping("/{id}")
     public Result retArticle(@PathVariable Integer id) {
 //        log.warn("test log->debug");
@@ -37,12 +54,6 @@ public class ArticleController {
     public Result retList(@PathVariable String order) {
 //        log.warn("test log->debug");
         return new Result(true, iArticleService.myList(order));
-    }
-
-    @PostMapping("/insert")
-    public Result insert(@RequestBody Article article) {
-//        log.warn("test log->debug");
-        return new Result(true, iArticleService.myInsert(article));
     }
 
     @PostMapping("/remove/{id}")
