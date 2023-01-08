@@ -51,12 +51,9 @@ public class ArticleController {
     public Result insert2(@RequestBody Article article) {
 //        log.warn("test log->debug");
         Object data = iArticleService.myInsert(article);
-        try {
+
             int x = 10 / 0;
-        } catch (Exception e) {
-            System.out.println(e);
-            throw e;
-        }
+
         return new Result(true, data);
     }
 
