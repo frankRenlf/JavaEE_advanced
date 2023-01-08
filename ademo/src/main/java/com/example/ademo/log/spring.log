@@ -33,3 +33,6 @@
 2023-01-08 10:49:32.993  INFO 7080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2023-01-08 10:49:33.035  INFO 7080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
 2023-01-08 10:49:33.044  INFO 7080 --- [restartedMain] com.example.ademo.AdemoApplication       : Started AdemoApplication in 2.436 seconds (JVM running for 3.155)
+2023-01-08 10:49:47.465  INFO 7080 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-08 10:49:47.465  INFO 7080 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-08 10:49:47.466  INFO 7080 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

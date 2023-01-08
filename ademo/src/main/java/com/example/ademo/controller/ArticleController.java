@@ -30,9 +30,9 @@ public class ArticleController {
     @Autowired
     private IArticleService iArticleService;
 
-    @Autowired
+    @Autowired(required = false)
     private DataSourceTransactionManager dataSourceTransactionManager;
-    @Autowired
+    @Autowired(required = false)
     private TransactionDefinition transactionDefinition;
 
     @PostMapping("/insert")
