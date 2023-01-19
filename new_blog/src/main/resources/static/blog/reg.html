@@ -51,7 +51,11 @@
         let user = {}
         user.username = jQuery("#username").val()
         user.password = jQuery("#password1").val()
-        if (user.password !== jQuery("#password2").val()) {
+        if (user.username === null) {
+            alert("username is null")
+        } else if (user.password === null) {
+            alert("password is null")
+        } else if (user.password !== jQuery("#password2").val()) {
             alert("passwords are not same!")
         } else {
             jQuery.ajax({
