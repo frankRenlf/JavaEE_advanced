@@ -27,5 +27,6 @@ import javax.servlet.http.HttpSession;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
+    @Autowired
+    private IUserService iUserService;
 }
