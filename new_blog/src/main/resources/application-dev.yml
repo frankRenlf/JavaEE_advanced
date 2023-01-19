@@ -24,7 +24,7 @@ mybatis-plus:
 
 logging:
   file:
-    path: ./src/main/java/com/example/ademo/log
+    path: ./src/main/java/com/frank/new_blog/log
     name:
   level:
     root: info
