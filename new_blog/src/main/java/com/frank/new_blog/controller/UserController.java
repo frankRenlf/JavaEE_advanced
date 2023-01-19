@@ -42,7 +42,7 @@ public class UserController {
             id = iUserService.checkIdentity(user);
         }
         if (id != null) {
-            session.setAttribute("userId", user);
+            session.setAttribute("userId", id);
             System.out.println(session.getAttribute("userId"));
         }
         return new Result(true, id);
