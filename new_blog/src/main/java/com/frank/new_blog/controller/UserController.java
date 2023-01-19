@@ -1,13 +1,11 @@
 package com.frank.new_blog.controller;
 
 import com.frank.new_blog.controller.utils.Result;
+import com.frank.new_blog.domain.User;
 import com.frank.new_blog.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 
@@ -29,4 +27,39 @@ import javax.servlet.http.HttpSession;
 public class UserController {
     @Autowired
     private IUserService iUserService;
+
+    @GetMapping("/{id}")
+    public Result retUser(@PathVariable Integer id, HttpSession session) {
+        session.setAttribute("userId", id);
+        System.out.println(session.getAttribute("userId"));
+        return new Result(true, iUserService.mySelectById(id));
+    }
+
+    @PostMapping("/login")
+    public Result login(@RequestBody User user, HttpSession session) {
+        Integer id = null;
+        if (user != null) {
+            id = iUserService.checkIdentity(user);
+        }
+        if (id != null) {
+            session.setAttribute("userId", user);
+            System.out.println(session.getAttribute("userId"));
+        }
+        return new Result(true, id);
+    }
+
+    @GetMapping("/logout")
+    public Result logout(HttpSession session) {
+//        log.warn("test log->debug");
+        session.removeAttribute("userId");
+        return new Result(true);
+    }
+
+    @GetMapping("/list")
+    public Result retList() {
+        log.warn("test log->debug");
+        int x = 10 / 0;
+        return new Result(true, iUserService.myList());
+    }
+
 }

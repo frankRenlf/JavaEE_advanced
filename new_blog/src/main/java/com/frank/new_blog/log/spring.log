@@ -12,3 +12,59 @@
 2023-01-19 11:33:29.099  INFO 17116 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : Started ArticleMapperTest in 4.073 seconds (JVM running for 5.48)
 2023-01-19 11:33:30.362  INFO 17116 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2023-01-19 11:33:30.368  INFO 17116 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-19 11:51:10.184  INFO 23496 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Starting NewBlogApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 23496 (C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-19 11:51:10.185  INFO 23496 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : The following 1 profile is active: "dev"
+2023-01-19 11:51:10.227  INFO 23496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-19 11:51:10.227  INFO 23496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-19 11:51:11.264  INFO 23496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-19 11:51:11.273  INFO 23496 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-19 11:51:11.273  INFO 23496 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-19 11:51:11.347  INFO 23496 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-19 11:51:11.348  INFO 23496 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1120 ms
+2023-01-19 11:51:11.462  INFO 23496 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-19 11:51:11.566  INFO 23496 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-19 11:51:12.079  INFO 23496 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-19 11:51:12.122  INFO 23496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-01-19 11:51:12.139  INFO 23496 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 2.317 seconds (JVM running for 2.997)
+2023-01-19 11:51:31.030  INFO 23496 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-19 11:51:31.030  INFO 23496 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-19 11:51:31.031  INFO 23496 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-19 11:51:31.472  WARN 23496 --- [http-nio-80-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: <EOL><EOL>### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id<EOL>        from userinfo<EOL>        where username = 'frank2'<EOL>          and passwo' at line 1<EOL><EOL>### The error may exist in file [C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes\mybatis\UserMapper.xml]<EOL><EOL>### The error may involve defaultParameterMap<EOL><EOL>### The error occurred while setting parameters<EOL><EOL>### SQL: select *.id         from userinfo         where username = ?           and password = ?<EOL><EOL>### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id<EOL>        from userinfo<EOL>        where username = 'frank2'<EOL>          and passwo' at line 1<EOL>; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.id<EOL>        from userinfo<EOL>        where username = 'frank2'<EOL>          and passwo' at line 1]
+2023-01-19 11:52:15.581  INFO 23496 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-19 11:52:15.584  INFO 23496 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-19 11:52:18.430  INFO 17368 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Starting NewBlogApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 17368 (C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-19 11:52:18.431  INFO 17368 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : The following 1 profile is active: "dev"
+2023-01-19 11:52:18.465  INFO 17368 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-19 11:52:18.465  INFO 17368 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-19 11:52:19.385  INFO 17368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-19 11:52:19.397  INFO 17368 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-19 11:52:19.397  INFO 17368 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-19 11:52:19.478  INFO 17368 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-19 11:52:19.479  INFO 17368 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1013 ms
+2023-01-19 11:52:19.598  INFO 17368 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-19 11:52:19.687  INFO 17368 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-19 11:52:20.232  INFO 17368 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-19 11:52:20.269  INFO 17368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-01-19 11:52:20.280  INFO 17368 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 2.271 seconds (JVM running for 3.114)
+2023-01-19 11:52:22.947  INFO 17368 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-19 11:52:22.948  INFO 17368 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-19 11:52:22.950  INFO 17368 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-01-19 11:52:34.394  WARN 17368 --- [http-nio-80-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.ClassCastException: class com.frank.new_blog.domain.User cannot be cast to class java.lang.Integer (com.frank.new_blog.domain.User is in unnamed module of loader org.springframework.boot.devtools.restart.classloader.RestartClassLoader @c4f7368; java.lang.Integer is in module java.base of loader 'bootstrap')]
+2023-01-19 11:54:38.508  INFO 17368 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-19 11:54:38.512  INFO 17368 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-19 11:54:45.598  INFO 23004 --- [main] c.frank.new_blog.mapper.UserMapperTest   : Starting UserMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 23004 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-19 11:54:45.600  INFO 23004 --- [main] c.frank.new_blog.mapper.UserMapperTest   : The following 1 profile is active: "dev"
+2023-01-19 11:54:47.027  INFO 23004 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-19 11:54:47.277  INFO 23004 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-19 11:54:48.966  INFO 23004 --- [main] c.frank.new_blog.mapper.UserMapperTest   : Started UserMapperTest in 3.85 seconds (JVM running for 5.105)
+2023-01-19 11:54:50.276  INFO 23004 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-19 11:54:50.286  INFO 23004 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-19 11:55:28.715  INFO 21152 --- [main] c.frank.new_blog.mapper.UserMapperTest   : Starting UserMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 21152 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-19 11:55:28.716  INFO 21152 --- [main] c.frank.new_blog.mapper.UserMapperTest   : The following 1 profile is active: "dev"
+2023-01-19 11:55:30.160  INFO 21152 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-19 11:55:30.439  INFO 21152 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-19 11:55:32.362  INFO 21152 --- [main] c.frank.new_blog.mapper.UserMapperTest   : Started UserMapperTest in 4.132 seconds (JVM running for 5.436)
+2023-01-19 11:55:33.839  INFO 21152 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-19 11:55:33.847  INFO 21152 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-19 11:55:53.510  INFO 20668 --- [main] c.frank.new_blog.mapper.UserMapperTest   : Starting UserMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 20668 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-19 11:55:53.511  INFO 20668 --- [main] c.frank.new_blog.mapper.UserMapperTest   : The following 1 profile is active: "dev"

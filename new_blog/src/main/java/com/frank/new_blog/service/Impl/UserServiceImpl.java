@@ -36,4 +36,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     public List<User> myList() {
         return userMapper.myList();
     }
+
+    @Override
+    public Integer checkIdentity(User user) {
+        return userMapper.checkIdentity(user);
+    }
 }

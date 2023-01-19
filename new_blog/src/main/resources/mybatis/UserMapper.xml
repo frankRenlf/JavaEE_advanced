@@ -58,4 +58,10 @@
             </if>
         </trim>
     </select>
+    <select id="checkIdentity" resultType="java.lang.Integer">
+        select id
+        from userinfo
+        where username = #{username}
+          and password = #{password}
+    </select>
 </mapper>

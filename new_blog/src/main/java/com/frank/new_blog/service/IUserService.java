@@ -22,7 +22,10 @@ import java.util.List;
 public interface IUserService extends IService<User> {
 
     User mySelectById(Integer id);
+
     List<User> myList();
+
+    Integer checkIdentity(User user);
 //    Integer myUpdate(Article article);
 
 }

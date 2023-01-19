@@ -54,4 +54,9 @@ class UserMapperTest {
         user.setUpdateTime(e);
         System.out.println(userMapper.mySelectByParams(user));
     }
+
+    @Test
+    void checkIdentity() {
+        System.out.println(userMapper.checkIdentity(new User("admin","admin1")));
+    }
 }
