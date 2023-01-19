@@ -38,9 +38,9 @@ public class Result {
         this.data = data;
     }
 
-    public Result(Boolean status, String msg) {
+    public Result(Boolean status, Object data, String msg) {
         this.status = status;
-        this.data = null;
+        this.data = data;
         this.message = msg;
     }
 

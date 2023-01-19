@@ -63,20 +63,18 @@
             jQuery.ajax({
                 type: "post",        // 请求方式
                 url: "/user/register", // 请求路径
-                dataType: "application/json",   // 预期返回一个 json 类型数据
+                dataType: "json",   // 预期返回一个 json 类型数据
                 contentType: "application/json",
                 data: JSON.stringify(user),
                 success: function (data) {   // data是形参名，代表返回的数据
-                    console.log(data);
+                    console.log("success: ",data);
                     if (data.code === 200) {
+                        alert("register success")
                         location.href = "login.html"
                     }else {
                         alert("the name is already registered")
                     }
                 },
-                error: function (data) {
-                    console.log(data);
-                }
             })
         }
     }
