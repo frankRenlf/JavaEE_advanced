@@ -8,6 +8,7 @@
     <title>登陆页面</title>
     <link rel="stylesheet" href="css/conmmon.css">
     <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -33,13 +34,44 @@
             </div>
             <div class="row">
                 <span>密码</span>
-                <input type="password" id="password">
+                <input type="password" id="password1">
             </div>
             <div class="row">
-                <button id="submit">提交</button>
+                <button id="submit" onclick="submit()">提交</button>
             </div>
         </div>
     </div>
+    <script>
+        function submit() {
+            let user = {}
+            user.username = jQuery("#username").val()
+            user.password = jQuery("#password1").val()
+            console.log(user)
+            if (user.username === "") {
+                alert("username is null")
+            } else if (user.password === "") {
+                alert("password is null")
+            } else {
+                console.log("success send")
+                jQuery.ajax({
+                    type: "post",        // 请求方式
+                    url: "/user/login", // 请求路径
+                    dataType: "json",   // 预期返回一个 json 类型数据
+                    contentType: "application/json",
+                    data: JSON.stringify(user),
+                    success: function (data) {   // data是形参名，代表返回的数据
+                        console.log("success: ",data);
+                        if (data.code === 200) {
+                            alert("login success")
+                            location.href = "blog_list.html"
+                        }else {
+                            alert("wrong username or password")
+                        }
+                    },
+                })
+            }
+        }
+    </script>
 </body>
 
 </html>

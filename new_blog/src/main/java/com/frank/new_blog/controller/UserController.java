@@ -44,8 +44,9 @@ public class UserController {
         if (id != null) {
             session.setAttribute("userId", id);
             System.out.println(session.getAttribute("userId"));
+            return new Result(200, true, id, "success");
         }
-        return new Result(200, true, id, "success");
+        return new Result(400, true, id, "success");
     }
 
     @PostMapping("/register")
