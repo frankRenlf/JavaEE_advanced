@@ -111,3 +111,22 @@
 2023-01-19 12:07:57.913  INFO 23620 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2023-01-19 12:09:15.951  INFO 23620 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2023-01-19 12:09:15.954  INFO 23620 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-19 12:50:59.264  INFO 1052 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Starting NewBlogApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 1052 (C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-19 12:50:59.265  INFO 1052 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : The following 1 profile is active: "dev"
+2023-01-19 12:50:59.302  INFO 1052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-19 12:50:59.303  INFO 1052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-19 12:51:00.242  INFO 1052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-19 12:51:00.249  INFO 1052 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-19 12:51:00.249  INFO 1052 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-19 12:51:00.321  INFO 1052 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-19 12:51:00.323  INFO 1052 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1018 ms
+2023-01-19 12:51:00.442  INFO 1052 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-19 12:51:00.541  INFO 1052 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-19 12:51:01.072  INFO 1052 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-19 12:51:01.118  INFO 1052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-01-19 12:51:01.129  INFO 1052 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 2.234 seconds (JVM running for 2.865)
+2023-01-19 12:51:15.108  INFO 1052 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-19 12:51:15.108  INFO 1052 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-19 12:51:15.109  INFO 1052 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-19 12:52:03.993  WARN 1052 --- [http-nio-80-exec-5] c.f.new_blog.controller.UserController   : test log->debug
+2023-01-19 12:52:04.005  WARN 1052 --- [http-nio-80-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.ArithmeticException: / by zero]
