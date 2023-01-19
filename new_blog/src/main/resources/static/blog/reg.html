@@ -34,11 +34,11 @@
         </div>
         <div class="row">
             <span>密码</span>
-            <input type="password" id="password">
+            <input type="password" id="password1">
         </div>
         <div class="row">
             <span>确认密码</span>
-            <input type="password" id="password">
+            <input type="password" id="password2">
         </div>
         <div class="row">
             <button id="submit" onclick="submit()">提交</button>
@@ -49,21 +49,25 @@
 <script>
     function submit() {
         let user = {}
-        user.username = document.getElementById("username").value
-        user.password = document.getElementById("password").value
-        $.ajax({
-            type: "post",        // 请求方式
-            url: "/user/register", // 请求路径
-            dataType: "application/json",   // 预期返回一个 json 类型数据
-            contentType: "application/json",
-            data: JSON.stringify(user),
-            success: function (data) {   // data是形参名，代表返回的数据
-                console.log(data);
-            },
-            error: function (data) {
-                console.log(data);
-            }
-        })
+        user.username = jQuery("#username").val()
+        user.password = jQuery("#password1").val()
+        if (user.password !== jQuery("#password2").val()) {
+            alert("passwords are not same!")
+        } else {
+            jQuery.ajax({
+                type: "post",        // 请求方式
+                url: "/user/register", // 请求路径
+                dataType: "application/json",   // 预期返回一个 json 类型数据
+                contentType: "application/json",
+                data: JSON.stringify(user),
+                success: function (data) {   // data是形参名，代表返回的数据
+                    console.log(data);
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            })
+        }
     }
 </script>
 </body>
