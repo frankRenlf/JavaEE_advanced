@@ -1,0 +1,14 @@
+2023-01-19 11:32:32.753  INFO 23716 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : Starting ArticleMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 23716 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-19 11:32:32.754  INFO 23716 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : The following 1 profile is active: "dev"
+2023-01-19 11:32:33.897  INFO 23716 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-19 11:32:34.092  INFO 23716 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-19 11:32:35.391  INFO 23716 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : Started ArticleMapperTest in 3.037 seconds (JVM running for 4.211)
+2023-01-19 11:32:36.464  INFO 23716 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-19 11:32:36.471  INFO 23716 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-19 11:33:25.458  INFO 17116 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : Starting ArticleMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 17116 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-19 11:33:25.459  INFO 17116 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : The following 1 profile is active: "dev"
+2023-01-19 11:33:26.737  INFO 17116 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-19 11:33:27.030  INFO 17116 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-19 11:33:29.099  INFO 17116 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : Started ArticleMapperTest in 4.073 seconds (JVM running for 5.48)
+2023-01-19 11:33:30.362  INFO 17116 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-19 11:33:30.368  INFO 17116 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
