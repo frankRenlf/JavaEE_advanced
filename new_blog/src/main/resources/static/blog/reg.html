@@ -68,6 +68,11 @@
                 data: JSON.stringify(user),
                 success: function (data) {   // data是形参名，代表返回的数据
                     console.log(data);
+                    if (data.code === 200) {
+                        location.href = "login.html"
+                    }else {
+                        alert("the name is already registered")
+                    }
                 },
                 error: function (data) {
                     console.log(data);
