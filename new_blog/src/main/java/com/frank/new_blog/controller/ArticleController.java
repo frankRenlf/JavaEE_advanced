@@ -29,5 +29,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/article")
 public class ArticleController {
+    @Autowired
+    private IArticleService iArticleService;
 
 }
