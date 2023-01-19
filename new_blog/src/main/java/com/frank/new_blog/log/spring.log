@@ -68,3 +68,8 @@
 2023-01-19 11:55:33.847  INFO 21152 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
 2023-01-19 11:55:53.510  INFO 20668 --- [main] c.frank.new_blog.mapper.UserMapperTest   : Starting UserMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 20668 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
 2023-01-19 11:55:53.511  INFO 20668 --- [main] c.frank.new_blog.mapper.UserMapperTest   : The following 1 profile is active: "dev"
+2023-01-19 11:55:55.484  INFO 20668 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-19 11:55:55.859  INFO 20668 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-19 11:55:57.950  INFO 20668 --- [main] c.frank.new_blog.mapper.UserMapperTest   : Started UserMapperTest in 4.977 seconds (JVM running for 6.402)
+2023-01-19 11:55:59.650  INFO 20668 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-19 11:55:59.657  INFO 20668 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
