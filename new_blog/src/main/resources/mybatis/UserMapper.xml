@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.ademo.mapper.UserMapper">
-    <resultMap id="BaseMap" type="com.example.ademo.domain.User">
+<mapper namespace="com.frank.new_blog.mapper.UserMapper">
+    <resultMap id="BaseMap" type="com.frank.new_blog.domain.User">
         <id column="id" property="userId"></id>
         <result column="username" property="username"></result>
         <result column="password" property="password"></result>
@@ -11,26 +11,26 @@
         <result column="updatetime" property="updateTime"></result>
         <result column="state" property="state"></result>
         <collection property="list"
-                    resultMap="com.example.ademo.mapper.ArticleMapper.BaseMap"
+                    resultMap="com.frank.new_blog.mapper.ArticleMapper.BaseMap"
                     columnPrefix="a_">
         </collection>
     </resultMap>
-    <select id="mySelectById" resultType="com.example.ademo.domain.User" resultMap="BaseMap">
+    <select id="mySelectById" resultType="com.frank.new_blog.domain.User" resultMap="BaseMap">
         select *
         from userinfo
         where id = #{id}
     </select>
-    <select id="myList" resultType="com.example.ademo.domain.User" resultMap="BaseMap">
+    <select id="myList" resultType="com.frank.new_blog.domain.User" resultMap="BaseMap">
         select *
         from userinfo
     </select>
-    <select id="verify" resultType="com.example.ademo.domain.User" resultMap="BaseMap">
+    <select id="verify" resultType="com.frank.new_blog.domain.User" resultMap="BaseMap">
         select *
         from userinfo
         where username = #{username}
           and password = #{password}
     </select>
-    <select id="mySelectByIdArticles" resultType="com.example.ademo.domain.User" resultMap="BaseMap">
+    <select id="mySelectByIdArticles" resultType="com.frank.new_blog.domain.User" resultMap="BaseMap">
         select u.*
              , a.id         a_id
              , a.title      a_title
@@ -43,7 +43,7 @@
                  left join articleinfo a on u.id = a.uid
         where u.id = #{id}
     </select>
-    <select id="mySelectByParams" resultType="com.example.ademo.domain.User" resultMap="BaseMap">
+    <select id="mySelectByParams" resultType="com.frank.new_blog.domain.User" resultMap="BaseMap">
         select *
         from userinfo
         <trim prefix="where" prefixOverrides="" suffixOverrides="and">

@@ -1,6 +1,6 @@
 package com.frank.new_blog.mapper;
 
-import com.example.ademo.domain.User;
+import com.frank.new_blog.domain.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
