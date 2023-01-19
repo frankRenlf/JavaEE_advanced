@@ -45,7 +45,7 @@ public class UserController {
             session.setAttribute("userId", id);
             System.out.println(session.getAttribute("userId"));
         }
-        return new Result(true, id);
+        return new Result(200, true, id, "success");
     }
 
     @GetMapping("/logout")

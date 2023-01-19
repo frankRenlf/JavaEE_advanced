@@ -21,9 +21,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Result {
 
+
+    private Integer code;
     private Boolean status;
     private Object data;
     private String message;
+
 
     public Result(Boolean status) {
         this.status = status;
