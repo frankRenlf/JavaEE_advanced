@@ -15,6 +15,10 @@
                     columnPrefix="a_">
         </collection>
     </resultMap>
+    <insert id="myInsert" useGeneratedKeys="true" keyProperty="userId">
+        insert into userinfo(username, password)
+        values (#{username}, #{password})
+    </insert>
     <select id="mySelectById" resultType="com.frank.new_blog.domain.User" resultMap="BaseMap">
         select *
         from userinfo
@@ -63,5 +67,10 @@
         from userinfo
         where username = #{username}
           and password = #{password}
+    </select>
+    <select id="mySelectByName" resultType="com.frank.new_blog.domain.User" resultMap="BaseMap">
+        select *
+        from userinfo
+        where username = #{username}
     </select>
 </mapper>

@@ -29,6 +29,7 @@ public class LoginConfig implements WebMvcConfigurer {
         registry.addInterceptor(loginInterceptor)
                 .addPathPatterns("/**")
                 .excludePathPatterns("/user/login")
+                .excludePathPatterns("/user/register")
                 .excludePathPatterns("/**/*.js")
                 .excludePathPatterns("/**/*.css")
                 .excludePathPatterns("/blog/img/**")

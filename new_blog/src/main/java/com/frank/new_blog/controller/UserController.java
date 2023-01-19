@@ -48,6 +48,16 @@ public class UserController {
         return new Result(200, true, id, "success");
     }
 
+    @PostMapping("/register")
+    public Result register(@RequestBody User user) {
+        Integer id = null;
+        if (iUserService.mySelectByName(user.getUsername()) != null) {
+            id = iUserService.myInsert(user);
+            return new Result(200, true, id, "success");
+        }
+        return new Result(400, true, id, "failed");
+    }
+
     @GetMapping("/logout")
     public Result logout(HttpSession session) {
 //        log.warn("test log->debug");

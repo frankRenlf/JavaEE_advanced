@@ -25,6 +25,10 @@ public interface IUserService extends IService<User> {
 
     List<User> myList();
 
+    Integer myInsert(User user);
+
+    User mySelectByName(String username);
+
     Integer checkIdentity(User user);
 //    Integer myUpdate(Article article);
 

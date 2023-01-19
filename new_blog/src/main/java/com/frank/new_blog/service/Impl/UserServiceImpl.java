@@ -27,6 +27,7 @@ import java.util.List;
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
     @Autowired
     private UserMapper userMapper;
+
     @Override
     public User mySelectById(Integer id) {
         return userMapper.mySelectById(id);
@@ -35,6 +36,16 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public List<User> myList() {
         return userMapper.myList();
+    }
+
+    @Override
+    public Integer myInsert(User user) {
+        return userMapper.myInsert(user);
+    }
+
+    @Override
+    public User mySelectByName(String username) {
+        return userMapper.mySelectByName(username);
     }
 
     @Override

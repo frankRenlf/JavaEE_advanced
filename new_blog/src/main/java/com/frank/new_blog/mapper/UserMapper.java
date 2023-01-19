@@ -22,9 +22,9 @@ import java.util.List;
 public interface UserMapper extends BaseMapper<User> {
 
     User mySelectById(Integer id);
-
+    User mySelectByName(String name);
     Integer checkIdentity(User user);
-
+    Integer myInsert(User user);
     List<User> myList();
 
     User verify(User user);
