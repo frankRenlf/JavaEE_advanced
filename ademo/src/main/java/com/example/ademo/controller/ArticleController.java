@@ -3,7 +3,6 @@ package com.example.ademo.controller;
 import com.example.ademo.controller.utils.Result;
 import com.example.ademo.domain.Article;
 import com.example.ademo.service.IArticleService;
-import com.example.ademo.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
