@@ -51,7 +51,7 @@ public class UserController {
     @PostMapping("/register")
     public Result register(@RequestBody User user) {
         Integer id = null;
-        if (iUserService.mySelectByName(user.getUsername()) != null) {
+        if (iUserService.mySelectByName(user.getUsername()) == null) {
             id = iUserService.myInsert(user);
             return new Result(200, true, id, "success");
         }

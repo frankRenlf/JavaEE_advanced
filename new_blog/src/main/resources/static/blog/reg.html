@@ -8,7 +8,7 @@
     <title>注册页面</title>
     <link rel="stylesheet" href="css/conmmon.css">
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="js/jquery.min.js">
+    <script src="js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -48,7 +48,22 @@
 
 <script>
     function submit() {
-        alert(111)
+        let user = {}
+        user.username = document.getElementById("username").value
+        user.password = document.getElementById("password").value
+        $.ajax({
+            type: "post",        // 请求方式
+            url: "/user/register", // 请求路径
+            dataType: "application/json",   // 预期返回一个 json 类型数据
+            contentType: "application/json",
+            data: JSON.stringify(user),
+            success: function (data) {   // data是形参名，代表返回的数据
+                console.log(data);
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        })
     }
 </script>
 </body>
