@@ -51,13 +51,15 @@
         let user = {}
         user.username = jQuery("#username").val()
         user.password = jQuery("#password1").val()
-        if (user.username === null) {
+        console.log(user)
+        if (user.username === "") {
             alert("username is null")
-        } else if (user.password === null) {
+        } else if (user.password === "") {
             alert("password is null")
         } else if (user.password !== jQuery("#password2").val()) {
             alert("passwords are not same!")
         } else {
+            console.log("success send")
             jQuery.ajax({
                 type: "post",        // 请求方式
                 url: "/user/register", // 请求路径

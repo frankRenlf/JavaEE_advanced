@@ -369,3 +369,79 @@
 2023-01-19 13:48:49.720  INFO 4504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2023-01-19 13:48:49.785  INFO 4504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
 2023-01-19 13:48:49.806  INFO 4504 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 3.578 seconds (JVM running for 4.391)
+2023-01-19 13:49:34.845  INFO 4504 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-19 13:49:34.846  INFO 4504 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-19 13:49:34.847  INFO 4504 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-19 13:50:16.589  INFO 4504 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-19 13:50:16.593  INFO 4504 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-19 13:50:19.366  INFO 12972 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Starting NewBlogApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 12972 (C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-19 13:50:19.368  INFO 12972 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : The following 1 profile is active: "dev"
+2023-01-19 13:50:19.405  INFO 12972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-19 13:50:19.405  INFO 12972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-19 13:50:20.316  INFO 12972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-19 13:50:20.324  INFO 12972 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-19 13:50:20.324  INFO 12972 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-19 13:50:20.400  INFO 12972 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-19 13:50:20.400  INFO 12972 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 994 ms
+2023-01-19 13:50:20.530  INFO 12972 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-19 13:50:20.627  INFO 12972 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-19 13:50:21.284  INFO 12972 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-19 13:50:21.327  INFO 12972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-01-19 13:50:21.338  INFO 12972 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 2.331 seconds (JVM running for 2.994)
+2023-01-19 13:50:27.747  INFO 12972 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-19 13:50:27.747  INFO 12972 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-19 13:50:27.748  INFO 12972 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-01-19 13:51:38.411  INFO 12972 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-19 13:51:38.415  INFO 12972 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-19 13:51:41.791  INFO 10940 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Starting NewBlogApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 10940 (C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-19 13:51:41.792  INFO 10940 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : The following 1 profile is active: "dev"
+2023-01-19 13:51:41.835  INFO 10940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-19 13:51:41.835  INFO 10940 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-19 13:51:42.888  INFO 10940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-19 13:51:42.894  INFO 10940 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-19 13:51:42.895  INFO 10940 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-19 13:51:42.963  INFO 10940 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-19 13:51:42.963  INFO 10940 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1127 ms
+2023-01-19 13:51:43.089  INFO 10940 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-19 13:51:43.191  INFO 10940 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-19 13:51:43.871  INFO 10940 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-19 13:51:43.915  INFO 10940 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-01-19 13:51:43.928  INFO 10940 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 2.622 seconds (JVM running for 3.353)
+2023-01-19 13:51:45.767  INFO 10940 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-19 13:51:45.769  INFO 10940 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-19 13:51:45.770  INFO 10940 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-19 13:57:40.396  INFO 10940 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-19 13:57:40.397  INFO 10940 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-19 13:57:43.082  INFO 2584 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Starting NewBlogApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 2584 (C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-19 13:57:43.083  INFO 2584 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : The following 1 profile is active: "dev"
+2023-01-19 13:57:43.119  INFO 2584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-19 13:57:43.119  INFO 2584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-19 13:57:43.994  INFO 2584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-19 13:57:44.002  INFO 2584 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-19 13:57:44.002  INFO 2584 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-19 13:57:44.073  INFO 2584 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-19 13:57:44.074  INFO 2584 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 955 ms
+2023-01-19 13:57:44.193  INFO 2584 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-19 13:57:44.297  INFO 2584 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-19 13:57:44.988  INFO 2584 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-19 13:57:45.036  INFO 2584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-01-19 13:57:45.056  INFO 2584 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 2.339 seconds (JVM running for 2.98)
+2023-01-19 13:57:46.165  INFO 2584 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-19 13:57:46.165  INFO 2584 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-19 13:57:46.166  INFO 2584 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-19 13:58:07.566  INFO 2584 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-19 13:58:07.568  INFO 2584 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-19 13:58:10.660  INFO 24516 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Starting NewBlogApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 24516 (C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-19 13:58:10.661  INFO 24516 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : The following 1 profile is active: "dev"
+2023-01-19 13:58:10.697  INFO 24516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-19 13:58:10.697  INFO 24516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-19 13:58:11.580  INFO 24516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-19 13:58:11.587  INFO 24516 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-19 13:58:11.587  INFO 24516 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-19 13:58:11.671  INFO 24516 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-19 13:58:11.671  INFO 24516 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 973 ms
+2023-01-19 13:58:11.791  INFO 24516 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-19 13:58:11.882  INFO 24516 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-19 13:58:12.518  INFO 24516 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-19 13:58:12.561  INFO 24516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-01-19 13:58:12.572  INFO 24516 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 2.274 seconds (JVM running for 2.966)
