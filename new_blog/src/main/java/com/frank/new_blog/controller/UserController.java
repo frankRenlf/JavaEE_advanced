@@ -28,29 +28,4 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/user")
 public class UserController {
 
-    @Autowired
-    private IUserService iUserService;
-
-    @GetMapping("/{id}")
-    public Result retUser(@PathVariable Integer id, HttpSession session) {
-        session.setAttribute("userId", id);
-        System.out.println(session.getAttribute("userId"));
-        return new Result(true, iUserService.mySelectById(id));
-    }
-
-    @GetMapping("/logout")
-    public Result logout(HttpSession session) {
-//        log.warn("test log->debug");
-        session.removeAttribute("userId");
-        return new Result(true);
-    }
-
-    @GetMapping("/list")
-    public Result retList() {
-        log.warn("test log->debug");
-        int x = 10 / 0;
-        return new Result(true, iUserService.myList());
-    }
-
-
 }

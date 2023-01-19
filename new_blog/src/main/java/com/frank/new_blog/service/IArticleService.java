@@ -1,8 +1,8 @@
 package com.frank.new_blog.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.ademo.domain.Article;
-import com.example.ademo.domain.User;
+import com.frank.new_blog.domain.Article;
+import com.frank.new_blog.domain.User;
 
 import java.util.List;
 

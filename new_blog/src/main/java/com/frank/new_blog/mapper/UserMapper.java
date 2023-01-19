@@ -1,7 +1,7 @@
 package com.frank.new_blog.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.ademo.domain.User;
+import com.frank.new_blog.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

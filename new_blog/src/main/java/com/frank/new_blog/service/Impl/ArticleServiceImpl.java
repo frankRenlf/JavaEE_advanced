@@ -1,9 +1,9 @@
 package com.frank.new_blog.service.Impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.example.ademo.domain.Article;
-import com.example.ademo.mapper.ArticleMapper;
-import com.example.ademo.service.IArticleService;
+import com.frank.new_blog.domain.Article;
+import com.frank.new_blog.mapper.ArticleMapper;
+import com.frank.new_blog.service.IArticleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
