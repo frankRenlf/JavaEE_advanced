@@ -1,5 +1,6 @@
 package com.frank.new_blog.controller;
 
+import com.frank.new_blog.utils.Constant;
 import com.frank.new_blog.utils.Result;
 import com.frank.new_blog.domain.User;
 import com.frank.new_blog.service.IUserService;
@@ -30,8 +31,8 @@ public class UserController {
 
     @GetMapping("/{id}")
     public Result retUser(@PathVariable Integer id, HttpSession session) {
-        session.setAttribute("userId", id);
-        System.out.println(session.getAttribute("userId"));
+        session.setAttribute(Constant.SESSION_USERID_KEY, id);
+        System.out.println(session.getAttribute(Constant.SESSION_USERID_KEY));
         return new Result(true, iUserService.mySelectById(id));
     }
 
@@ -42,11 +43,11 @@ public class UserController {
             id = iUserService.checkIdentity(user);
         }
         if (id != null) {
-            session.setAttribute("userId", id);
-            System.out.println(session.getAttribute("userId"));
-            return new Result(Result.CODE_SUCCESS, Result.STATUS_SUCCESS, id, "success");
+            session.setAttribute(Constant.SESSION_USERID_KEY, id);
+            System.out.println(session.getAttribute(Constant.SESSION_USERID_KEY));
+            return Result.success(id);
         }
-        return new Result(Result.CODE_FAIL, Result.STATUS_FAIL, id, "success");
+        return Result.fail(id);
     }
 
     @PostMapping("/register")
@@ -62,7 +63,7 @@ public class UserController {
     @GetMapping("/logout")
     public Result logout(HttpSession session) {
 //        log.warn("test log->debug");
-        session.removeAttribute("userId");
+        session.removeAttribute(Constant.SESSION_USERID_KEY);
         return new Result(true);
     }
 
@@ -74,7 +75,7 @@ public class UserController {
 
     @GetMapping("/verify")
     public Result verify(HttpSession session) {
-        return new Result(true, session.getAttribute("userId") != null);
+        return new Result(true, session.getAttribute(Constant.SESSION_USERID_KEY) != null);
     }
 
 }
