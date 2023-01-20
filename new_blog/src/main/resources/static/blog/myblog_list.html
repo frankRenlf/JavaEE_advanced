@@ -77,15 +77,14 @@
                 dataType: "json",   // 预期返回一个 json 类型数据
                 success: function (data) {   // data是形参名，代表返回的数据
                     console.log("success: ",data);
-                    if (data.code === 200) {
+                    if (data.status) {
                         alert("logout success")
-                        location.href = "myblog_list.html"
+                        location.href = "login.html"
                     }else {
-                        alert("wrong username or password")
+                        alert("logout fail")
                     }
                 },
             })
-            alert("logout success")
         }
     }
 </script>
