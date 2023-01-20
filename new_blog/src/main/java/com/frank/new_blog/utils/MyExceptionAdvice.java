@@ -1,4 +1,4 @@
-package com.frank.new_blog.controller.utils;
+package com.frank.new_blog.utils;
 
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

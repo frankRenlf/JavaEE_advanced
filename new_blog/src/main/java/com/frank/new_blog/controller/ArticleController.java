@@ -1,9 +1,8 @@
 package com.frank.new_blog.controller;
 
-import com.frank.new_blog.controller.utils.Result;
+import com.frank.new_blog.utils.Result;
 import com.frank.new_blog.domain.Article;
 import com.frank.new_blog.service.IArticleService;
-import com.frank.new_blog.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;

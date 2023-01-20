@@ -1,4 +1,4 @@
-package com.frank.new_blog.controller.utils;
+package com.frank.new_blog.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +21,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Result {
 
+    public static final Integer CODE_SUCCESS = 200;
+    public static final Integer CODE_FAIL = 400;
+
+    public static final Boolean STATUS_SUCCESS = true;
+    public static final Boolean STATUS_FAIL = false;
 
     private Integer code;
     private Boolean status;
@@ -42,6 +47,14 @@ public class Result {
         this.status = status;
         this.data = data;
         this.message = msg;
+    }
+
+    public static Result fail(Object data) {
+        return new Result(Result.CODE_FAIL, Result.STATUS_FAIL, data, "fail");
+    }
+
+    public static Result success(Object data) {
+        return new Result(Result.CODE_SUCCESS, Result.STATUS_SUCCESS, data, "success");
     }
 
 }

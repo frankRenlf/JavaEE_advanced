@@ -1,6 +1,6 @@
 package com.frank.new_blog.controller;
 
-import com.frank.new_blog.controller.utils.Result;
+import com.frank.new_blog.utils.Result;
 import com.frank.new_blog.domain.User;
 import com.frank.new_blog.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
@@ -44,9 +44,9 @@ public class UserController {
         if (id != null) {
             session.setAttribute("userId", id);
             System.out.println(session.getAttribute("userId"));
-            return new Result(200, true, id, "success");
+            return new Result(Result.CODE_SUCCESS, Result.STATUS_SUCCESS, id, "success");
         }
-        return new Result(400, true, id, "success");
+        return new Result(Result.CODE_FAIL, Result.STATUS_FAIL, id, "success");
     }
 
     @PostMapping("/register")
@@ -54,9 +54,9 @@ public class UserController {
         Integer id = null;
         if (iUserService.mySelectByName(user.getUsername()) == null) {
             id = iUserService.myInsert(user);
-            return new Result(200, true, id, "success");
+            return Result.success(id);
         }
-        return new Result(400, true, id, "failed");
+        return Result.fail(id);
     }
 
     @GetMapping("/logout")
@@ -69,8 +69,12 @@ public class UserController {
     @GetMapping("/list")
     public Result retList() {
         log.warn("test log->debug");
-        int x = 10 / 0;
         return new Result(true, iUserService.myList());
+    }
+
+    @GetMapping("/verify")
+    public Result verify(HttpSession session) {
+        return new Result(true, session.getAttribute("userId") != null);
     }
 
 }
