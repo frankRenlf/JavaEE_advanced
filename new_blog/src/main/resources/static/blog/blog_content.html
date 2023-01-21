@@ -33,15 +33,15 @@
     <div class="container-left">
         <div class="card">
             <img src="img/doge.jpg" class="avtar" alt="">
-            <h3>比特小可爱</h3>
-            <a href="http:www.github.com">github 地址</a>
+            <h3 id="username"></h3>
+            <a href="http:www.github.com">github location</a>
             <div class="counter">
-                <span>文章</span>
-                <span>分类</span>
+                <span>article</span>
+                <span>sort</span>
             </div>
             <div class="counter">
-                <span>2</span>
-                <span>1</span>
+                <span id="articleNumber"></span>
+                <span>0</span>
             </div>
         </div>
     </div>
@@ -72,7 +72,6 @@
             // htmlDecode : "style,script,iframe",  // Note: If enabled, you should filter some dangerous HTML tags for website security.
         });
     }
-
     function getURLParams(key) {
         let url = location.search;
         if (url.indexOf("?") >= 0) {
@@ -104,7 +103,8 @@
                         jQuery("#title").text(articleInfo.title);
                         jQuery("#date").text(articleInfo.createTime);
                         jQuery("#rcount").text(articleInfo.rcount);
-                        jQuery("#editorDiv").text(articleInfo.content);
+                        initEdit(articleInfo.content)
+
                     } else {
                         alert("fail to delete")
                     }
@@ -117,7 +117,28 @@
     }
 
     getContent();
+    function myInfo() {
+        jQuery.ajax({
+            type: "get",        // 请求方式
+            url: "/article/countByUserId", // 请求路径
+            dataType: "json",   // 预期返回一个 json 类型数据
+            success: function (data) {   // data是形参名，代表返回的  数据
+                console.log("success send: ", data);
+                if (data.code === 200) {
 
+                    jQuery("#username").text(data.data.username);
+                    jQuery("#articleNumber").text(data.data.articleNumber);
+                } else {
+                    alert("fail to load myList")
+                }
+            },
+            error: function (data) {
+
+            }
+        })
+    }
+
+    myInfo()
 
 </script>
 </body>
