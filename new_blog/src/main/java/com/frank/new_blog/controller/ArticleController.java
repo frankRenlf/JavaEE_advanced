@@ -1,5 +1,6 @@
 package com.frank.new_blog.controller;
 
+import com.frank.new_blog.utils.Constant;
 import com.frank.new_blog.utils.Result;
 import com.frank.new_blog.domain.Article;
 import com.frank.new_blog.service.IArticleService;
@@ -11,6 +12,8 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * Created with IntelliJ IDEA.
@@ -64,13 +67,14 @@ public class ArticleController {
     @GetMapping("/list/{order}")
     public Result listAll(@PathVariable String order) {
 //        log.warn("test log->debug");
-        return new Result(true, iArticleService.listAll(order));
+        return Result.success(iArticleService.listAll(order));
     }
 
-    @GetMapping("/list/{uid}/{order}")
-    public Result myList(@PathVariable String order, @PathVariable Integer uid) {
+    @GetMapping("/myList/{order}")
+    public Result myList(@PathVariable String order, HttpSession session) {
 //        log.warn("test log->debug");
-        return new Result(true, iArticleService.myList(order, uid));
+        Integer uid = (Integer) session.getAttribute(Constant.SESSION_USERID_KEY);
+        return Result.success(iArticleService.myList(order, uid));
     }
 
     @PostMapping("/remove/{id}")
