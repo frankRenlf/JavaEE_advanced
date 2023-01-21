@@ -63,7 +63,7 @@ public class ArticleController {
     }
 
     @GetMapping("/{id}")
-    public Result retArticle(@PathVariable Integer id) {
+    public Result getArticleById(@PathVariable Integer id) {
 //        log.warn("test log->debug");
         return new Result(true, iArticleService.mySelectById(id));
     }

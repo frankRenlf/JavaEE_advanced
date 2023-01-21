@@ -86,7 +86,29 @@
         }
     }
 
-    alert(getURLParams("id"))
+    function getContent() {
+        let aid = getURLParams('id');
+        if(aid!=null&&aid>=0){
+            jQuery.ajax({
+                type: "get",        // 请求方式
+                url: "/article/" + aid, // 请求路径
+                dataType: 'json',
+                contentType: 'application/json',
+                success: function (data) {   // data是形参名，代表返回的  数据
+                    console.log("success send: ", data);
+                    if (data.code === 200) {
+
+                    } else {
+                        alert("fail to delete")
+                    }
+                },
+                error: function (data) {
+
+                }
+            })
+        }
+    }
+
 
 </script>
 </body>
