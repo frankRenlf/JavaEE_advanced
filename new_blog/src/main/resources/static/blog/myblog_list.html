@@ -63,18 +63,20 @@
                 if (data.code === 200) {
                     var html = "";
                     data.data.forEach(function (item) {
+                        let str = subContent(item.content);
                         html += '<div class="blog">' +
                             '<div class="title">' + item.title + '</div>' +
                             '<div class="date">' + item.createTime + '</div>' +
-                            '<div class="desc">' + subContent(item.content) + '</div>' +
+                            '<div class="desc">' + str + '</div>' +
                             '<div style="text-align: center;margin-top: 50px">' +
                             '<a href="blog_content.html?id=' + item.articleId + '" class="">detail</a>&nbsp;&nbsp;' +
                             '<a href="blog_update.html?id=' + item.articleId + '" class="">modify</a>&nbsp;&nbsp;' +
                             '<a href="javascript:myDelete(' + item.articleId + ')" class="">delete</a>&nbsp;&nbsp;' +
-                            '</div>' +
                             '</div>'
+                        '</div>'
+                        jQuery("#myArticleList").html(html);
                     })
-                    jQuery("#myArticleList").html(html);
+
                 } else {
                     alert("fail to load myList")
                 }

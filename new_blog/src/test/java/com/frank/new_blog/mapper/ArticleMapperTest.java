@@ -47,7 +47,7 @@ class ArticleMapperTest {
 
     @Test
     void myUpdate() {
-        System.out.println(articleMapper.myUpdate(new Article(18, "change2", "what's up 2")));
+        System.out.println(articleMapper.myUpdate(new Article(5, "change2", "what's up 2")));
     }
 
     @Test

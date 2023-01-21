@@ -26,7 +26,7 @@
         insert into articleinfo(title, content, uid)
         values (#{title}, #{content}, #{uid})
     </insert>
-    <update id="myUpdate">
+    <update id="myUpdate" useGeneratedKeys="true" keyProperty="articleId">
         update articleinfo
         set title   = #{title},
             content = #{content}

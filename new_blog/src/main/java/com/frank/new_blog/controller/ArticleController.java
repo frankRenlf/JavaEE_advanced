@@ -111,6 +111,7 @@ public class ArticleController {
     @PostMapping("/update")
     public Result update(@RequestBody Article article) {
 //        log.warn("test log->debug");
+        System.out.println(article);
         return Result.success(iArticleService.myUpdate(article));
     }
 
