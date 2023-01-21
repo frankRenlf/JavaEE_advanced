@@ -14,6 +14,6 @@ package com.frank.new_blog.utils;
  */
 public class Constant {
 
-    public static String SESSION_USERID_KEY = "userId";
+    public static String SESSION_USERINFO_KEY = "userInfo";
 
 }

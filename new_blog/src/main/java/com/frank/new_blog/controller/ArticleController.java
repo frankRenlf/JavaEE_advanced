@@ -77,14 +77,14 @@ public class ArticleController {
     @GetMapping("/myList/{order}")
     public Result myList(@PathVariable String order, HttpSession session) {
 //        log.warn("test log->debug");
-        Integer uid = (Integer) session.getAttribute(Constant.SESSION_USERID_KEY);
+        Integer uid = ((User) session.getAttribute(Constant.SESSION_USERINFO_KEY)).getUserId();
         return Result.success(iArticleService.myList(order, uid));
     }
 
     @GetMapping("/countByUserId")
     public Result countByUserId(HttpSession session) {
 //        log.warn("test log->debug");
-        Integer uid = (Integer) session.getAttribute(Constant.SESSION_USERID_KEY);
+        Integer uid = ((User) session.getAttribute(Constant.SESSION_USERINFO_KEY)).getUserId();
         User user = iUserService.mySelectById(uid);
         user.setArticleNumber(iArticleService.countByUserId(uid));
         user.setPassword(null);

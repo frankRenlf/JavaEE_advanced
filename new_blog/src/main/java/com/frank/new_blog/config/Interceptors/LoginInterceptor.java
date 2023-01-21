@@ -1,5 +1,6 @@
 package com.frank.new_blog.config.Interceptors;
 
+import com.frank.new_blog.utils.Constant;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
@@ -26,7 +27,7 @@ public class LoginInterceptor implements HandlerInterceptor {
                              HttpServletResponse response,
                              Object handler) throws Exception {
         HttpSession session = request.getSession(true);
-        if (session != null && session.getAttribute("userId") != null) {
+        if (session != null && session.getAttribute(Constant.SESSION_USERINFO_KEY) != null) {
             response.setStatus(200);
             return true;
         }

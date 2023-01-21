@@ -29,13 +29,6 @@ public class UserController {
     @Autowired
     private IUserService iUserService;
 
-    @GetMapping("/{id}")
-    public Result retUser(@PathVariable Integer id, HttpSession session) {
-        session.setAttribute(Constant.SESSION_USERID_KEY, id);
-        System.out.println(session.getAttribute(Constant.SESSION_USERID_KEY));
-        return new Result(true, iUserService.mySelectById(id));
-    }
-
     @PostMapping("/login")
     public Result login(@RequestBody User user, HttpSession session) {
         Integer id = null;
@@ -43,8 +36,8 @@ public class UserController {
             id = iUserService.checkIdentity(user);
         }
         if (id != null) {
-            session.setAttribute(Constant.SESSION_USERID_KEY, id);
-            System.out.println(session.getAttribute(Constant.SESSION_USERID_KEY));
+            session.setAttribute(Constant.SESSION_USERINFO_KEY, iUserService.mySelectById(id));
+            System.out.println(session.getAttribute(Constant.SESSION_USERINFO_KEY));
             return Result.success(id);
         }
         return Result.fail(id);
@@ -63,7 +56,7 @@ public class UserController {
     @GetMapping("/logout")
     public Result logout(HttpSession session) {
 //        log.warn("test log->debug");
-        session.removeAttribute(Constant.SESSION_USERID_KEY);
+        session.removeAttribute(Constant.SESSION_USERINFO_KEY);
         return new Result(true);
     }
 
@@ -75,7 +68,7 @@ public class UserController {
 
     @GetMapping("/verify")
     public Result verify(HttpSession session) {
-        return new Result(true, session.getAttribute(Constant.SESSION_USERID_KEY) != null);
+        return new Result(true, session.getAttribute(Constant.SESSION_USERINFO_KEY) != null);
     }
 
 }
