@@ -47,26 +47,29 @@
     </div>
 </div>
 <script>
+    function subContent(str){
+        return str.length > 100 ? str.substring(0, 100) : str
+    }
     function initLists() {
         jQuery.ajax({
             type: "get",        // 请求方式
             url: "/article/myList/desc", // 请求路径
             dataType: "json",   // 预期返回一个 json 类型数据
-            success: function (data) {   // data是形参名，代表返回的数据
+            success: function (data) {   // data是形参名，代表返回的  数据
                 console.log("success send: ", data);
                 if (data.code === 200) {
-                    let html = null;
+                    var html = "";
                     data.data.forEach(function (item) {
-                        html += '        <div class="blog">\n' +
-                        '            <div class="title">' + item.title + '</div>\n' +
-                        '            <div class="date">' + item.createtime + '</div>\n' +
-                        '            <div class="desc">\n' + item.content.length > 100 ? item.content.splice(0, 100) : item.content +
-                            '            </div>\n' +
-                            '            <a href="blog_content.html?id="' + item.uid +
-                            ' class="detail">查看全文 &gt;&gt;</a>\n' +
-                            '        </div>'
-                        jQuery("#myArticleList").html(html);
+                        let str = '<div class="blog">' +
+                        '<div class="title">' + item.title + '</div>' +
+                        '<div class="date">' + item.createTime + '</div>' +
+                        '<div class="desc">' + subContent(item.content) + '</div>' +
+                            '<a href="blog_content.html?id=' + item.uid + '" class="detail">detail &gt;&gt;</a>' +
+                            '</div>'
+                        html += str
+                        console.log(str)
                     })
+                    jQuery("#myArticleList").html(html);
                 } else {
                     alert("fail to load myList")
                 }
