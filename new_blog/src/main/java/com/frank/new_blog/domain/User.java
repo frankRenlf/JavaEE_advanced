@@ -38,6 +38,7 @@ public class User {
     Date updateTime;
     Integer state;
     List<Article> list;
+    Integer articleNumber;
 
     public User(String username, String password) {
         this.username = username;

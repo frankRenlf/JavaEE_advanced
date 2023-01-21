@@ -86,7 +86,7 @@ public class ArticleController {
 //        log.warn("test log->debug");
         Integer uid = (Integer) session.getAttribute(Constant.SESSION_USERID_KEY);
         User user = iUserService.mySelectById(uid);
-        user.setUserId(iArticleService.countByUserId(uid));
+        user.setArticleNumber(iArticleService.countByUserId(uid));
         user.setPassword(null);
         return Result.success(user);
     }
