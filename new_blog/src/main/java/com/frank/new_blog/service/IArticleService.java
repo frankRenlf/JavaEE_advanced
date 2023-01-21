@@ -20,7 +20,8 @@ import java.util.List;
  */
 public interface IArticleService extends IService<Article> {
     Article mySelectById(Integer id);
-    List<Article> myList(String order);
+    List<Article> myList(String order,Integer uid);
+    List<Article> listAll(String order);
     Integer myInsert(Article article);
     Integer myRemoveById(Integer id);
     Integer myUpdate(Article article);

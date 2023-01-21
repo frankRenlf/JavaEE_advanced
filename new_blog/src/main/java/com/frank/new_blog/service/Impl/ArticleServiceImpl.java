@@ -24,7 +24,7 @@ import java.util.List;
  */
 @Service
 @Slf4j
-public class ArticleServiceImpl extends ServiceImpl<ArticleMapper,Article> implements IArticleService {
+public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> implements IArticleService {
 
     @Autowired
     private ArticleMapper articleMapper;
@@ -35,8 +35,13 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper,Article> imple
     }
 
     @Override
-    public List<Article> myList(String order) {
-        return articleMapper.myList(order);
+    public List<Article> myList(String order, Integer uid) {
+        return articleMapper.myList(order, uid);
+    }
+
+    @Override
+    public List<Article> listAll(String order) {
+        return articleMapper.listAll(order);
     }
 
     @Override

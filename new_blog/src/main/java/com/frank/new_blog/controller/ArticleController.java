@@ -62,9 +62,15 @@ public class ArticleController {
     }
 
     @GetMapping("/list/{order}")
-    public Result retList(@PathVariable String order) {
+    public Result listAll(@PathVariable String order) {
 //        log.warn("test log->debug");
-        return new Result(true, iArticleService.myList(order));
+        return new Result(true, iArticleService.listAll(order));
+    }
+
+    @GetMapping("/list/{uid}/{order}")
+    public Result myList(@PathVariable String order, @PathVariable Integer uid) {
+//        log.warn("test log->debug");
+        return new Result(true, iArticleService.myList(order, uid));
     }
 
     @PostMapping("/remove/{id}")

@@ -40,6 +40,7 @@
     <select id="myList" resultType="com.frank.new_blog.domain.Article" resultMap="BaseMap">
         select *
         from articleinfo
+        where uid = #{uid}
         order by id ${order}
     </select>
     <select id="myFindByTitle" resultType="com.frank.new_blog.domain.Article" resultMap="BaseMap">
@@ -74,6 +75,11 @@
             </if>
         </trim>
 
+    </select>
+    <select id="listAll" resultType="com.frank.new_blog.domain.Article" resultMap="BaseMap">
+        select *
+        from articleinfo
+        order by id ${order}
     </select>
     <delete id="myDeleteListId">
         delete from articleinfo where id in

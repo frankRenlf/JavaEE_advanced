@@ -23,8 +23,8 @@ public interface ArticleMapper extends BaseMapper<Article> {
 
     Article mySelectById(Integer id);
 
-    List<Article> myList(String order);
-
+    List<Article> listAll(String order);
+    List<Article> myList(String order,Integer uid);
     Integer myInsert(Article article);
 
     Integer myRemoveById(Integer id);

@@ -32,10 +32,6 @@ class ArticleMapperTest {
         System.out.println(articleMapper.mySelectById(2));
     }
 
-    @Test
-    void myList() {
-        System.out.println(articleMapper.myList("desc"));
-    }
 
     @Test
     void myInsert() {
@@ -81,5 +77,15 @@ class ArticleMapperTest {
         list.add(16);
         list.add(18);
         System.out.println(articleMapper.myDeleteListId(list));
+    }
+
+    @Test
+    void listAll() {
+        System.out.println(articleMapper.listAll("asc"));
+    }
+
+    @Test
+    void testMyList() {
+        System.out.println(articleMapper.myList("desc", 0));
     }
 }

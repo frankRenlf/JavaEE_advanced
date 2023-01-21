@@ -26,7 +26,6 @@ public interface UserMapper extends BaseMapper<User> {
     Integer checkIdentity(User user);
     Integer myInsert(User user);
     List<User> myList();
-
     User verify(User user);
 
     User mySelectByIdArticles(Integer id);
