@@ -41,7 +41,7 @@
         </div>
     </div>
     <!-- 右侧内容详情 -->
-    <div class="container-right">
+    <div class="container-right" id="myArticleList">
         <!-- 每一篇博客包含标题, 摘要, 时间 -->
 
     </div>
@@ -65,6 +65,7 @@
                             '            <a href="blog_content.html?id="' + item.uid +
                             ' class="detail">查看全文 &gt;&gt;</a>\n' +
                             '        </div>'
+                        jQuery("#myArticleList").html(html);
                     })
                 } else {
                     alert("fail to load myList")
