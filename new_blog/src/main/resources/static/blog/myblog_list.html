@@ -19,6 +19,7 @@
     <!-- 用来占据中间位置 -->
     <span class="spacer"></span>
     <a href="blog_list.html">main page</a>
+    <a href="myblog_list.html">my blog list</a>
     <a href="blog_edit.html">edit article</a>
     <a href="javascript:onExit()">logout</a>
 </div>
@@ -61,11 +62,13 @@
                 if (data.code === 200) {
                     var html = "";
                     data.data.forEach(function (item) {
-                        html = '<div class="blog">' +
+                        html += '<div class="blog">' +
                             '<div class="title">' + item.title + '</div>' +
                             '<div class="date">' + item.createTime + '</div>' +
                             '<div class="desc">' + subContent(item.content) + '</div>' +
                             '<a href="blog_content.html?id=' + item.uid + '" class="detail">detail &gt;&gt;</a>' +
+                            '<a href="blog_content.html?id=' + item.uid + '" class="detail">modify &gt;&gt;</a>' +
+                            '<a href="blog_content.html?id=' + item.uid + '" class="detail">delete &gt;&gt;</a>' +
                             '</div>'
                     })
                     jQuery("#myArticleList").html(html);
