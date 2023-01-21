@@ -54,17 +54,6 @@
             </div>
             <a href="blog_content.html?id=1" class="detail">查看全文 &gt;&gt;</a>
         </div>
-        <div class="blog">
-            <div class="title">我的第二篇博客</div>
-            <div class="date">2021-06-02</div>
-            <div class="desc">
-                从今天起, 我要认真敲代码. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum distinctio ullam eum ut
-                veroab laborum numquam tenetur est in dolorum a sint, assumenda adipisci similique quaerat vel.
-                Facere,
-                et.
-            </div>
-            <a href="blog_content.html?id=2" class="detail">查看全文 &gt;&gt;</a>
-        </div>
     </div>
 </div>
 <script>
@@ -76,7 +65,9 @@
             success: function (data) {   // data是形参名，代表返回的数据
                 console.log("success send: ", data);
                 if (data.code === 200) {
-                    console.log(data.data)
+                    data.data.forEach(function (item) {
+
+                    })
                 } else {
                     alert("fail to load myList")
                 }
