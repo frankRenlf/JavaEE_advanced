@@ -49,9 +49,12 @@
     <div class="container-right">
         <div class="blog-content">
             <!-- 博客标题 -->
-            <h3>我的第一篇博客</h3>
+            <h3 id="title"></h3>
             <!-- 博客时间 -->
-            <div class="date">2021-06-02</div>
+            <div class="date">
+                <span id="date"></span>&nbsp;&nbsp;&nbsp;
+                Visits:<span id="rcount"></span>&nbsp;&nbsp;&nbsp;
+            </div>
             <!-- 博客正文 -->
             <div id="editorDiv">
 
@@ -97,7 +100,11 @@
                 success: function (data) {   // data是形参名，代表返回的  数据
                     console.log("success send: ", data);
                     if (data.code === 200) {
-
+                        let articleInfo = data.data;
+                        jQuery("#title").text(articleInfo.title);
+                        jQuery("#date").text(articleInfo.createTime);
+                        jQuery("#rcount").text(articleInfo.rcount);
+                        jQuery("#editorDiv").text(articleInfo.content);
                     } else {
                         alert("fail to delete")
                     }

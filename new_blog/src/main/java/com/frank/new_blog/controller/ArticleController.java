@@ -65,7 +65,7 @@ public class ArticleController {
     @GetMapping("/{id}")
     public Result getArticleById(@PathVariable Integer id) {
 //        log.warn("test log->debug");
-        return new Result(true, iArticleService.mySelectById(id));
+        return Result.success(iArticleService.mySelectById(id));
     }
 
     @GetMapping("/list/{order}")
