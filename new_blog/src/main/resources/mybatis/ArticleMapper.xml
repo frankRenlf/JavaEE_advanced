@@ -29,7 +29,8 @@
     <update id="myUpdate" useGeneratedKeys="true" keyProperty="articleId">
         update articleinfo
         set title   = #{title},
-            content = #{content}
+            content = #{content},
+            updatetime = now()
         where id = #{articleId}
     </update>
     <delete id="myRemoveById">
