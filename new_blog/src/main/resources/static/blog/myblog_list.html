@@ -68,22 +68,24 @@
     </div>
 </div>
 <script>
-    function initLists(){
+    function initLists() {
         jQuery.ajax({
             type: "get",        // 请求方式
-            url: "/article/myList/order", // 请求路径
+            url: "/article/myList/desc", // 请求路径
             dataType: "json",   // 预期返回一个 json 类型数据
             success: function (data) {   // data是形参名，代表返回的数据
-                console.log("success: ",data);
+                console.log("success: ", data);
                 if (data.code === 200) {
-
-                }else {
+                    console.log(data.data)
+                } else {
                     alert("fail to load myList")
                 }
             },
         })
     }
+
     initLists()
+
     function onExit() {
         if (confirm("Confirm Exit")) {
             jQuery.ajax({
