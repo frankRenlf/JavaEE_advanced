@@ -1,5 +1,7 @@
 package com.frank.new_blog.controller;
 
+import com.frank.new_blog.domain.User;
+import com.frank.new_blog.service.IUserService;
 import com.frank.new_blog.utils.Constant;
 import com.frank.new_blog.utils.Result;
 import com.frank.new_blog.domain.Article;
@@ -33,6 +35,8 @@ import javax.servlet.http.HttpSession;
 public class ArticleController {
     @Autowired
     private IArticleService iArticleService;
+    @Autowired
+    private IUserService iUserService;
     @Autowired(required = false)
     private DataSourceTransactionManager dataSourceTransactionManager;
     @Autowired(required = false)
@@ -75,6 +79,16 @@ public class ArticleController {
 //        log.warn("test log->debug");
         Integer uid = (Integer) session.getAttribute(Constant.SESSION_USERID_KEY);
         return Result.success(iArticleService.myList(order, uid));
+    }
+
+    @GetMapping("/countByUserId")
+    public Result countByUserId(HttpSession session) {
+//        log.warn("test log->debug");
+        Integer uid = (Integer) session.getAttribute(Constant.SESSION_USERID_KEY);
+        User user = iUserService.mySelectById(uid);
+        user.setUserId(iArticleService.countByUserId(uid));
+        user.setPassword(null);
+        return Result.success(user);
     }
 
     @PostMapping("/remove/{id}")

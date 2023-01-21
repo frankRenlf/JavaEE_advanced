@@ -25,6 +25,7 @@ public interface ArticleMapper extends BaseMapper<Article> {
 
     List<Article> listAll(String order);
     List<Article> myList(String order,Integer uid);
+    Integer countByUserid(Integer uid);
     Integer myInsert(Article article);
 
     Integer myRemoveById(Integer id);

@@ -507,3 +507,79 @@
 2023-01-21 12:55:18.352  INFO 24884 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2023-01-21 12:58:28.898  INFO 24884 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2023-01-21 12:58:28.903  INFO 24884 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-21 13:07:17.636  INFO 27324 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : Starting ArticleMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 27324 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-21 13:07:17.637  INFO 27324 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : The following 1 profile is active: "dev"
+2023-01-21 13:07:18.912  INFO 27324 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-21 13:07:19.120  INFO 27324 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-21 13:07:20.906  INFO 27324 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : Started ArticleMapperTest in 3.661 seconds (JVM running for 4.876)
+2023-01-21 13:07:21.993  INFO 27324 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-21 13:07:22.001  INFO 27324 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-21 13:07:32.185  INFO 13168 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : Starting ArticleMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 13168 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-21 13:07:32.187  INFO 13168 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : The following 1 profile is active: "dev"
+2023-01-21 13:07:33.714  INFO 13168 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-21 13:07:33.942  INFO 13168 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-21 13:07:35.541  INFO 13168 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : Started ArticleMapperTest in 3.916 seconds (JVM running for 5.332)
+2023-01-21 13:07:36.994  INFO 13168 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-21 13:07:37.003  INFO 13168 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-21 13:13:54.959  INFO 24872 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : Starting ArticleMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 24872 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-21 13:13:54.960  INFO 24872 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : The following 1 profile is active: "dev"
+2023-01-21 13:13:56.092  INFO 24872 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-21 13:13:56.301  INFO 24872 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-21 13:13:57.649  INFO 24872 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : Started ArticleMapperTest in 3.062 seconds (JVM running for 4.11)
+2023-01-21 13:13:58.761  INFO 24872 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-21 13:13:58.769  INFO 24872 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-21 13:14:06.693  INFO 25800 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Starting NewBlogApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 25800 (C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-21 13:14:06.694  INFO 25800 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : The following 1 profile is active: "dev"
+2023-01-21 13:14:06.737  INFO 25800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-21 13:14:06.738  INFO 25800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-21 13:14:07.617  INFO 25800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-21 13:14:07.624  INFO 25800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-21 13:14:07.624  INFO 25800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-21 13:14:07.690  INFO 25800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-21 13:14:07.690  INFO 25800 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 952 ms
+2023-01-21 13:14:07.804  INFO 25800 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-21 13:14:07.894  INFO 25800 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-21 13:14:08.566  INFO 25800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-21 13:14:08.607  INFO 25800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-01-21 13:14:08.618  INFO 25800 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 2.292 seconds (JVM running for 2.931)
+2023-01-21 13:14:13.424  INFO 25800 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-21 13:14:13.424  INFO 25800 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-21 13:14:13.425  INFO 25800 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-21 13:14:39.058  INFO 25800 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-21 13:14:39.064  INFO 25800 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-21 13:14:42.634  INFO 20852 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Starting NewBlogApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 20852 (C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-21 13:14:42.636  INFO 20852 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : The following 1 profile is active: "dev"
+2023-01-21 13:14:42.672  INFO 20852 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-21 13:14:42.672  INFO 20852 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-21 13:14:43.781  INFO 20852 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-21 13:14:43.789  INFO 20852 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-21 13:14:43.789  INFO 20852 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-21 13:14:43.859  INFO 20852 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-21 13:14:43.860  INFO 20852 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1187 ms
+2023-01-21 13:14:43.980  INFO 20852 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-21 13:14:44.084  INFO 20852 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-21 13:14:44.729  INFO 20852 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-21 13:14:44.773  INFO 20852 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-01-21 13:14:44.784  INFO 20852 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 2.503 seconds (JVM running for 3.664)
+2023-01-21 13:14:47.470  INFO 20852 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-21 13:14:47.471  INFO 20852 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-21 13:14:47.472  INFO 20852 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-21 13:15:42.234  INFO 20852 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-21 13:15:42.239  INFO 20852 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-21 13:15:45.856  INFO 23168 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Starting NewBlogApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 23168 (C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-21 13:15:45.857  INFO 23168 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : The following 1 profile is active: "dev"
+2023-01-21 13:15:45.901  INFO 23168 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-21 13:15:45.901  INFO 23168 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-21 13:15:46.890  INFO 23168 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-21 13:15:46.898  INFO 23168 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-21 13:15:46.898  INFO 23168 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-21 13:15:46.973  INFO 23168 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-21 13:15:46.973  INFO 23168 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1072 ms
+2023-01-21 13:15:47.097  INFO 23168 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-21 13:15:47.211  INFO 23168 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-21 13:15:47.883  INFO 23168 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-21 13:15:47.932  INFO 23168 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-01-21 13:15:47.950  INFO 23168 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 2.521 seconds (JVM running for 3.291)
+2023-01-21 13:15:51.780  INFO 23168 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-21 13:15:51.780  INFO 23168 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-21 13:15:51.781  INFO 23168 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms

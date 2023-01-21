@@ -45,6 +45,11 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     }
 
     @Override
+    public Integer countByUserId(Integer uid) {
+        return articleMapper.countByUserid(uid);
+    }
+
+    @Override
     public Integer myInsert(Article article) {
         articleMapper.myInsert(article);
         return article.getArticleId();

@@ -88,4 +88,9 @@ class ArticleMapperTest {
     void testMyList() {
         System.out.println(articleMapper.myList("desc", 0));
     }
+
+    @Test
+    void countByUserid() {
+        System.out.println(articleMapper.countByUserid(1));
+    }
 }

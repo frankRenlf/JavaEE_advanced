@@ -81,6 +81,11 @@
         from articleinfo
         order by id ${order}
     </select>
+    <select id="countByUserid" resultType="java.lang.Integer">
+        select count(*)
+        from articleinfo
+        where uid = #{uid}
+    </select>
     <delete id="myDeleteListId">
         delete from articleinfo where id in
         <foreach collection="listId" item="id" separator="," open="(" close=")">

@@ -28,15 +28,15 @@
     <div class="container-left">
         <div class="card">
             <img src="img/doge.jpg" class="avtar" alt="">
-            <h3>username</h3>
+            <h3 id="username"></h3>
             <a href="http:www.github.com">github location</a>
             <div class="counter">
                 <span>article</span>
                 <span>sort</span>
             </div>
             <div class="counter">
-                <span>2</span>
-                <span>1</span>
+                <span id="articleNumber"></span>
+                <span>0</span>
             </div>
         </div>
     </div>
@@ -82,6 +82,29 @@
     }
 
     initLists()
+
+    function myInfo() {
+        jQuery.ajax({
+            type: "get",        // 请求方式
+            url: "/article/countByUserId", // 请求路径
+            dataType: "json",   // 预期返回一个 json 类型数据
+            success: function (data) {   // data是形参名，代表返回的  数据
+                console.log("success send: ", data);
+                if (data.code === 200) {
+
+                    jQuery("#username").text(data.data.username);
+                    jQuery("#articleNumber").text(data.data.userId);
+                } else {
+                    alert("fail to load myList")
+                }
+            },
+            error: function (data) {
+
+            }
+        })
+    }
+
+    myInfo()
 
     function onExit() {
         if (confirm("Confirm Exit")) {
