@@ -81,6 +81,11 @@
                     alert("fail to load myList")
                 }
             },
+            error: function (data) {
+                console.log(data)
+                alert("User is not logged in")
+                location.href = "login.html";
+            }
         })
     }
 
