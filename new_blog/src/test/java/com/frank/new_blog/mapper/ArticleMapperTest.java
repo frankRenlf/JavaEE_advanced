@@ -93,4 +93,9 @@ class ArticleMapperTest {
     void countByUserid() {
         System.out.println(articleMapper.countByUserid(1));
     }
+
+    @Test
+    void addRcount() {
+        System.out.println(articleMapper.addRcount(1,1));
+    }
 }

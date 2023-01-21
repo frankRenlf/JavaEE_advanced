@@ -63,6 +63,8 @@
     </div>
 </div>
 <script type="text/javascript">
+
+
     var editormd;
 
     function initEdit(md) {
@@ -72,6 +74,7 @@
             // htmlDecode : "style,script,iframe",  // Note: If enabled, you should filter some dangerous HTML tags for website security.
         });
     }
+
     function getURLParams(key) {
         let url = location.search;
         if (url.indexOf("?") >= 0) {
@@ -88,6 +91,8 @@
         }
     }
 
+    var articleInfo;
+
     function getContent() {
         let aid = getURLParams('id');
         if (aid != null && aid >= 0) {
@@ -99,12 +104,28 @@
                 success: function (data) {   // data是形参名，代表返回的  数据
                     console.log("success send: ", data);
                     if (data.code === 200) {
-                        let articleInfo = data.data;
+                        articleInfo = data.data;
                         jQuery("#title").text(articleInfo.title);
                         jQuery("#date").text(articleInfo.createTime);
                         jQuery("#rcount").text(articleInfo.rcount);
                         initEdit(articleInfo.content)
-
+                        // jQuery.ajax({
+                        //     type: "get",        // 请求方式
+                        //     url: "/article/addRcount/" + articleInfo.articleId + '/' + articleInfo.rcount,// 请求路径
+                        //     dataType: 'json',
+                        //     success: function (data) {   // data是形参名，代表返回的  数据
+                        //         console.log("success send: ", data);
+                        //         if (data.code === 200) {
+                        //             articleInfo.rcount += 1
+                        //             jQuery("#rcount").text(articleInfo.rcount);
+                        //         } else {
+                        //             alert("fail to addrcount")
+                        //         }
+                        //     },
+                        //     error: function (data) {
+                        //
+                        //     }
+                        // })
                     } else {
                         alert("fail to delete")
                     }
@@ -113,14 +134,16 @@
 
                 }
             })
+
         }
     }
 
-    getContent();
-    function myInfo() {
+
+    function userInfo() {
+        let aid = getURLParams('id');
         jQuery.ajax({
             type: "get",        // 请求方式
-            url: "/article/countByUserId", // 请求路径
+            url: "/article/user/" + aid, // 请求路径
             dataType: "json",   // 预期返回一个 json 类型数据
             success: function (data) {   // data是形参名，代表返回的  数据
                 console.log("success send: ", data);
@@ -129,7 +152,7 @@
                     jQuery("#username").text(data.data.username);
                     jQuery("#articleNumber").text(data.data.articleNumber);
                 } else {
-                    alert("fail to load myList")
+                    alert("fail to load userInfo")
                 }
             },
             error: function (data) {
@@ -138,7 +161,13 @@
         })
     }
 
-    myInfo()
+
+    function initPage() {
+        getContent();
+        userInfo()
+    }
+
+    initPage()
 
 </script>
 </body>

@@ -31,6 +31,7 @@ public interface ArticleMapper extends BaseMapper<Article> {
     Integer myRemoveById(Integer id);
 
     Integer myUpdate(Article article);
+    Integer addRcount(Integer id,Integer rcount);
 
     List<Article> myFindByTitle(String sub);
 

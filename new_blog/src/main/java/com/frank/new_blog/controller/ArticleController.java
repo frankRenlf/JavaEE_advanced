@@ -65,7 +65,18 @@ public class ArticleController {
     @GetMapping("/{id}")
     public Result getArticleById(@PathVariable Integer id) {
 //        log.warn("test log->debug");
+        iArticleService.addRcount(id, iArticleService.mySelectById(id).getRcount());
         return Result.success(iArticleService.mySelectById(id));
+    }
+
+    @GetMapping("/user/{aid}")
+    public Result getUserInfo(@PathVariable Integer aid) {
+//        log.warn("test log->debug");
+        Integer uid = iArticleService.mySelectById(aid).getUid();
+        User user = iUserService.mySelectById(uid);
+        user.setArticleNumber(iArticleService.countByUserId(uid));
+        user.setPassword(null);
+        return Result.success(user);
     }
 
     @GetMapping("/list/{order}")
@@ -102,4 +113,5 @@ public class ArticleController {
 //        log.warn("test log->debug");
         return Result.success(iArticleService.myUpdate(article));
     }
+
 }
