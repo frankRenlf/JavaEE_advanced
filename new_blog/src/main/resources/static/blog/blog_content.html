@@ -91,7 +91,7 @@
 
     function getContent() {
         let aid = getURLParams('id');
-        if(aid!=null&&aid>=0){
+        if (aid != null && aid >= 0) {
             jQuery.ajax({
                 type: "get",        // 请求方式
                 url: "/article/" + aid, // 请求路径
@@ -115,6 +115,8 @@
             })
         }
     }
+
+    getContent();
 
 
 </script>
