@@ -15,3 +15,7 @@
 2023-01-21 10:26:32.922  INFO 17764 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : Starting ArticleMapperTest using Java 15.0.2 on DESKTOP-24TA0GO with PID 17764 (started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
 2023-01-21 10:26:32.924  INFO 17764 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : The following 1 profile is active: "dev"
 2023-01-21 10:26:36.215  INFO 17764 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-21 10:26:36.923  INFO 17764 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-21 10:26:40.446  INFO 17764 --- [main] c.f.new_blog.mapper.ArticleMapperTest    : Started ArticleMapperTest in 8.474 seconds (JVM running for 10.444)
+2023-01-21 10:26:42.450  INFO 17764 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-21 10:26:42.458  INFO 17764 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
