@@ -84,25 +84,31 @@
         // editor.setValue("#123") // 设置值
         articleInfo.title = jQuery('#title').val()
         articleInfo.content = editor.getValue()
-        jQuery.ajax({
-            type: "post",        // 请求方式
-            url: "/article/update", // 请求路径
-            dataType: 'json',
-            contentType: 'application/json',
-            data: JSON.stringify(articleInfo),
-            success: function (data) {   // data是形参名，代表返回的  数据
-                console.log("success send: ", data);
-                if (data.code === 200) {
-                    alert("update success")
-                } else {
-                    alert("fail to update, invalid user")
-                    location.href = "myblog_list.html"
-                }
-            },
-            error: function (data) {
+        if (articleInfo.title === null || articleInfo.title === "") {
+            alert("title is null")
+        } else if (articleInfo.content === null || articleInfo.content === "") {
+            alert("content is null")
+        } else {
+            jQuery.ajax({
+                type: "post",        // 请求方式
+                url: "/article/update", // 请求路径
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(articleInfo),
+                success: function (data) {   // data是形参名，代表返回的  数据
+                    console.log("success send: ", data);
+                    if (data.code === 200) {
+                        alert("update success")
+                    } else {
+                        alert("fail to update, invalid user")
+                        location.href = "myblog_list.html"
+                    }
+                },
+                error: function (data) {
 
-            }
-        })
+                }
+            })
+        }
     }
 
     function displayContent() {
