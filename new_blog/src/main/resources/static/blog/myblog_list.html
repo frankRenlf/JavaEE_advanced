@@ -43,17 +43,7 @@
     <!-- 右侧内容详情 -->
     <div class="container-right">
         <!-- 每一篇博客包含标题, 摘要, 时间 -->
-        <div class="blog">
-            <div class="title">我的第一篇博客</div>
-            <div class="date">2021-06-02</div>
-            <div class="desc">
-                从今天起, 我要认真敲代码. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum distinctio ullam eum ut
-                veroab laborum numquam tenetur est in dolorum a sint, assumenda adipisci similique quaerat vel.
-                Facere,
-                et.
-            </div>
-            <a href="blog_content.html?id=1" class="detail">查看全文 &gt;&gt;</a>
-        </div>
+
     </div>
 </div>
 <script>
@@ -65,8 +55,16 @@
             success: function (data) {   // data是形参名，代表返回的数据
                 console.log("success send: ", data);
                 if (data.code === 200) {
+                    let html = null;
                     data.data.forEach(function (item) {
-
+                        html += '        <div class="blog">\n' +
+                        '            <div class="title">' + item.title + '</div>\n' +
+                        '            <div class="date">' + item.createtime + '</div>\n' +
+                        '            <div class="desc">\n' + item.content.length > 100 ? item.content.splice(0, 100) : item.content +
+                            '            </div>\n' +
+                            '            <a href="blog_content.html?id="' + item.uid +
+                            ' class="detail">查看全文 &gt;&gt;</a>\n' +
+                            '        </div>'
                     })
                 } else {
                     alert("fail to load myList")
