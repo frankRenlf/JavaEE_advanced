@@ -22,9 +22,11 @@ import javax.servlet.http.HttpSession;
 @Component
 public class LoginInterceptor implements HandlerInterceptor {
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+    public boolean preHandle(HttpServletRequest request,
+                             HttpServletResponse response,
+                             Object handler) throws Exception {
         HttpSession session = request.getSession(true);
-        if(session!=null&&session.getAttribute("userId")!=null){
+        if (session != null && session.getAttribute("userId") != null) {
             response.setStatus(200);
             return true;
         }
