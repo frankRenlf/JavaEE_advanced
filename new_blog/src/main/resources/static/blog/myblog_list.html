@@ -47,9 +47,10 @@
     </div>
 </div>
 <script>
-    function subContent(str){
+    function subContent(str) {
         return str.length > 100 ? str.substring(0, 100) : str
     }
+
     function initLists() {
         jQuery.ajax({
             type: "get",        // 请求方式
@@ -60,14 +61,12 @@
                 if (data.code === 200) {
                     var html = "";
                     data.data.forEach(function (item) {
-                        let str = '<div class="blog">' +
-                        '<div class="title">' + item.title + '</div>' +
-                        '<div class="date">' + item.createTime + '</div>' +
-                        '<div class="desc">' + subContent(item.content) + '</div>' +
+                        html = '<div class="blog">' +
+                            '<div class="title">' + item.title + '</div>' +
+                            '<div class="date">' + item.createTime + '</div>' +
+                            '<div class="desc">' + subContent(item.content) + '</div>' +
                             '<a href="blog_content.html?id=' + item.uid + '" class="detail">detail &gt;&gt;</a>' +
                             '</div>'
-                        html += str
-                        console.log(str)
                     })
                     jQuery("#myArticleList").html(html);
                 } else {
