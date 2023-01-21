@@ -91,15 +91,15 @@ public class ArticleController {
         return Result.success(user);
     }
 
-    @PostMapping("/remove/{id}")
+    @GetMapping("/remove/{id}")
     public Result remove(@PathVariable Integer id) {
 //        log.warn("test log->debug");
-        return new Result(true, iArticleService.myRemoveById(id));
+        return Result.success(iArticleService.myRemoveById(id));
     }
 
     @PostMapping("/update")
     public Result update(@RequestBody Article article) {
 //        log.warn("test log->debug");
-        return new Result(true, iArticleService.myUpdate(article));
+        return Result.success(iArticleService.myUpdate(article));
     }
 }

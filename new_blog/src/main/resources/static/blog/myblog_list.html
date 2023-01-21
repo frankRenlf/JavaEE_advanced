@@ -48,6 +48,7 @@
     </div>
 </div>
 <script>
+
     function subContent(str) {
         return str.length > 100 ? str.substring(0, 100) : str
     }
@@ -66,9 +67,11 @@
                             '<div class="title">' + item.title + '</div>' +
                             '<div class="date">' + item.createTime + '</div>' +
                             '<div class="desc">' + subContent(item.content) + '</div>' +
-                            '<a href="blog_content.html?id=' + item.uid + '" class="detail">detail &gt;&gt;</a>' +
-                            '<a href="blog_content.html?id=' + item.uid + '" class="detail">modify &gt;&gt;</a>' +
-                            '<a href="blog_content.html?id=' + item.uid + '" class="detail">delete &gt;&gt;</a>' +
+                            '<div style="text-align: center;margin-top: 50px">' +
+                            '<a href="blog_content.html?id=' + item.articleId + '" class="">detail</a>&nbsp;&nbsp;' +
+                            '<a href="blog_update.html?id=' + item.articleId + '" class="">modify</a>&nbsp;&nbsp;' +
+                            '<a href="javascript:myDelete(' + item.articleId + ')" class="">delete</a>&nbsp;&nbsp;' +
+                            '</div>' +
                             '</div>'
                     })
                     jQuery("#myArticleList").html(html);
@@ -85,6 +88,26 @@
     }
 
     initLists()
+
+    function myDelete(aid) {
+        if (confirm("confirm delete")) {
+            jQuery.ajax({
+                type: "get",        // 请求方式
+                url: "/article/remove/" + aid, // 请求路径
+                success: function (data) {   // data是形参名，代表返回的  数据
+                    console.log("success send: ", data);
+                    if (data.code === 200) {
+                        initLists()
+                    } else {
+                        alert("fail to delete")
+                    }
+                },
+                error: function (data) {
+
+                }
+            })
+        }
+    }
 
     function myInfo() {
         jQuery.ajax({
