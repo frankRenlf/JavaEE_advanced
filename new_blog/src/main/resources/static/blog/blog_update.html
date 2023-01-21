@@ -34,8 +34,8 @@
 <div class="blog-edit-container">
     <!-- 标题编辑区 -->
     <div class="title">
-        <input id="title" type="text" placeholder="在这里写下文章标题">
-        <button onclick="mysub()">submit</button>
+        <input id="title" type="text" placeholder="title">
+        <button onclick="mysub()">modify</button>
     </div>
     <!-- 创建编辑器标签 -->
     <div id="editorDiv">
@@ -95,7 +95,8 @@
                 if (data.code === 200) {
                     alert("update success")
                 } else {
-                    alert("fail to load")
+                    alert("fail to update, invalid user")
+                    location.href = "myblog_list.html"
                 }
             },
             error: function (data) {

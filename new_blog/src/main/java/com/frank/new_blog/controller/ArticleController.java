@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.Objects;
 
 /**
  * Created with IntelliJ IDEA.
@@ -109,10 +110,13 @@ public class ArticleController {
     }
 
     @PostMapping("/update")
-    public Result update(@RequestBody Article article) {
+    public Result update(@RequestBody Article article, HttpSession session) {
 //        log.warn("test log->debug");
-        System.out.println(article);
-        return Result.success(iArticleService.myUpdate(article));
+        Integer uid = ((User) session.getAttribute(Constant.SESSION_USERINFO_KEY)).getUserId();
+        if (Objects.equals(uid, article.getUid())) {
+            return Result.success(iArticleService.myUpdate(article));
+        }
+        return Result.fail(iArticleService.myUpdate(article));
     }
 
 }
