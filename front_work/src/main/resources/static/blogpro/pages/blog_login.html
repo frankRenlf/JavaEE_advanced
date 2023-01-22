@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/blog_login.css">
+
+</head>
+
+<body>
+<div class="nav">
+
+    <img src="../images/note.png" alt="note">
+    <span class="title">My blog</span>
+    <span class="spacer"></span>
+
+    <!-- <a href="./blog_list.html">Home page</a>
+<a href="./blog_edit.html">edit blog</a>
+<a href="#">Log out</a> -->
+</div>
+
+<div class="login-container">
+    <!-- 中间的登陆框 -->
+    <div class="login-dialog">
+        <h3>login</h3>
+        <div class="row">
+            <span>account</span>
+            <input type="text" class="username">
+        </div>
+        <div class="row">
+            <span>password</span>
+            <input type="password" class="password">
+        </div>
+        <div class="row">
+            <button class="submit">submit</button>
+        </div>
+        <div class="row">
+            <button class="register">register</button>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="../js/jquerysession.js"></script>
+<script>
+    // sessionStorage.removeItem("userid");
+    // let un = document.querySelector('.username');
+    // console.log(un);
+    let un = $('.username')[0];
+    let pw = $('.password')[0];
+    // console.log($('.username').val());
+    let btn = document.querySelector('.submit');
+    let btn2 = document.querySelector('.register')
+    btn2.onclick = function () {
+        window.location.href = './blog_register.html';
+    };
+    let ui = 0;
+    $('.submit').on('click', function () {
+        let uname = un.value;
+        let upassword = pw.value;
+        let user = {
+            "id": null,
+            "username": uname,
+            "password": upassword
+        }
+        console.log(user);
+        console.log(JSON.stringify(user));
+        $.ajax({
+            type: "POST",
+            contentType: 'application/json',
+            data: JSON.stringify(user),
+            dataType: 'JSON',
+            url: '/user/login',
+            success: function (body) {
+                console.log(typeof (body.data));
+                console.log(body);
+                if (body.data) {
+                    // sessionStorage.setItem("userid", user.username);
+                    // let key = sessionStorage.getItem("userid");
+                    // console.log(key);
+                    ui = body.data;
+                    userId = body.data;
+                    console.log("userId: " + userId)
+                    alert('login success');
+                    window.location.href = './blog_list.html';
+                } else {
+                    alert('invalid input');
+                    un.value = '';
+                    pw.value = '';
+                    un.focus();
+                }
+                // con.value = body.data.id;
+            },
+            error: function (body) {
+                alert('invalid input');
+                un.value = '';
+                pw.value = '';
+                un.focus();
+            }
+        });
+    });
+
+</script>
+
+</html>

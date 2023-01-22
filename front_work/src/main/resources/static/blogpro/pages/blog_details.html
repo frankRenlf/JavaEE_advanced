@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/blog_list.css">
+    <link rel="stylesheet" href="../css/blog_detail.css">
+    <link rel="stylesheet" href="../editor.md-master/css/editormd.min.css"/>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../editor.md-master/lib/marked.min.js"></script>
+    <script src="../editor.md-master/lib/prettify.min.js"></script>
+    <script src="../editor.md-master/editormd.js"></script>
+</head>
+
+<body>
+<div class="nav">
+
+    <img src="../images/note.png" alt="note">
+    <span class="title">My blog</span>
+    <span class="spacer"></span>
+
+    <a href="./blog_list.html">Home page</a>
+    <a href="./blog_mylist.html">User page</a>
+    <a href="./blog_edit.html">edit blog</a>
+    <a href="./blog_login.html">Log out</a>
+</div>
+<div class="container">
+    <!-- 左侧个人信息 -->
+    <!-- 左侧个人信息 -->
+    <div class="container-left">
+        <div class="card">
+            <img src="../images/home.png" class="avtar" alt="home">
+            <h3></h3>
+            <a href="https://github.com/frankRenlf">github address</a>
+            <div class="counter">
+                <span>articles</span>
+                <span>sort</span>
+            </div>
+            <div class="counter">
+                <span class="number"></span>
+                <span>0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 右侧内容详情 -->
+    <div class="container-right">
+        <!-- 每一篇博客包含标题, 摘要, 时间 -->
+        <div class="blog-content">
+            <h3></h3>
+            <div class="date"></div>
+            <div id="editor">
+                <textarea style="opacity: 80%;"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/app.js"></script>
+<script>
+    // checkLogin();
+
+    function getBlog() {
+        $.ajax({
+            type: 'get',
+            url: '/article/articlelist/' + location.search.substring(location.search.lastIndexOf('=') + 1, location.search.length),
+            success: function (body) {
+                let h3 = document.querySelector('.blog-content h3');
+                h3.innerHTML = body.data.title;
+                let divDate = document.querySelector('.blog-content .date')
+                divDate.innerHTML = body.data.createtime;
+                //
+                // let divContent = document.querySelector('.blog-content .text');
+                // divContent.innerHTML = body.content;
+                editormd.markdownToHTML('editor', {
+                    markdown: body.data.content,
+                    opacity: "80 %",
+                    saveHTMLToTextarea: true
+                });
+            },
+            error: function (body) {
+                alert('invalid login');
+                window.location.href = './blog_login.html';
+            }
+        });
+    }
+
+    getBlog();
+
+    function getUserInfo() {
+        $.ajax({
+            type: "get",
+            url: "/user/" + location.search.substring(location.search.lastIndexOf('=') + 1, location.search.length),
+            success: function (body) {
+                console.log(typeof body);
+                console.log(body);
+                let username = document.querySelector(".card h3");
+                let number = document.querySelector(".number");
+                username.innerHTML = body.data.username;
+                number.innerHTML = body.data.password;
+            },
+        });
+    }
+
+    getUserInfo();
+</script>
+</body>
+
+</html>
