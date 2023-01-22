@@ -55,7 +55,7 @@ public class ArticleController {
     public Result pagingList(@PathVariable Integer pageIndex, @PathVariable Integer pageSize) {
 //        log.warn("test log->debug");
         Integer start = pageSize * (pageIndex - 1);
-        return Result.success("pagingList");
+        return Result.success(start);
     }
 
     @Transactional(isolation = Isolation.SERIALIZABLE)
