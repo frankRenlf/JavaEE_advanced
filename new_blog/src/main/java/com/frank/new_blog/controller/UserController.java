@@ -35,7 +35,9 @@ public class UserController {
         Integer id = null;
         if (user != null) {
             User account = iUserService.mySelectByName(user.getUsername());
-            if(SecurityUtil.decrypt(user.getPassword(),account.getPassword())){
+            if (account != null &&
+                    account.getPassword() != null &&
+                    SecurityUtil.decrypt(user.getPassword(), account.getPassword())) {
                 id = account.getUserId();
             }
         }
