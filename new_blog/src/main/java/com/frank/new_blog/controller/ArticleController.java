@@ -44,11 +44,10 @@ public class ArticleController {
     private TransactionDefinition transactionDefinition;
 
     @PostMapping("/insert")
-    public Result insert(@RequestBody Article article) {
+    public Result insert(@RequestBody Article article, HttpSession session) {
 //        log.warn("test log->debug");
-        TransactionStatus transactionStatus = dataSourceTransactionManager.getTransaction(transactionDefinition);
+        article.setUid(((User) session.getAttribute(Constant.SESSION_USERINFO_KEY)).getUserId());
         Object data = iArticleService.myInsert(article);
-        dataSourceTransactionManager.rollback(transactionStatus);
         return Result.success(data);
     }
 
