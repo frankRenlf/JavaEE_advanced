@@ -508,3 +508,65 @@
 2023-01-22 15:36:52.759  INFO 16500 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-01-22 15:36:52.760  INFO 16500 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2023-01-22 15:36:57.920  WARN 16500 --- [http-nio-80-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2023-01-22 15:41:23.379  INFO 16500 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-22 15:41:23.384  INFO 16500 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-22 15:41:27.774  INFO 9916 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Starting NewBlogApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 9916 (C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-22 15:41:27.775  INFO 9916 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : The following 1 profile is active: "dev"
+2023-01-22 15:41:27.814  INFO 9916 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-22 15:41:27.814  INFO 9916 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-22 15:41:28.841  INFO 9916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-22 15:41:28.848  INFO 9916 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-22 15:41:28.849  INFO 9916 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-22 15:41:28.917  INFO 9916 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-22 15:41:28.918  INFO 9916 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1103 ms
+2023-01-22 15:41:29.045  INFO 9916 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-22 15:41:29.141  INFO 9916 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-22 15:41:29.775  INFO 9916 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-22 15:41:29.819  INFO 9916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-01-22 15:41:29.835  INFO 9916 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 2.448 seconds (JVM running for 3.094)
+2023-01-22 15:41:31.491  INFO 9916 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-22 15:41:31.491  INFO 9916 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-22 15:41:31.492  INFO 9916 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-01-22 15:41:36.889  WARN 9916 --- [http-nio-80-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2023-01-22 15:41:39.420  WARN 9916 --- [http-nio-80-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2023-01-22 15:42:43.595  INFO 9916 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-22 15:42:43.601  INFO 9916 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-22 15:42:46.910  INFO 22444 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Starting NewBlogApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 22444 (C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-22 15:42:46.911  INFO 22444 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : The following 1 profile is active: "dev"
+2023-01-22 15:42:46.959  INFO 22444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-22 15:42:46.960  INFO 22444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-22 15:42:48.161  INFO 22444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-22 15:42:48.170  INFO 22444 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-22 15:42:48.171  INFO 22444 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-22 15:42:48.249  INFO 22444 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-22 15:42:48.249  INFO 22444 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1289 ms
+2023-01-22 15:42:48.390  INFO 22444 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-22 15:42:48.505  INFO 22444 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-22 15:42:49.365  INFO 22444 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-22 15:42:49.420  INFO 22444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-01-22 15:42:49.444  INFO 22444 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 3.012 seconds (JVM running for 3.907)
+2023-01-22 15:42:51.718  INFO 22444 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-22 15:42:51.718  INFO 22444 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-22 15:42:51.719  INFO 22444 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-22 15:42:56.764  WARN 22444 --- [http-nio-80-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; nested exception is java.lang.NumberFormatException: For input string: "NaN"]
+2023-01-22 15:44:13.080  INFO 22444 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-22 15:44:13.085  INFO 22444 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-01-22 15:44:16.326  INFO 24272 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Starting NewBlogApplication using Java 15.0.2 on DESKTOP-24TA0GO with PID 24272 (C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog\target\classes started by 11195 in C:\Users\11195\IdeaProjects\JavaEE_advanced\new_blog)
+2023-01-22 15:44:16.327  INFO 24272 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : The following 1 profile is active: "dev"
+2023-01-22 15:44:16.377  INFO 24272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-22 15:44:16.377  INFO 24272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-22 15:44:17.620  INFO 24272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-01-22 15:44:17.632  INFO 24272 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-22 15:44:17.632  INFO 24272 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-01-22 15:44:17.768  INFO 24272 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-22 15:44:17.769  INFO 24272 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1391 ms
+2023-01-22 15:44:17.983  INFO 24272 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-01-22 15:44:18.118  INFO 24272 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-01-22 15:44:18.866  INFO 24272 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-22 15:44:18.917  INFO 24272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-01-22 15:44:18.933  INFO 24272 --- [restartedMain] com.frank.new_blog.NewBlogApplication    : Started NewBlogApplication in 3.037 seconds (JVM running for 3.704)
+2023-01-22 15:44:18.971  INFO 24272 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-22 15:44:18.971  INFO 24272 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-01-22 15:44:18.972  INFO 24272 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-01-22 15:44:55.900  INFO 24272 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-01-22 15:44:55.907  INFO 24272 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

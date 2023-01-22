@@ -98,7 +98,7 @@
 <script>
     var listSize;
     var limit;
-    var pageIndex = parseInt(getURLParams("pageIndex"));
+    var pageIndex = getURLParams("pageIndex") === "" ? 1 : parseInt(getURLParams("pageIndex"));
     var pageSize = 3;
 
     function getListSize() {
@@ -170,9 +170,8 @@
                     return name[1];
                 }
             }
-        } else {
-            return ""
         }
+        return ""
     }
 
     function pagingList() {
