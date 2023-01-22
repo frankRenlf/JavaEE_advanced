@@ -70,31 +70,85 @@
 <!-- 版心 -->
 <div class="container">
     <!-- 右侧内容详情 -->
-    <div class="container-right">
-        <!-- 每一篇博客包含标题, 摘要, 时间 -->
-        <div class="blog">
-            <div class="title">我的第一篇博客</div>
-            <div class="date">2021-06-02</div>
-            <div class="desc">
-                从今天起, 我要认真敲代码. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum distinctio ullam eum ut
-                veroab laborum numquam tenetur est in dolorum a sint, assumenda adipisci similique quaerat vel.
-                Facere,
-                et.
-            </div>
-            <a href="blog_content.html?id=1" class="detail">查看全文 &gt;&gt;</a>
+    <div class="container-right" style="width: 100%">
+        <div id="myArticleList">
+            <!--            每一篇博客包含标题, 摘要, 时间-->
+            <!--            <div class="blog">-->
+            <!--                <div class="title">我的第一篇博客</div>-->
+            <!--                <div class="date">2021-06-02</div>-->
+            <!--                <div class="desc">-->
+            <!--                    从今天起, 我要认真敲代码. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum distinctio ullam eum ut-->
+            <!--                    veroab laborum numquam tenetur est in dolorum a sint, assumenda adipisci similique quaerat vel.-->
+            <!--                    Facere,-->
+            <!--                    et.-->
+            <!--                </div>-->
+            <!--                <a href="blog_content.html?id=1" class="detail">查看全文 &gt;&gt;</a>-->
+            <!--            </div>-->
         </div>
+
         <hr>
         <div class="blog-pagnation-wrapper">
-            <button class="blog-pagnation-item">首页</button>
-            <button class="blog-pagnation-item">上一页</button>
-            <button class="blog-pagnation-item">下一页</button>
-            <button class="blog-pagnation-item">末页</button>
+            <button class="blog-pagnation-item" onclick="turnToFirst()">首页</button>
+            <button class="blog-pagnation-item" onclick="turnToFormer()">上一页</button>
+            <button class="blog-pagnation-item" onclick="turnToNest()">下一页</button>
+            <button class="blog-pagnation-item" onclick="turnToLast()">末页</button>
         </div>
     </div>
 </div>
 <script>
+    var listSize;
     var pageIndex = 1;
-    var pageSize = 2;
+    var pageSize = 3;
+
+    function getListSize() {
+        jQuery.ajax({
+            type: "get",        // 请求方式
+            url: "/article/count", // 请求路径
+            dataType: "json",   // 预期返回一个 json 类型数据,
+            success: function (data) {   // data是形参名，代表返回的数据
+                console.log("success send: ", data);
+                if (data.status) {
+                    listSize = data.data;
+                } else {
+                }
+            },
+            error: function (error) {
+            }
+        })
+    }
+
+    function turnToFirst() {
+        location.href = "blog_list.html"
+    }
+
+    function turnToLast() {
+        location.href = "blog_list.html?pageIndex=" + (listSize / pageSize) + "&pageSize=" + pageSize
+    }
+
+    function turnToFormer() {
+        if (pageIndex <= 1) {
+            alert("First page")
+        } else {
+            pageIndex -= 1;
+            location.href = "blog_list.html?pageIndex=" + pageIndex + "&pageSize=" + pageSize
+        }
+
+    }
+
+    function turnToNest() {
+        if (pageIndex >= (listSize / pageSize)) {
+            alert("Last page")
+        } else {
+            pageIndex += 1;
+            location.href = "blog_list.html?pageIndex=" + pageIndex + "&pageSize=" + pageSize
+        }
+
+    }
+
+
+    function subContent(str) {
+        return str.length > 100 ? str.substring(0, 100) : str
+    }
 
     function getURLParams(key) {
         let url = location.search;
@@ -115,12 +169,27 @@
     function pagingList() {
         jQuery.ajax({
             type: "get",        // 请求方式
-            url: "/article/pagingList/" + getURLParams("pageIndex") + "/" + getURLParams("pageSize"), // 请求路径
+            url: "/article/pagingList/", // 请求路径
             dataType: "json",   // 预期返回一个 json 类型数据
+            data: {
+                "pageIndex": getURLParams("pageIndex"),
+                "pageSize": getURLParams("pageSize")
+            },
             success: function (data) {   // data是形参名，代表返回的数据
                 console.log("success send: ", data);
                 if (data.status) {
                     console.log("paging success")
+                    var html = "";
+                    data.data.forEach(function (item) {
+                        let str = subContent(item.content);
+                        html += '<div class="blog">' +
+                            '<div class="title">' + item.title + '</div>' +
+                            '<div class="date">' + item.createTime + '</div>' +
+                            '<div class="desc">' + str + '</div>' +
+                            '<a href="blog_content.html?id=' + item.articleId + '" class="detail">detail</a>&nbsp;&nbsp;' +
+                            '</div>'
+                    })
+                    jQuery("#myArticleList").html(html);
                 } else {
                     console.log("paging fail")
                 }

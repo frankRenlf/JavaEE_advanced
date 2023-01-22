@@ -22,6 +22,8 @@ public interface IArticleService extends IService<Article> {
     Article mySelectById(Integer id);
     List<Article> myList(String order,Integer uid);
     List<Article> listAll(String order);
+    List<Article> pagingList(String order, Integer limit, Integer offset);
+    Integer countList();
     Integer countByUserId(Integer uid);
     Integer myInsert(Article article);
     Integer myRemoveById(Integer id);

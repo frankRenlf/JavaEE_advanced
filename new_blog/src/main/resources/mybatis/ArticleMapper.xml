@@ -28,8 +28,8 @@
     </insert>
     <update id="myUpdate" useGeneratedKeys="true" keyProperty="articleId">
         update articleinfo
-        set title   = #{title},
-            content = #{content},
+        set title      = #{title},
+            content    = #{content},
             updatetime = now()
         where id = #{articleId}
     </update>
@@ -92,6 +92,18 @@
         select count(*)
         from articleinfo
         where uid = #{uid}
+    </select>
+    <select id="pagingList" resultType="com.frank.new_blog.domain.Article" resultMap="BaseMap">
+        select *
+        from articleinfo
+        order by id ${order}
+        limit #{limit}
+        offset #{offset}
+
+    </select>
+    <select id="count" resultType="java.lang.Integer">
+        select count(*)
+        from articleinfo
     </select>
     <delete id="myDeleteListId">
         delete from articleinfo where id in

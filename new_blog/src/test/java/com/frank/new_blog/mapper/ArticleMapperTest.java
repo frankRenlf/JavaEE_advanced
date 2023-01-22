@@ -96,6 +96,11 @@ class ArticleMapperTest {
 
     @Test
     void addRcount() {
-        System.out.println(articleMapper.addRcount(1,1));
+        System.out.println(articleMapper.addRcount(1, 1));
+    }
+
+    @Test
+    void pagingList() {
+        System.out.println(articleMapper.pagingList("desc", 2, 2));
     }
 }

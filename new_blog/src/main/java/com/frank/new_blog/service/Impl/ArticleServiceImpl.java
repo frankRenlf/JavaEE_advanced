@@ -45,6 +45,16 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     }
 
     @Override
+    public List<Article> pagingList(String order, Integer limit, Integer offset) {
+        return articleMapper.pagingList(order, limit, offset);
+    }
+
+    @Override
+    public Integer countList() {
+        return articleMapper.count();
+    }
+
+    @Override
     public Integer countByUserId(Integer uid) {
         return articleMapper.countByUserid(uid);
     }

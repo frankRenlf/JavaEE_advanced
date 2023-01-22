@@ -51,11 +51,16 @@ public class ArticleController {
         return Result.success(data);
     }
 
-    @GetMapping("/pagingList/{pageIndex}/{pageSize}")
-    public Result pagingList(@PathVariable Integer pageIndex, @PathVariable Integer pageSize) {
+    @GetMapping("/pagingList")
+    public Result pagingList(Integer pageIndex, Integer pageSize) {
 //        log.warn("test log->debug");
-        Integer start = pageSize * (pageIndex - 1);
-        return Result.success(start);
+        if (pageIndex == null || pageSize == null) {
+            pageIndex = 1;
+            pageSize = 2;
+        }
+        Integer limit = pageSize;
+        Integer offset = (pageIndex - 1) * pageSize;
+        return Result.success(iArticleService.pagingList("desc", limit, offset));
     }
 
     @Transactional(isolation = Isolation.SERIALIZABLE)
@@ -74,6 +79,12 @@ public class ArticleController {
 //        log.warn("test log->debug");
         iArticleService.addRcount(id, iArticleService.mySelectById(id).getRcount());
         return Result.success(iArticleService.mySelectById(id));
+    }
+
+    @GetMapping("/count")
+    public Result count() {
+//        log.warn("test log->debug");
+        return Result.success(iArticleService.countList());
     }
 
     @GetMapping("/user/{aid}")

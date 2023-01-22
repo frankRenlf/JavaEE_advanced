@@ -24,14 +24,20 @@ public interface ArticleMapper extends BaseMapper<Article> {
     Article mySelectById(Integer id);
 
     List<Article> listAll(String order);
-    List<Article> myList(String order,Integer uid);
+
+    List<Article> myList(String order, Integer uid);
+
+    List<Article> pagingList(String order, Integer limit, Integer offset);
+
     Integer countByUserid(Integer uid);
+    Integer count();
     Integer myInsert(Article article);
 
     Integer myRemoveById(Integer id);
 
     Integer myUpdate(Article article);
-    Integer addRcount(Integer id,Integer rcount);
+
+    Integer addRcount(Integer id, Integer rcount);
 
     List<Article> myFindByTitle(String sub);
 
