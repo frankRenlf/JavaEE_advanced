@@ -97,7 +97,8 @@
 </div>
 <script>
     var listSize;
-    var pageIndex = 1;
+    var limit;
+    var pageIndex = parseInt(getURLParams("pageIndex"));
     var pageSize = 3;
 
     function getListSize() {
@@ -109,6 +110,7 @@
                 console.log("success send: ", data);
                 if (data.status) {
                     listSize = data.data;
+                    limit = Math.round(listSize / pageSize) + 1
                 } else {
                 }
             },
@@ -117,12 +119,16 @@
         })
     }
 
+    getListSize()
+
     function turnToFirst() {
-        location.href = "blog_list.html"
+        pageIndex = 1
+        location.href = "blog_list.html?pageIndex=1" + "&pageSize=" + pageSize
     }
 
     function turnToLast() {
-        location.href = "blog_list.html?pageIndex=" + (listSize / pageSize) + "&pageSize=" + pageSize
+        pageIndex = limit
+        location.href = "blog_list.html?pageIndex=" + pageIndex + "&pageSize=" + pageSize
     }
 
     function turnToFormer() {
@@ -135,8 +141,11 @@
 
     }
 
+    console.log(pageIndex, pageSize, limit)
+
     function turnToNest() {
-        if (pageIndex >= (listSize / pageSize)) {
+
+        if (pageIndex >= limit) {
             alert("Last page")
         } else {
             pageIndex += 1;
@@ -186,7 +195,7 @@
                             '<div class="title">' + item.title + '</div>' +
                             '<div class="date">' + item.createTime + '</div>' +
                             '<div class="desc">' + str + '</div>' +
-                            '<a href="blog_content.html?id=' + item.articleId + '" class="detail">detail</a>&nbsp;&nbsp;' +
+                            '<a href="blog_content.html?id=' + item.articleId + '" class="detail">detail</a>' +
                             '</div>'
                     })
                     jQuery("#myArticleList").html(html);

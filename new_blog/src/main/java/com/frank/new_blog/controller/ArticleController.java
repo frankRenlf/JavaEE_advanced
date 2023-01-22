@@ -56,7 +56,7 @@ public class ArticleController {
 //        log.warn("test log->debug");
         if (pageIndex == null || pageSize == null) {
             pageIndex = 1;
-            pageSize = 2;
+            pageSize = 3;
         }
         Integer limit = pageSize;
         Integer offset = (pageIndex - 1) * pageSize;
