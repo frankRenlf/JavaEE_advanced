@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>博客编辑</title>
+    <title>blog edit</title>
 
     <!-- 引入自己写的样式 -->
     <link rel="stylesheet" href="css/conmmon.css">
@@ -21,21 +21,21 @@
     <!-- 导航栏 -->
     <div class="nav">
         <img src="img/logo2.jpg" alt="">
-        <span class="title">我的博客系统</span>
+        <span class="title">blog system</span>
         <!-- 用来占据中间位置 -->
         <span class="spacer"></span>
         <a href="blog_list.html">main page</a>
         <a href="myblog_list.html">my blog list</a>
         <a href="blog_edit.html">edit article</a>
-        <a href="javascript:onExit()">logout</a>
+<!--        <a href="javascript:onExit()">logout</a>-->
         <!-- <a href="#">注销</a> -->
     </div>
     <!-- 编辑框容器 -->
     <div class="blog-edit-container">
         <!-- 标题编辑区 -->
         <div class="title">
-            <input type="text" placeholder="在这里写下文章标题">
-            <button onclick="mysub()">发布文章</button>
+            <input type="text" placeholder="write title here">
+            <button onclick="mysub()">submit</button>
         </div>
         <!-- 创建编辑器标签 -->
         <div id="editorDiv">
@@ -59,11 +59,40 @@
                 saveHTMLToTextarea: true //
             });
         }
-        initEdit("# 在这里写下一篇博客"); // 初始化编译器的值
+        initEdit("# write content here"); // 初始化编译器的值
         // 提交
-        function mysub(){
+        var articleInfo;
+        function mysub() {
             // alert(editor.getValue()); // 获取值
             // editor.setValue("#123") // 设置值
+            articleInfo.title = jQuery('#title').val()
+            articleInfo.content = editor.getValue()
+            if (articleInfo.title === null || articleInfo.title === "") {
+                alert("title is null")
+            } else if (articleInfo.content === null || articleInfo.content === "") {
+                alert("content is null")
+            } else {
+                jQuery.ajax({
+                    type: "post",        // 请求方式
+                    url: "/article/insert", // 请求路径
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    data: JSON.stringify(articleInfo),
+                    success: function (data) {   // data是形参名，代表返回的  数据
+                        console.log("success send: ", data);
+                        if (data.code === 200) {
+                            alert("submit success")
+                            console.log(data.data)
+                        } else {
+                            alert("fail to edit")
+                            location.href = "myblog_list.html"
+                        }
+                    },
+                    error: function (data) {
+
+                    }
+                })
+            }
         }
     </script>
 </body>

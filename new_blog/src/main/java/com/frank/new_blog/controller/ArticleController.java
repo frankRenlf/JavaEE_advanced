@@ -49,7 +49,7 @@ public class ArticleController {
         TransactionStatus transactionStatus = dataSourceTransactionManager.getTransaction(transactionDefinition);
         Object data = iArticleService.myInsert(article);
         dataSourceTransactionManager.rollback(transactionStatus);
-        return new Result(true, data);
+        return Result.success(data);
     }
 
     @Transactional(isolation = Isolation.SERIALIZABLE)
