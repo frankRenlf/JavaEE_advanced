@@ -96,18 +96,33 @@
     var pageIndex = 1;
     var pageSize = 2;
 
+    function getURLParams(key) {
+        let url = location.search;
+        if (url.indexOf("?") >= 0) {
+            url = url.substring(url.indexOf("?") + 1);
+            let paramsArr = url.split('&');
+            for (let i = 0; i < paramsArr.length; i++) {
+                let name = paramsArr[i].split('=');
+                if (name[0] === key) {
+                    return name[1];
+                }
+            }
+        } else {
+            return ""
+        }
+    }
+
     function pagingList() {
         jQuery.ajax({
             type: "get",        // 请求方式
-            url: "/article/logout", // 请求路径
+            url: "/article/pagingList/" + getURLParams("pageIndex") + "/" + getURLParams("pageSize"), // 请求路径
             dataType: "json",   // 预期返回一个 json 类型数据
             success: function (data) {   // data是形参名，代表返回的数据
                 console.log("success: ", data);
                 if (data.status) {
-                    alert("logout success")
-                    location.href = "login.html"
+                    alert("paging success")
                 } else {
-                    alert("logout fail")
+                    alert("paging fail")
                 }
             },
             error: function (error) {
@@ -115,6 +130,7 @@
             }
         })
     }
+    pagingList()
 
     function onExit() {
         if (confirm("Confirm Exit")) {

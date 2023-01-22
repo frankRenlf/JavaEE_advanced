@@ -51,12 +51,11 @@ public class ArticleController {
         return Result.success(data);
     }
 
-    @GetMapping("/pagingList")
-    public Result pagingList(@RequestBody Article article, HttpSession session) {
+    @GetMapping("/pagingList/{pageIndex}/{pageSize}")
+    public Result pagingList(@PathVariable Integer pageIndex, @PathVariable Integer pageSize) {
 //        log.warn("test log->debug");
-        article.setUid(((User) session.getAttribute(Constant.SESSION_USERINFO_KEY)).getUserId());
-        Object data = iArticleService.myInsert(article);
-        return Result.success(data);
+        Integer start = pageSize * (pageIndex - 1);
+        return Result.success("pagingList");
     }
 
     @Transactional(isolation = Isolation.SERIALIZABLE)
