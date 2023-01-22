@@ -118,7 +118,7 @@
             url: "/article/pagingList/" + getURLParams("pageIndex") + "/" + getURLParams("pageSize"), // 请求路径
             dataType: "json",   // 预期返回一个 json 类型数据
             success: function (data) {   // data是形参名，代表返回的数据
-                console.log("success: ", data);
+                console.log("success send: ", data);
                 if (data.status) {
                     console.log("paging success")
                 } else {
@@ -126,7 +126,7 @@
                 }
             },
             error: function (error) {
-                alert("paging fail")
+                alert("fail send")
             }
         })
     }
