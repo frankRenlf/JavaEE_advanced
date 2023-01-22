@@ -2,7 +2,6 @@ package com.frank.new_blog.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.frank.new_blog.domain.Article;
-import com.frank.new_blog.domain.User;
 
 import java.util.List;
 
@@ -28,5 +27,5 @@ public interface IArticleService extends IService<Article> {
     Integer myInsert(Article article);
     Integer myRemoveById(Integer id);
     Integer myUpdate(Article article);
-    Integer addRcount(Integer id,Integer rcount);
+    void addRcount(Integer id, Integer rcount);
 }

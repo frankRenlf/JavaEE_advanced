@@ -76,7 +76,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     }
 
     @Override
-    public Integer addRcount(Integer id, Integer rcount) {
-        return articleMapper.addRcount(id, rcount + 1);
+    public void addRcount(Integer id, Integer rcount) {
+        articleMapper.addRcount(id, rcount + 1);
     }
 }

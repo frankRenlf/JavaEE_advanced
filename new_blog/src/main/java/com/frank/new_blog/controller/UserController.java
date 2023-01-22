@@ -4,6 +4,7 @@ import com.frank.new_blog.utils.Constant;
 import com.frank.new_blog.utils.Result;
 import com.frank.new_blog.domain.User;
 import com.frank.new_blog.service.IUserService;
+import com.frank.new_blog.utils.SecurityUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -33,7 +34,10 @@ public class UserController {
     public Result login(@RequestBody User user, HttpSession session) {
         Integer id = null;
         if (user != null) {
-            id = iUserService.checkIdentity(user);
+            User account = iUserService.mySelectByName(user.getUsername());
+            if(SecurityUtil.decrypt(user.getPassword(),account.getPassword())){
+                id = account.getUserId();
+            }
         }
         if (id != null) {
             session.setAttribute(Constant.SESSION_USERINFO_KEY, iUserService.mySelectById(id));
@@ -47,6 +51,7 @@ public class UserController {
     public Result register(@RequestBody User user) {
         Integer id = null;
         if (iUserService.mySelectByName(user.getUsername()) == null) {
+            user.setPassword(SecurityUtil.encrypt(user.getPassword()));
             id = iUserService.myInsert(user);
             return Result.success(id);
         }
