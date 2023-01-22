@@ -51,6 +51,14 @@ public class ArticleController {
         return Result.success(data);
     }
 
+    @GetMapping("/pagingList")
+    public Result pagingList(@RequestBody Article article, HttpSession session) {
+//        log.warn("test log->debug");
+        article.setUid(((User) session.getAttribute(Constant.SESSION_USERINFO_KEY)).getUserId());
+        Object data = iArticleService.myInsert(article);
+        return Result.success(data);
+    }
+
     @Transactional(isolation = Isolation.SERIALIZABLE)
     @PostMapping("/insert2")
     public Result insert2(@RequestBody Article article) {
